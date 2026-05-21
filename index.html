@@ -93,6 +93,18 @@
       width: 180px; height: 180px;
       filter: drop-shadow(0 1px 2px rgba(139,29,29,0.15));
     }
+    .seal-svg-wrap {
+      width: 180px; height: 180px;
+      filter: drop-shadow(0 1px 2px rgba(139,29,29,0.15));
+    }
+    .seal-svg-wrap svg { width: 100%; height: 100%; display: block; }
+    @media (max-width: 760px) {
+      .seal-svg-wrap { width: 130px; height: 130px; }
+    }
+    .diagram-svg-wrap {
+      width: 100%; max-width: 100%;
+    }
+    .diagram-svg-wrap svg { width: 100%; height: auto; display: block; margin: 0 auto; max-width: 720px; }
     @media (max-width: 760px) {
       .head-with-seal { grid-template-columns: 1fr; gap: 24px; }
       .head-seal { order: -1; }
@@ -484,7 +496,37 @@
         </div>
       </div>
       <div class="head-seal" aria-hidden="true">
-        <img src="/img/seal.svg" alt="" width="180" height="180"/>
+        <div class="seal-svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 240 240" role="img" aria-label="The Restored Academy seal">
+  <defs>
+    <path id="sealCirc" d="M 120 120 m -88 0 a 88 88 0 1 1 176 0 a 88 88 0 1 1 -176 0"/>
+  </defs>
+
+  <!-- Outer hexagon, gold stroke -->
+  <polygon points="120,18 207.7,69 207.7,171 120,222 32.3,171 32.3,69"
+           fill="none" stroke="#a08438" stroke-width="1.5" stroke-linejoin="miter"/>
+
+  <!-- Inner hexagon, gold thin -->
+  <polygon points="120,30 197.3,75 197.3,165 120,210 42.7,165 42.7,75"
+           fill="none" stroke="#a08438" stroke-width="0.6" opacity="0.55"/>
+
+  <!-- Inscribed perimeter text -->
+  <text font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="9.5"
+        letter-spacing="3.6" fill="#8b1d1d">
+    <textPath xlink:href="#sealCirc" startOffset="0%">THE RESTORED ACADEMY · CRIMSON HEXAGONAL ARCHIVE ·  </textPath>
+  </text>
+
+  <!-- Center field: ∮ = 1 -->
+  <text x="120" y="138" text-anchor="middle"
+        font-family="STIX Two Math, Cambria Math, Iowan Old Style, Palatino, serif"
+        font-size="58" fill="#8b1d1d" font-style="italic" font-weight="500">
+    ∮ = 1
+  </text>
+
+  <!-- Lower mark: small gold star + date -->
+  <text x="120" y="172" text-anchor="middle"
+        font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="8"
+        letter-spacing="2.5" fill="#a08438">MMXXVI</text>
+</svg></div>
       </div>
     </div>
   </header>
@@ -529,7 +571,100 @@
       <p>Protocols are sorted into seven categories. A single protocol may carry multiple category tags. The registry presents protocols filtered by category; the curriculum bundles use categories as pedagogical organization.</p>
 
       <figure class="diagram-figure">
-        <img src="/img/taxonomy.svg" alt="The seven categories arranged as a hexagonal mandala around the universal test: What changes when I drop this into an LLM?" />
+        <div class="diagram-svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" role="img" aria-label="The seven-category taxonomy of the Restored Academy Protocol Registry">
+  <style>
+    .ink { fill: #1a1816; font-family: 'Iowan Old Style', Palatino, Georgia, serif; }
+    .gold { fill: #a08438; }
+    .crimson { fill: #8b1d1d; }
+    .soft { fill: #4a4540; }
+    .faint { fill: #8a8580; }
+    .roman { font-family: 'Iowan Old Style', Palatino, Georgia, serif; font-size: 13px; letter-spacing: 0.12em; fill: #a08438; }
+    .cat-title { font-family: 'Iowan Old Style', Palatino, Georgia, serif; font-size: 16px; font-weight: 600; fill: #1a1816; }
+    .cat-sub { font-family: 'Iowan Old Style', Palatino, Georgia, serif; font-size: 11.5px; fill: #4a4540; font-style: italic; }
+    .center-q { font-family: 'Iowan Old Style', Palatino, Georgia, serif; font-size: 15px; fill: #8b1d1d; font-style: italic; }
+    .center-s { font-family: 'Iowan Old Style', Palatino, Georgia, serif; font-size: 12px; fill: #4a4540; }
+    .integral { font-family: 'STIX Two Math', 'Cambria Math', Georgia, serif; font-size: 22px; fill: #8b1d1d; font-style: italic; }
+  </style>
+
+  <!-- Background hexagon (outer) -->
+  <polygon points="360,40 612,184 612,472 360,616 108,472 108,184" 
+           fill="none" stroke="#c8c2b3" stroke-width="0.7" opacity="0.5" transform="translate(0,-30)"/>
+  
+  <!-- Inner hexagon (visual center frame) -->
+  <polygon points="360,210 432,252 432,336 360,378 288,336 288,252"
+           fill="#f9f5ec" stroke="#a08438" stroke-width="1.4"/>
+
+  <!-- Center: universal test -->
+  <text x="360" y="270" text-anchor="middle" class="center-s">THE UNIVERSAL TEST</text>
+  <text x="360" y="304" text-anchor="middle" class="center-q">What changes when</text>
+  <text x="360" y="322" text-anchor="middle" class="center-q">I drop this into</text>
+  <text x="360" y="340" text-anchor="middle" class="center-q">an LLM?</text>
+  <text x="360" y="362" text-anchor="middle" class="integral">∮ = 1</text>
+
+  <!-- 7 category boxes around the hexagon. 
+       Positions: 6 at hexagon vertices + 1 at top (since 7 not 6, we offset one).
+       Actually arrange as: TOP CENTER (I), then 3 right side (II, III, IV), then 3 left side (V, VI, VII) -->
+  
+  <!-- Connecting lines from center hexagon vertices to categories (decorative) -->
+  <g stroke="#c8c2b3" stroke-width="0.5" opacity="0.6">
+    <line x1="360" y1="210" x2="360" y2="100"/>
+    <line x1="432" y1="252" x2="600" y2="180"/>
+    <line x1="432" y1="294" x2="640" y2="294"/>
+    <line x1="432" y1="336" x2="600" y2="408"/>
+    <line x1="360" y1="378" x2="360" y2="490"/>
+    <line x1="288" y1="336" x2="120" y2="408"/>
+    <line x1="288" y1="252" x2="120" y2="180"/>
+  </g>
+
+  <!-- I — Semantic Integrity & Provenance (TOP) -->
+  <g>
+    <text x="360" y="58" text-anchor="middle" class="roman">I</text>
+    <text x="360" y="78" text-anchor="middle" class="cat-title">Semantic Integrity &amp; Provenance</text>
+    <text x="360" y="95" text-anchor="middle" class="cat-sub">preserve attribution, source fidelity</text>
+  </g>
+
+  <!-- II — Prompt-Native Runtime (UPPER RIGHT) -->
+  <g>
+    <text x="618" y="156" text-anchor="middle" class="roman">II</text>
+    <text x="618" y="175" text-anchor="middle" class="cat-title">Prompt-Native Runtime</text>
+    <text x="618" y="192" text-anchor="middle" class="cat-sub">modify model behavior in context</text>
+  </g>
+
+  <!-- III — Diagnostic & Measurement (MID RIGHT) -->
+  <g>
+    <text x="652" y="275" text-anchor="middle" class="roman">III</text>
+    <text x="652" y="294" text-anchor="middle" class="cat-title">Diagnostic &amp; Measurement</text>
+    <text x="652" y="311" text-anchor="middle" class="cat-sub">measure outputs, drift, distortion</text>
+  </g>
+
+  <!-- IV — Transformation & Operator (LOWER RIGHT) -->
+  <g>
+    <text x="618" y="395" text-anchor="middle" class="roman">IV</text>
+    <text x="618" y="415" text-anchor="middle" class="cat-title">Transformation &amp; Operator</text>
+    <text x="618" y="432" text-anchor="middle" class="cat-sub">transform under controlled rules</text>
+  </g>
+
+  <!-- V — Archive Construction & Retrieval (BOTTOM) -->
+  <g>
+    <text x="360" y="503" text-anchor="middle" class="roman">V</text>
+    <text x="360" y="522" text-anchor="middle" class="cat-title">Archive Construction &amp; Retrieval</text>
+    <text x="360" y="539" text-anchor="middle" class="cat-sub">build durable, machine-readable archives</text>
+  </g>
+
+  <!-- VI — Pedagogical & Institutional (LOWER LEFT) -->
+  <g>
+    <text x="102" y="395" text-anchor="middle" class="roman">VI</text>
+    <text x="102" y="415" text-anchor="middle" class="cat-title">Pedagogical &amp; Institutional</text>
+    <text x="102" y="432" text-anchor="middle" class="cat-sub">teach, certify, license, deploy</text>
+  </g>
+
+  <!-- VII — Ethical & Jurisdictional (UPPER LEFT) -->
+  <g>
+    <text x="102" y="156" text-anchor="middle" class="roman">VII</text>
+    <text x="102" y="175" text-anchor="middle" class="cat-title">Ethical &amp; Jurisdictional</text>
+    <text x="102" y="192" text-anchor="middle" class="cat-sub">govern use, attribution, scope</text>
+  </g>
+</svg></div>
         <figcaption>The seven categories arrange around the universal test. A protocol is admitted to the registry only if its presence in an LLM produces a constrained, measurable, repeatable effect.</figcaption>
       </figure>
 
@@ -584,7 +719,165 @@
       <p>The Tier 0 corpus is the core kernel of the registry. Each protocol carries a full card with operational form, pasteable LLM block, operator notes, failure modes, dependency graph, and license. The full set defines the Academy.</p>
 
       <figure class="diagram-figure">
-        <img src="/img/dependency-graph.svg" alt="Dependency graph showing how Tier 0 protocols compose: SPXI uses SIM and Holographic Kernel; Drowning Test uses Kernel and Traversal Logging; CDI measures SPXI effectiveness." />
+        <div class="diagram-svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" role="img" aria-label="Tier 0 Protocol Dependency Graph">
+  <style>
+    .node { font-family: 'Iowan Old Style', Palatino, Georgia, serif; }
+    .node-title { font-size: 13px; font-weight: 600; fill: #1a1816; }
+    .node-id { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 9px; fill: #a08438; letter-spacing: 0.05em; }
+    .layer-label { font-family: 'Iowan Old Style', Palatino, Georgia, serif; font-size: 10.5px; fill: #8a8580; letter-spacing: 0.15em; text-transform: uppercase; }
+    .arrow { stroke: #a08438; stroke-width: 1; fill: none; opacity: 0.7; }
+    .arrow-strong { stroke: #8b1d1d; stroke-width: 1.2; fill: none; opacity: 0.8; }
+  </style>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#a08438" opacity="0.7"/>
+    </marker>
+    <marker id="arrow-c" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b1d1d" opacity="0.8"/>
+    </marker>
+  </defs>
+
+  <!-- Layer labels (left side) -->
+  <text x="40" y="60" class="layer-label">INSCRIPTION</text>
+  <text x="40" y="178" class="layer-label">SUBSTRATE</text>
+  <text x="40" y="296" class="layer-label">RUNTIME</text>
+  <text x="40" y="412" class="layer-label">MEASUREMENT</text>
+  <text x="40" y="528" class="layer-label">REVIEW</text>
+
+  <!-- Layer separators -->
+  <line x1="180" y1="55" x2="870" y2="55" stroke="#c8c2b3" stroke-width="0.5" opacity="0.4"/>
+  <line x1="180" y1="173" x2="870" y2="173" stroke="#c8c2b3" stroke-width="0.5" opacity="0.4"/>
+  <line x1="180" y1="291" x2="870" y2="291" stroke="#c8c2b3" stroke-width="0.5" opacity="0.4"/>
+  <line x1="180" y1="407" x2="870" y2="407" stroke="#c8c2b3" stroke-width="0.5" opacity="0.4"/>
+  <line x1="180" y1="523" x2="870" y2="523" stroke="#c8c2b3" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- LAYER 1: INSCRIPTION -->
+  <!-- MPAI 0002 (broadest spec) -->
+  <g>
+    <rect x="280" y="30" width="170" height="50" rx="2" fill="#f9f5ec" stroke="#a08438" stroke-width="1"/>
+    <text x="365" y="50" text-anchor="middle" class="node node-id">RA-PROT-0002</text>
+    <text x="365" y="68" text-anchor="middle" class="node node-title">MPAI</text>
+  </g>
+  <!-- SPXI 0001 -->
+  <g>
+    <rect x="500" y="30" width="170" height="50" rx="2" fill="#f9f5ec" stroke="#8b1d1d" stroke-width="1.4"/>
+    <text x="585" y="50" text-anchor="middle" class="node node-id">RA-PROT-0001</text>
+    <text x="585" y="68" text-anchor="middle" class="node node-title">SPXI</text>
+  </g>
+
+  <!-- LAYER 2: SUBSTRATE -->
+  <!-- SIM 0003 -->
+  <g>
+    <rect x="190" y="148" width="160" height="50" rx="2" fill="#f9f5ec" stroke="#a08438" stroke-width="1"/>
+    <text x="270" y="168" text-anchor="middle" class="node node-id">RA-PROT-0003</text>
+    <text x="270" y="186" text-anchor="middle" class="node node-title">SIM</text>
+  </g>
+  <!-- Holographic Kernel 0005 -->
+  <g>
+    <rect x="370" y="148" width="190" height="50" rx="2" fill="#f9f5ec" stroke="#8b1d1d" stroke-width="1.4"/>
+    <text x="465" y="168" text-anchor="middle" class="node node-id">RA-PROT-0005</text>
+    <text x="465" y="186" text-anchor="middle" class="node node-title">Holographic Kernel</text>
+  </g>
+  <!-- Integrity Lock 0004 -->
+  <g>
+    <rect x="580" y="148" width="160" height="50" rx="2" fill="#f9f5ec" stroke="#a08438" stroke-width="1"/>
+    <text x="660" y="168" text-anchor="middle" class="node node-id">RA-PROT-0004</text>
+    <text x="660" y="186" text-anchor="middle" class="node node-title">Integrity Lock</text>
+  </g>
+
+  <!-- LAYER 3: RUNTIME -->
+  <!-- UKTP 0007 -->
+  <g>
+    <rect x="200" y="266" width="160" height="50" rx="2" fill="#f9f5ec" stroke="#a08438" stroke-width="1"/>
+    <text x="280" y="286" text-anchor="middle" class="node node-id">RA-PROT-0007</text>
+    <text x="280" y="304" text-anchor="middle" class="node node-title">UKTP</text>
+  </g>
+  <!-- Space Ark 0006 -->
+  <g>
+    <rect x="380" y="266" width="160" height="50" rx="2" fill="#f9f5ec" stroke="#a08438" stroke-width="1"/>
+    <text x="460" y="286" text-anchor="middle" class="node node-id">RA-PROT-0006</text>
+    <text x="460" y="304" text-anchor="middle" class="node node-title">Space Ark</text>
+  </g>
+  <!-- Traversal Logging 0008 -->
+  <g>
+    <rect x="560" y="266" width="180" height="50" rx="2" fill="#f9f5ec" stroke="#a08438" stroke-width="1"/>
+    <text x="650" y="286" text-anchor="middle" class="node node-id">RA-PROT-0008</text>
+    <text x="650" y="304" text-anchor="middle" class="node node-title">Traversal Logging</text>
+  </g>
+
+  <!-- LAYER 4: MEASUREMENT -->
+  <!-- PER 0009 -->
+  <g>
+    <rect x="200" y="382" width="160" height="50" rx="2" fill="#f9f5ec" stroke="#a08438" stroke-width="1"/>
+    <text x="280" y="402" text-anchor="middle" class="node node-id">RA-PROT-0009</text>
+    <text x="280" y="420" text-anchor="middle" class="node node-title">PER</text>
+  </g>
+  <!-- CDI 0010 -->
+  <g>
+    <rect x="380" y="382" width="160" height="50" rx="2" fill="#f9f5ec" stroke="#8b1d1d" stroke-width="1.4"/>
+    <text x="460" y="402" text-anchor="middle" class="node node-id">RA-PROT-0010</text>
+    <text x="460" y="420" text-anchor="middle" class="node node-title">CDI</text>
+  </g>
+  <!-- Drowning Test 0011 -->
+  <g>
+    <rect x="560" y="382" width="180" height="50" rx="2" fill="#f9f5ec" stroke="#8b1d1d" stroke-width="1.4"/>
+    <text x="650" y="402" text-anchor="middle" class="node node-id">RA-PROT-0011</text>
+    <text x="650" y="420" text-anchor="middle" class="node node-title">Drowning Test</text>
+  </g>
+
+  <!-- LAYER 5: REVIEW -->
+  <!-- Reception Apparatus 0012 -->
+  <g>
+    <rect x="370" y="498" width="220" height="50" rx="2" fill="#f9f5ec" stroke="#a08438" stroke-width="1"/>
+    <text x="480" y="518" text-anchor="middle" class="node node-id">RA-PROT-0012</text>
+    <text x="480" y="536" text-anchor="middle" class="node node-title">Reception Apparatus</text>
+  </g>
+
+  <!-- ARROWS: dependency relations -->
+  <!-- MPAI parents SPXI -->
+  <path d="M 450 55 L 500 55" class="arrow" marker-end="url(#arrow)"/>
+
+  <!-- SPXI uses SIM -->
+  <path d="M 530 80 Q 400 110 320 148" class="arrow-strong" marker-end="url(#arrow-c)"/>
+  <!-- SPXI uses Kernel -->
+  <path d="M 585 80 L 480 148" class="arrow-strong" marker-end="url(#arrow-c)"/>
+  <!-- SPXI uses Integrity Lock -->
+  <path d="M 640 80 Q 670 110 660 148" class="arrow" marker-end="url(#arrow)"/>
+
+  <!-- Kernel→Space Ark (Ark carries Kernel) -->
+  <path d="M 465 198 L 465 266" class="arrow" marker-end="url(#arrow)"/>
+  <!-- UKTP→Space Ark (variants) -->
+  <path d="M 320 266 Q 360 240 400 266" class="arrow" marker-end="url(#arrow)"/>
+
+  <!-- Traversal Logging → CDI (provides captures) -->
+  <path d="M 600 316 Q 530 350 490 382" class="arrow-strong" marker-end="url(#arrow-c)"/>
+  <!-- Traversal Logging → Drowning Test -->
+  <path d="M 660 316 L 660 382" class="arrow-strong" marker-end="url(#arrow-c)"/>
+
+  <!-- Kernel → Drowning Test (substrate) -->
+  <path d="M 540 198 Q 620 320 640 382" class="arrow-strong" marker-end="url(#arrow-c)"/>
+
+  <!-- CDI → Drowning Test (γ uses CDI) -->
+  <path d="M 540 407 L 560 407" class="arrow" marker-end="url(#arrow)"/>
+
+  <!-- SPXI → CDI (CDI measures SPXI effectiveness) - dashed -->
+  <path d="M 600 80 Q 700 200 540 395" class="arrow" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+
+  <!-- Anything → Reception Apparatus -->
+  <path d="M 460 432 L 470 498" class="arrow" marker-end="url(#arrow)"/>
+
+  <!-- Legend (lower right) -->
+  <g transform="translate(740,470)">
+    <text x="0" y="0" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="10" fill="#8a8580" letter-spacing="0.1em">LEGEND</text>
+    <line x1="0" y1="18" x2="22" y2="18" stroke="#8b1d1d" stroke-width="1.2"/>
+    <text x="28" y="22" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="10" fill="#4a4540">core dependency</text>
+    <line x1="0" y1="36" x2="22" y2="36" stroke="#a08438" stroke-width="1"/>
+    <text x="28" y="40" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="10" fill="#4a4540">uses / supports</text>
+    <line x1="0" y1="54" x2="22" y2="54" stroke="#a08438" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="28" y="58" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="10" fill="#4a4540">measures effectiveness of</text>
+  </g>
+</svg></div>
         <figcaption>How the twelve compose. Inscription protocols (top) deploy substrate layers (SIM, Holographic Kernel, Integrity Lock). Runtime protocols (Space Ark, UKTP) operate on the substrate. Measurement protocols (PER, CDI, Drowning Test) close the loop. Reception Apparatus reviews work across all layers.</figcaption>
       </figure>
 
