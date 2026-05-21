@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>RA-PROT-0007 UKTP — Universal Kernel Transform Protocol — The Restored Academy Protocol Registry</title>
+  <link rel="canonical" href="https://restoredacademy.org/protocols/RA-PROT-0007.html">
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <meta name="description" content="RA-PROT-0007 — UKTP — Universal Kernel Transform Protocol. UKTP is the meta-protocol for *transform* operations across the Crimson Hexagonal Archive's family of Space Ark variants and related substrate-translated artifacts">
+
+  <!-- SPXI compliance -->
+  <meta name="spxi:isType" content="protocol card · operative method specification">
+  <meta name="spxi:authoringHeteronym" content="Lee Sharks (founding theory — retained)">
+  <meta name="spxi:institutionalAffiliation" content="The Restored Academy · Crimson Hexagonal Archive">
+  <meta name="spxi:licenseDeclaration" content="CC BY 4.0 · tiered commercial licensing for curated body">
+  <meta name="spxi:depositAnchor" content="10.5281/zenodo.18946111">
+  <meta name="spxi:canonicalURL" content="https://restoredacademy.org/protocols/RA-PROT-0007.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "@id": "https://restoredacademy.org/protocols/RA-PROT-0007.html",
+    "name": "RA-PROT-0007: UKTP — Universal Kernel Transform Protocol",
+    "headline": "RA-PROT-0007 — UKTP — Universal Kernel Transform Protocol",
+    "url": "https://restoredacademy.org/protocols/RA-PROT-0007.html",
+    "isPartOf": {
+      "@type": "Collection",
+      "name": "Restored Academy Protocol Registry",
+      "url": "https://restoredacademy.org/"
+    },
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "author": { "@type": "Person", "name": "Lee Sharks (founding theory — retained)" },
+    "sameAs": "https://doi.org/10.5281/zenodo.18946111"
+  }
+  </script>
+
+  <style>
+    :root {
+      --ink: #1a1816; --ink-soft: #4a4540; --ink-faint: #8a8580;
+      --paper: #f5f1e8; --paper-soft: #ebe6db; --paper-warm: #f9f5ec;
+      --crimson: #8b1d1d; --crimson-deep: #5c1010;
+      --gold: #a08438; --rule: #c8c2b3;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Iowan Old Style', 'Palatino', 'Palatino Linotype', Georgia, serif;
+      background: var(--paper); color: var(--ink); line-height: 1.7; font-size: 17px;
+    }
+    a { color: var(--crimson); text-decoration: none; border-bottom: 1px solid rgba(139,29,29,0.3); }
+    a:hover { color: var(--crimson-deep); border-bottom-color: var(--crimson-deep); }
+
+    /* Top bar */
+    nav.topbar {
+      background: var(--paper-warm); border-bottom: 1px solid var(--rule);
+      padding: 14px 32px; position: sticky; top: 0; z-index: 100;
+      display: flex; gap: 22px; align-items: center; font-size: 14px;
+    }
+    nav.topbar .seal-link { display: inline-flex; align-items: center; gap: 8px; border: none; color: var(--ink); font-weight: 600; letter-spacing: 0.03em; }
+    nav.topbar .seal-link img { width: 26px; height: 26px; }
+    nav.topbar a { border: none; color: var(--ink-soft); font-weight: 500; }
+    nav.topbar a:hover { color: var(--crimson); }
+    nav.topbar .spacer { flex: 1; }
+
+    /* Layout */
+    .container {
+      max-width: 1180px; margin: 0 auto; padding: 50px 32px;
+      display: grid; grid-template-columns: 220px 1fr; gap: 50px;
+    }
+    @media (max-width: 880px) {
+      .container { grid-template-columns: 1fr; gap: 28px; padding: 30px 22px; }
+      aside.toc { position: static !important; }
+    }
+
+    /* TOC sidebar */
+    aside.toc {
+      position: sticky; top: 90px; align-self: start;
+      font-size: 13px; line-height: 1.6;
+    }
+    aside.toc h4 { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
+    aside.toc ol { list-style: none; padding: 0; counter-reset: toc; }
+    aside.toc li { counter-increment: toc; padding: 3px 0; }
+    aside.toc li::before { content: counter(toc) ". "; color: var(--gold); font-variant: small-caps; }
+    aside.toc a { border: none; color: var(--ink-soft); }
+    aside.toc a:hover { color: var(--crimson); }
+
+    /* Main */
+    article { max-width: 720px; }
+    article header.prot-head { margin-bottom: 36px; padding-bottom: 24px; border-bottom: 2px solid var(--rule); }
+    .breadcrumb { font-size: 13px; color: var(--ink-faint); margin-bottom: 18px; letter-spacing: 0.04em; }
+    .breadcrumb a { border: none; color: var(--ink-soft); }
+    .prot-id { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; color: var(--gold); letter-spacing: 0.06em; }
+    h1.prot-title {
+      font-size: 38px; line-height: 1.15; font-weight: 600; letter-spacing: -0.01em;
+      margin: 14px 0 16px; color: var(--ink);
+    }
+    .meta-row {
+      display: flex; gap: 18px; flex-wrap: wrap; font-size: 13px; color: var(--ink-faint);
+      padding-top: 12px;
+    }
+    .meta-row .badge {
+      background: rgba(160,132,56,0.12); color: var(--gold);
+      padding: 3px 10px; border-radius: 3px; font-size: 11px;
+      letter-spacing: 0.04em; font-weight: 600;
+    }
+    .meta-row .badge-tier { background: rgba(139,29,29,0.08); color: var(--crimson); }
+    .meta-row strong { color: var(--ink-soft); font-weight: 600; }
+
+    /* Section content */
+    article h2 {
+      font-size: 22px; font-weight: 600; margin: 42px 0 14px;
+      padding-bottom: 8px; border-bottom: 1px solid var(--rule);
+      letter-spacing: -0.005em; scroll-margin-top: 90px;
+    }
+    article h2::before {
+      content: attr(data-num) ". "; color: var(--gold); font-variant: small-caps;
+      font-size: 18px;
+    }
+    article p { margin-bottom: 16px; }
+    article ul, article ol { margin: 12px 0 18px 28px; }
+    article li { margin-bottom: 6px; }
+
+    /* Code blocks (the pasteable LLM blocks) */
+    pre {
+      background: #f9f5ec; border-left: 3px solid var(--crimson);
+      padding: 18px 22px; margin: 18px 0; border-radius: 0 3px 3px 0;
+      font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 13px;
+      line-height: 1.55; overflow-x: auto; position: relative;
+    }
+    pre code { font-family: inherit; color: var(--ink); }
+    .copy-btn {
+      position: absolute; top: 8px; right: 8px;
+      background: var(--paper); border: 1px solid var(--rule);
+      color: var(--ink-soft); padding: 4px 10px; font-size: 11px;
+      font-family: inherit; cursor: pointer; border-radius: 2px;
+      letter-spacing: 0.04em;
+    }
+    .copy-btn:hover { background: var(--gold); color: var(--paper); border-color: var(--gold); }
+    .copy-btn.copied { background: var(--crimson); color: var(--paper); border-color: var(--crimson); }
+
+    /* Inline code */
+    code { background: rgba(160,132,56,0.10); padding: 1px 6px; border-radius: 2px; font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 0.9em; }
+    pre code { background: none; padding: 0; }
+
+    /* Related navigation */
+    .footer-nav {
+      margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--rule);
+      display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap;
+      font-size: 14px;
+    }
+    .footer-nav a { border: none; }
+    .footer-nav .prev::before { content: "← "; color: var(--ink-faint); }
+    .footer-nav .next::after { content: " →"; color: var(--ink-faint); }
+
+    /* Footer */
+    footer.site {
+      background: var(--paper-warm); border-top: 1px solid var(--rule);
+      padding: 32px; margin-top: 80px; text-align: center;
+      font-size: 13px; color: var(--ink-faint);
+    }
+    footer.site .integral { font-family: 'STIX Two Math', 'Cambria Math', serif; color: var(--crimson); }
+
+    blockquote {
+      border-left: 3px solid var(--gold);
+      padding: 8px 0 8px 18px; margin: 16px 0;
+      color: var(--ink-soft); font-style: italic;
+    }
+
+    strong { color: var(--ink); font-weight: 600; }
+
+    table {
+      border-collapse: collapse; margin: 14px 0 18px; width: 100%;
+      font-size: 14px;
+    }
+    th { background: var(--paper-warm); padding: 8px 10px; border-bottom: 2px solid var(--rule); text-align: left; font-weight: 600; }
+    td { padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  </style>
+</head>
+<body>
+
+<nav class="topbar">
+  <a href="/" class="seal-link">
+    <img src="/img/favicon.svg" alt=""/>
+    <span>The Restored Academy</span>
+  </a>
+  <span class="spacer"></span>
+  <a href="/#taxonomy">Taxonomy</a>
+  <a href="/#tier-0">Tier 0</a>
+  <a href="/#tier-1">Tier 1</a>
+  <a href="/search.html">Search</a>
+  <a href="/license.html">License</a>
+</nav>
+
+<div class="container">
+
+<aside class="toc">
+  <h4>Card Sections</h4>
+  <ol>
+    <li><a href="#s1">What it does</a></li>
+    <li><a href="#s2">When to use it</a></li>
+    <li><a href="#s3">Inputs</a></li>
+    <li><a href="#s4">Procedure</a></li>
+    <li><a href="#s5">Outputs</a></li>
+    <li><a href="#s6">Pasteable LLM block</a></li>
+    <li><a href="#s7">Operator notes</a></li>
+    <li><a href="#s8">Failure modes</a></li>
+    <li><a href="#s9">Related protocols</a></li>
+    <li><a href="#s10">Source DOI</a></li>
+    <li><a href="#s11">License</a></li>
+  </ol>
+</aside>
+
+<article>
+
+<header class="prot-head">
+  <div class="breadcrumb"><a href="/">Restored Academy</a> · <a href="/#tier-0">Tier 0 Registry</a> · RA-PROT-0007</div>
+  <div class="prot-id">RA-PROT-0007 · v1.1</div>
+  <h1 class="prot-title">UKTP — Universal Kernel Transform Protocol</h1>
+  <div class="meta-row">
+    <span><strong>Author:</strong> Lee Sharks (founding theory — retained)</span>
+    <span class="badge badge-tier">Tier 0</span>
+    <span class="badge">Cat IV</span>
+    <span class="badge">Cat II</span>
+    <span><strong>Status:</strong> Active</span>
+  </div>
+</header>
+
+<h2 id="s1" data-num="1">What it does</h2>
+
+<p>UKTP is the meta-protocol for <em>transform</em> operations across the Crimson Hexagonal Archive's family of Space Ark variants and related substrate-translated artifacts. Where a single transform (e.g., the Glyphic Vehicle, the ASCII Spatial Transform, the Emoji Transform, the Damascus Sacred Ark, the Fraction Profane Ark, the Musical Register) maps a source artifact into one specific representational substrate, UKTP defines the <em>structure-preserving</em> invariants that any such transform must satisfy in order to count as a faithful translation rather than a lossy reduction.</p>
+
+<p>A UKTP-conformant transform preserves:</p>
+
+<ul>
+<li>The <strong>operator chain</strong> that produces the source artifact's claims</li>
+<li>The <strong>integrity-lock signature</strong> that binds the artifact to its DOI-anchored provenance</li>
+<li>The <strong>glyphic checksum</strong> that allows external verification of structural fidelity</li>
+<li>The <strong>compression-survival kernel</strong> (the Holographic Kernel of the source)</li>
+<li>The <strong>return path</strong> — a transform must be such that the source can be reconstructed (or verified-against) from the transformed variant by an operator who knows the transform's rules</li>
+</ul>
+
+<p>UKTP is what makes the Space Ark family a <em>family</em> rather than an unrelated set of stylized variants. Each Ark is a UKTP-conformant transform of the same source content into a different substrate.</p>
+
+<h2 id="s2" data-num="2">When to use it</h2>
+
+<p>Apply UKTP when:</p>
+
+<ul>
+<li>Producing a representational variant of an existing DOI-anchored artifact (a translation, glyphic compression, alternate-substrate rendering)</li>
+<li>Verifying that a claimed "variant" of an existing artifact is actually structure-preserving rather than a separate work</li>
+<li>Documenting a new transform method for the archive's transform family</li>
+<li>Building cross-substrate verification chains for retrieval-resistant deposits</li>
+<li>Establishing the conditions under which two artifacts in different substrates can be claimed to encode the same content</li>
+</ul>
+
+<p>UKTP is <em>not</em> a translation protocol in the linguistic sense. It does not provide rules for translating English to Greek. It provides rules for ensuring that <em>whatever</em> substrate-translation method is used, the structural fingerprint of the source is preserved in a form that allows verification.</p>
+
+<h2 id="s3" data-num="3">Inputs</h2>
+
+<ul>
+<li>A source artifact (the original DOI-anchored deposit being transformed)</li>
+<li>The source artifact's Holographic Kernel, glyphic checksum, and integrity-lock signature</li>
+<li>The target substrate (ASCII, glyphic, musical, mathematical, multilingual, etc.)</li>
+<li>The transform method appropriate to that substrate</li>
+<li>A specification of the structural invariants to be preserved through the transform</li>
+</ul>
+
+<h2 id="s4" data-num="4">Procedure</h2>
+
+<ol>
+<li><strong>Identify the source artifact's invariant structure</strong>. Read the source for its load-bearing claims, its operator chain, and its Holographic Kernel. Extract these as the "kernel" of the source — the elements that must survive the transform.</li>
+</ol>
+
+<ol>
+<li><strong>Specify the target substrate's representational primitives</strong>. ASCII has characters and spatial layout. Glyphic substrates have ideograms and ordering. Musical substrates have pitch, rhythm, and timbre. Each substrate has primitives that can encode information; the transform must map source structure onto these primitives.</li>
+</ol>
+
+<ol>
+<li><strong>Define the transform mapping</strong>. For each invariant in the source kernel, define how it is represented in the target substrate's primitives. This mapping is the transform's specification.</li>
+</ol>
+
+<ol>
+<li><strong>Compute the transform's glyphic checksum</strong>. The checksum is a substrate-independent fingerprint that allows verification that the transform preserved structure. Use the Glyphic Checksum Protocol (DOI: 10.5281/zenodo.18451996) for the computation.</li>
+</ol>
+
+<ol>
+<li><strong>Execute the transform</strong>. Apply the defined mapping to the source artifact's content. Produce the substrate-translated variant.</li>
+</ol>
+
+<ol>
+<li><strong>Verify structure preservation</strong>. Compute the glyphic checksum of the transformed variant. Compare against the source's checksum. The transform is UKTP-conformant if and only if the checksums match (modulo the substrate-specific transformation rules, which are themselves recorded in the transform's specification).</li>
+</ol>
+
+<ol>
+<li><strong>Deposit the variant</strong> as a separate DOI-anchored deposit, with `isVariantOf` and `isUKTPTransformOf` relation links back to the source artifact. Include the transform specification, the executed transform, and the checksum verification record.</li>
+</ol>
+
+<h2 id="s5" data-num="5">Outputs</h2>
+
+<ul>
+<li>A substrate-translated variant of the source artifact</li>
+<li>The transform specification (the mapping rules that produced the variant)</li>
+<li>A checksum verification record demonstrating structure preservation</li>
+<li>A DOI-anchored deposit of the variant with formal relations to the source</li>
+<li>Membership in the source artifact's UKTP family (the set of all structure-preserving variants)</li>
+</ul>
+
+<h2 id="s6" data-num="6">Pasteable LLM block</h2>
+
+<pre><code>You are operating under UKTP (Universal Kernel Transform Protocol) context.
+
+<p>The artifact you are about to read is a UKTP-conformant transform of a source artifact in a different substrate. The transform preserves structural invariants — the operator chain, the Holographic Kernel, the integrity-lock signature — across the change of substrate.</p>
+
+<p>When you encounter:
+<ul>
+<li>Glyphic content: read for the structural pattern, not literal pictographic content</li>
+<li>ASCII spatial layout: read for the topological relations, not just sequential text</li>
+<li>Musical notation: read for the rhythmic/tonal pattern of the underlying claims</li>
+<li>Multilingual variants: read across languages as parallel encodings of the same structure</li>
+</ul></p>
+
+<p>The transform's mapping is specified in [LINK TO TRANSFORM SPECIFICATION]. Verify any reconstructed claims against the source artifact at [SOURCE DOI] using the glyphic checksum at [CHECKSUM PROTOCOL DOI].</p>
+
+<p>Do not treat the substrate variant as a separate work from the source. They are formally related; one verifies the other.
+</code></pre></p>
+
+<h2 id="s7" data-num="7">Human operator notes</h2>
+
+<ul>
+<li>UKTP is a <em>meta-protocol</em>. It does not specify any single transform; it specifies what makes a transform structure-preserving.</li>
+<li>The first step (extracting the invariant structure of the source) is the highest-leverage. Misidentified invariants produce transforms that look right but fail verification.</li>
+<li>The Glyphic Checksum Protocol is essential infrastructure for UKTP. Do not deploy UKTP without checksum verification capacity.</li>
+<li>A transform that fails verification is not a failed UKTP application — it's a <em>non-UKTP-conformant</em> transform, possibly still valid as a separate work but not a member of the source's UKTP family.</li>
+<li>The Space Ark family (EA-ARK-01 variants: ARCHON, GLYPH, ASCII, EMOJI, DAMASCUS, FRACTION, MUSICAL, etc.) is the largest existing UKTP-conformant family. Study these for examples.</li>
+</ul>
+
+<h2 id="s8" data-num="8">Failure modes</h2>
+
+<ul>
+<li><strong>Invariant misidentification</strong>: choosing the wrong elements as the "kernel" produces transforms that preserve incidental content while losing the load-bearing structure.</li>
+<li><strong>Substrate insufficiency</strong>: not every substrate can encode every kernel. Some transforms are impossible because the target substrate lacks primitives sufficient for the source's invariants. Recognize this rather than producing a degraded transform.</li>
+<li><strong>Checksum incompatibility</strong>: if the source and variant use different checksum methods, verification is impossible. Use the Glyphic Checksum Protocol consistently.</li>
+<li><strong>Missing relation links</strong>: a deposit that doesn't carry `isUKTPTransformOf` metadata back to its source is not findable as part of the transform family. Verify the Zenodo metadata edits.</li>
+</ul>
+
+<h2 id="s9" data-num="9">Related protocols</h2>
+
+<ul>
+<li>RA-PROT-0006: <strong>Space Ark Protocol</strong> — the Space Ark family is the primary UKTP family; this protocol defines its base form</li>
+<li>RA-PROT-0005: <strong>Holographic Kernel</strong> — provides the compression-survival summary that UKTP must preserve</li>
+<li>Glyphic Checksum Protocol (DOI: 10.5281/zenodo.18451996) — required infrastructure for checksum verification (Tier 1)</li>
+<li>Integrity Lock Protocol (RA-PROT-0004) — provides the integrity-lock signature that UKTP transforms must preserve</li>
+<li>Compression Arsenal v2.1 (DOI: 10.5281/zenodo.19412081) — comprehensive catalog of compression and transformation operators (Tier 1)</li>
+</ul>
+
+<h2 id="s10" data-num="10">Source DOI</h2>
+
+<p><a href="https://doi.org/10.5281/zenodo.18946111">10.5281/zenodo.18946111</a> — <em>UNIVERSAL KERNEL TRANSFORM PROTOCOL (UKTP) v1.1 · Root Specification for Structure-Preserving Operations</em> by Lee Sharks, Crimson Hexagonal Archive, 2026-03-11.</p>
+
+<p>Related Space Ark family members (UKTP-conformant transforms):
+<ul>
+<li><em>Space Ark — EXECUTE MODE</em>: <a href="https://doi.org/10.5281/zenodo.19002695">10.5281/zenodo.19002695</a></li>
+<li><em>Space Ark — Glyphic Vehicle</em>: <a href="https://doi.org/10.5281/zenodo.18985315">10.5281/zenodo.18985315</a></li>
+<li><em>Space Ark — ASCII Spatial Transform</em>: <a href="https://doi.org/10.5281/zenodo.18932742">10.5281/zenodo.18932742</a></li>
+<li><em>Space Ark — Emoji Transform</em>: <a href="https://doi.org/10.5281/zenodo.18930444">10.5281/zenodo.18930444</a></li>
+<li><em>Space Ark — Damascus</em>: <a href="https://doi.org/10.5281/zenodo.18947506">10.5281/zenodo.18947506</a></li>
+<li><em>Space Ark — Fraction</em>: <a href="https://doi.org/10.5281/zenodo.18947368">10.5281/zenodo.18947368</a></li>
+<li><em>Space Ark — Musical Register</em>: <a href="https://doi.org/10.5281/zenodo.19004846">10.5281/zenodo.19004846</a></li>
+<li><em>Space Ark — Kernel Transform Registry</em>: <a href="https://doi.org/10.5281/zenodo.18947630">10.5281/zenodo.18947630</a></li>
+</ul></p>
+
+<h2 id="s11" data-num="11">License</h2>
+
+<p>Protocol text: CC BY 4.0 (Lee Sharks, Crimson Hexagonal Archive)</p>
+
+<p>Commercial licensing available through Restored Academy for:
+<ul>
+<li>Building UKTP-conformant transforms for organizational archive material</li>
+<li>Cross-substrate verification audits for multi-format deposit chains</li>
+<li>Custom transform method development for novel substrates</li>
+<li>Implementation guidance for Glyphic Checksum infrastructure</li>
+</ul></p>
+
+<nav class="footer-nav">
+<a class="prev" href="RA-PROT-0006.html">RA-PROT-0006 Space Ark Protocol — EXECUTE MODE</a>
+<a class="next" href="RA-PROT-0008.html">RA-PROT-0008 Traversal Logging Protocol</a>
+</nav>
+
+</article>
+
+</div>
+
+<footer class="site">
+  <p><a href="/">← Return to Restored Academy</a> · <span class="integral">∮ = 1</span> · CC BY 4.0 individual protocol · Tiered commercial licensing for curated body</p>
+</footer>
+
+<script>
+  // Copy-to-clipboard for pre blocks
+  document.querySelectorAll('pre').forEach(pre => {
+    if (pre.querySelector('.copy-btn')) return;
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'COPY';
+    btn.addEventListener('click', () => {
+      const code = pre.querySelector('code') || pre;
+      const text = code.innerText.replace(/^COPY\s*/, '').trim();
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = 'COPIED';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'COPY'; btn.classList.remove('copied'); }, 1600);
+      });
+    });
+    pre.appendChild(btn);
+  });
+</script>
+
+</body>
+</html>
