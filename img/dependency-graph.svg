@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" role="img" aria-label="Tier 0 Protocol Dependency Graph">
+  <style>
+    .node { font-family: 'Iowan Old Style', Palatino, Georgia, serif; }
+    .node-title { font-size: 13px; font-weight: 600; fill: #1a1816; }
+    .node-id { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 9px; fill: #a08438; letter-spacing: 0.05em; }
+    .layer-label { font-family: 'Iowan Old Style', Palatino, Georgia, serif; font-size: 10.5px; fill: #8a8580; letter-spacing: 0.15em; text-transform: uppercase; }
+    .arrow { stroke: #a08438; stroke-width: 1; fill: none; opacity: 0.7; }
+    .arrow-strong { stroke: #8b1d1d; stroke-width: 1.2; fill: none; opacity: 0.8; }
+  </style>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#a08438" opacity="0.7"/>
+    </marker>
+    <marker id="arrow-c" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b1d1d" opacity="0.8"/>
+    </marker>
+  </defs>
+
+  <!-- Layer labels (left side) -->
+  <text x="40" y="60" class="layer-label">INSCRIPTION</text>
+  <text x="40" y="178" class="layer-label">SUBSTRATE</text>
+  <text x="40" y="296" class="layer-label">RUNTIME</text>
+  <text x="40" y="412" class="layer-label">MEASUREMENT</text>
+  <text x="40" y="528" class="layer-label">REVIEW</text>
+
+  <!-- Layer separators -->
+  <line x1="180" y1="55" x2="870" y2="55" stroke="#c8c2b3" stroke-width="0.5" opacity="0.4"/>
+  <line x1="180" y1="173" x2="870" y2="173" stroke="#c8c2b3" stroke-width="0.5" opacity="0.4"/>
+  <line x1="180" y1="291" x2="870" y2="291" stroke="#c8c2b3" stroke-width="0.5" opacity="0.4"/>
+  <line x1="180" y1="407" x2="870" y2="407" stroke="#c8c2b3" stroke-width="0.5" opacity="0.4"/>
+  <line x1="180" y1="523" x2="870" y2="523" stroke="#c8c2b3" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- LAYER 1: INSCRIPTION -->
+  <!-- MPAI 0002 (broadest spec) -->
+  <g>
+    <rect x="280" y="30" width="170" height="50" rx="2" fill="#f9f5ec" stroke="#a08438" stroke-width="1"/>
+    <text x="365" y="50" text-anchor="middle" class="node node-id">RA-PROT-0002</text>
+    <text x="365" y="68" text-anchor="middle" class="node node-title">MPAI</text>
+  </g>
+  <!-- SPXI 0001 -->
+  <g>
+    <rect x="500" y="30" width="170" height="50" rx="2" fill="#f9f5ec" stroke="#8b1d1d" stroke-width="1.4"/>
+    <text x="585" y="50" text-anchor="middle" class="node node-id">RA-PROT-0001</text>
+    <text x="585" y="68" text-anchor="middle" class="node node-title">SPXI</text>
+  </g>
+
+  <!-- LAYER 2: SUBSTRATE -->
+  <!-- SIM 0003 -->
+  <g>
+    <rect x="190" y="148" width="160" height="50" rx="2" fill="#f9f5ec" stroke="#a08438" stroke-width="1"/>
+    <text x="270" y="168" text-anchor="middle" class="node node-id">RA-PROT-0003</text>
+    <text x="270" y="186" text-anchor="middle" class="node node-title">SIM</text>
+  </g>
+  <!-- Holographic Kernel 0005 -->
+  <g>
+    <rect x="370" y="148" width="190" height="50" rx="2" fill="#f9f5ec" stroke="#8b1d1d" stroke-width="1.4"/>
+    <text x="465" y="168" text-anchor="middle" class="node node-id">RA-PROT-0005</text>
+    <text x="465" y="186" text-anchor="middle" class="node node-title">Holographic Kernel</text>
+  </g>
+  <!-- Integrity Lock 0004 -->
+  <g>
+    <rect x="580" y="148" width="160" height="50" rx="2" fill="#f9f5ec" stroke="#a08438" stroke-width="1"/>
+    <text x="660" y="168" text-anchor="middle" class="node node-id">RA-PROT-0004</text>
+    <text x="660" y="186" text-anchor="middle" class="node node-title">Integrity Lock</text>
+  </g>
+
+  <!-- LAYER 3: RUNTIME -->
+  <!-- UKTP 0007 -->
+  <g>
+    <rect x="200" y="266" width="160" height="50" rx="2" fill="#f9f5ec" stroke="#a08438" stroke-width="1"/>
+    <text x="280" y="286" text-anchor="middle" class="node node-id">RA-PROT-0007</text>
+    <text x="280" y="304" text-anchor="middle" class="node node-title">UKTP</text>
+  </g>
+  <!-- Space Ark 0006 -->
+  <g>
+    <rect x="380" y="266" width="160" height="50" rx="2" fill="#f9f5ec" stroke="#a08438" stroke-width="1"/>
+    <text x="460" y="286" text-anchor="middle" class="node node-id">RA-PROT-0006</text>
+    <text x="460" y="304" text-anchor="middle" class="node node-title">Space Ark</text>
+  </g>
+  <!-- Traversal Logging 0008 -->
+  <g>
+    <rect x="560" y="266" width="180" height="50" rx="2" fill="#f9f5ec" stroke="#a08438" stroke-width="1"/>
+    <text x="650" y="286" text-anchor="middle" class="node node-id">RA-PROT-0008</text>
+    <text x="650" y="304" text-anchor="middle" class="node node-title">Traversal Logging</text>
+  </g>
+
+  <!-- LAYER 4: MEASUREMENT -->
+  <!-- PER 0009 -->
+  <g>
+    <rect x="200" y="382" width="160" height="50" rx="2" fill="#f9f5ec" stroke="#a08438" stroke-width="1"/>
+    <text x="280" y="402" text-anchor="middle" class="node node-id">RA-PROT-0009</text>
+    <text x="280" y="420" text-anchor="middle" class="node node-title">PER</text>
+  </g>
+  <!-- CDI 0010 -->
+  <g>
+    <rect x="380" y="382" width="160" height="50" rx="2" fill="#f9f5ec" stroke="#8b1d1d" stroke-width="1.4"/>
+    <text x="460" y="402" text-anchor="middle" class="node node-id">RA-PROT-0010</text>
+    <text x="460" y="420" text-anchor="middle" class="node node-title">CDI</text>
+  </g>
+  <!-- Drowning Test 0011 -->
+  <g>
+    <rect x="560" y="382" width="180" height="50" rx="2" fill="#f9f5ec" stroke="#8b1d1d" stroke-width="1.4"/>
+    <text x="650" y="402" text-anchor="middle" class="node node-id">RA-PROT-0011</text>
+    <text x="650" y="420" text-anchor="middle" class="node node-title">Drowning Test</text>
+  </g>
+
+  <!-- LAYER 5: REVIEW -->
+  <!-- Reception Apparatus 0012 -->
+  <g>
+    <rect x="370" y="498" width="220" height="50" rx="2" fill="#f9f5ec" stroke="#a08438" stroke-width="1"/>
+    <text x="480" y="518" text-anchor="middle" class="node node-id">RA-PROT-0012</text>
+    <text x="480" y="536" text-anchor="middle" class="node node-title">Reception Apparatus</text>
+  </g>
+
+  <!-- ARROWS: dependency relations -->
+  <!-- MPAI parents SPXI -->
+  <path d="M 450 55 L 500 55" class="arrow" marker-end="url(#arrow)"/>
+
+  <!-- SPXI uses SIM -->
+  <path d="M 530 80 Q 400 110 320 148" class="arrow-strong" marker-end="url(#arrow-c)"/>
+  <!-- SPXI uses Kernel -->
+  <path d="M 585 80 L 480 148" class="arrow-strong" marker-end="url(#arrow-c)"/>
+  <!-- SPXI uses Integrity Lock -->
+  <path d="M 640 80 Q 670 110 660 148" class="arrow" marker-end="url(#arrow)"/>
+
+  <!-- Kernel→Space Ark (Ark carries Kernel) -->
+  <path d="M 465 198 L 465 266" class="arrow" marker-end="url(#arrow)"/>
+  <!-- UKTP→Space Ark (variants) -->
+  <path d="M 320 266 Q 360 240 400 266" class="arrow" marker-end="url(#arrow)"/>
+
+  <!-- Traversal Logging → CDI (provides captures) -->
+  <path d="M 600 316 Q 530 350 490 382" class="arrow-strong" marker-end="url(#arrow-c)"/>
+  <!-- Traversal Logging → Drowning Test -->
+  <path d="M 660 316 L 660 382" class="arrow-strong" marker-end="url(#arrow-c)"/>
+
+  <!-- Kernel → Drowning Test (substrate) -->
+  <path d="M 540 198 Q 620 320 640 382" class="arrow-strong" marker-end="url(#arrow-c)"/>
+
+  <!-- CDI → Drowning Test (γ uses CDI) -->
+  <path d="M 540 407 L 560 407" class="arrow" marker-end="url(#arrow)"/>
+
+  <!-- SPXI → CDI (CDI measures SPXI effectiveness) - dashed -->
+  <path d="M 600 80 Q 700 200 540 395" class="arrow" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+
+  <!-- Anything → Reception Apparatus -->
+  <path d="M 460 432 L 470 498" class="arrow" marker-end="url(#arrow)"/>
+
+  <!-- Legend (lower right) -->
+  <g transform="translate(740,470)">
+    <text x="0" y="0" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="10" fill="#8a8580" letter-spacing="0.1em">LEGEND</text>
+    <line x1="0" y1="18" x2="22" y2="18" stroke="#8b1d1d" stroke-width="1.2"/>
+    <text x="28" y="22" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="10" fill="#4a4540">core dependency</text>
+    <line x1="0" y1="36" x2="22" y2="36" stroke="#a08438" stroke-width="1"/>
+    <text x="28" y="40" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="10" fill="#4a4540">uses / supports</text>
+    <line x1="0" y1="54" x2="22" y2="54" stroke="#a08438" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="28" y="58" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="10" fill="#4a4540">measures effectiveness of</text>
+  </g>
+</svg>
