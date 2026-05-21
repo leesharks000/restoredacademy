@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://restoredacademy.org/sitemap.xml
+
+# SPXI-compliant site. Structured data is canonical.
+# Charter DOI: 10.5281/zenodo.20327083
+# License: CC BY 4.0 (individual protocols) / tiered commercial (curated body)
