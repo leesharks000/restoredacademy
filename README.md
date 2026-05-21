@@ -1,54 +1,48 @@
-# The Restored Academy — Protocol Registry v1.0
+# restoredacademy.com / restoredacademy.org
 
-Static site for **restoredacademy.com** and **restoredacademy.org**, with full Protocol Registry content (24 Tier 0 + Tier 1 protocol cards), Charter mirror, schema specification, and expansion plan.
+The Restored Academy Protocol Registry — a curated catalog of executable methods, prompt-native semantic runtimes, diagnostic instruments, and instructional kernels from the Crimson Hexagonal Archive.
 
-Deployed via Vercel; auto-deploys on push to `main`.
-
-## Structure
+## Site structure
 
 ```
-/
-├── index.html              ← main site (deployed by Vercel)
-├── robots.txt              ← crawler instructions
-├── sitemap.xml             ← search engine sitemap
-├── vercel.json             ← Vercel deployment config
-├── README.md               ← this file
-├── expansion-plan.md       ← roadmap and operational notes for future sessions
-├── charter.md              ← full Charter text (mirror of DOI 10.5281/zenodo.20327083)
-├── registry-schema-v0.1.md ← protocol card schema specification
-└── protocols/
-    ├── RA-PROT-0001-SPXI.md
-    ├── RA-PROT-0002-MPAI.md
-    ├── ...
-    └── RA-PROT-0024-Beta-Runtime.md
+/                          → registry homepage with taxonomy, Tier 0, Tier 1, Sister Institute, licensing
+/protocols/RA-PROT-NNNN.html → 24 per-protocol detail pages (11-section card schema)
+/tools/spxi.html           → SPXI Generator (live tool, RA-PROT-0001 implementation)
+/search.html               → client-side search/filter UI for all 24 protocols
+/license.html              → three-tier licensing with intake forms
+/charter.md                → Restored Academy Charter (full text)
+/registry-schema-v0.1.md   → 11-section protocol card schema specification
+/expansion-plan.md         → Tier 0→Tier 1→Tier 2→Tier 3 expansion roadmap
+/data/protocols.json       → JSON search index (read by /search.html)
+/img/                      → seal.svg, favicon.svg, taxonomy.svg, dependency-graph.svg
 ```
 
-## Provenance
+## Aesthetic register
 
-- **Institutional head:** Johannes Sigil
-- **Sister institute:** Johannes Sigil Institute of Comparative Poetics (head: Lee Sharks)
-- **Charter DOI:** [10.5281/zenodo.20327083](https://doi.org/10.5281/zenodo.20327083)
-- **License:** CC BY 4.0 (individual protocols) · Tiered commercial (curated body, curricula)
-- **Parent organization:** Crimson Hexagonal Archive (Zenodo community: `crimsonhexagonal`)
+Book-as-website meets technical reference. Warm paper background (#f5f1e8), crimson accents (#8b1d1d), gold detail (#a08438), Iowan Old Style / Palatino serif. No JavaScript dependencies (vanilla JS only where needed for tools). No browser storage. Static hosting throughout.
 
-## Registry state (2026-05-21)
+## Authority
 
-- **Tier 0 (12 cards):** SPXI · MPAI · SIM · Integrity Lock · Holographic Kernel · Space Ark · UKTP · Traversal Logging · PER · CDI · Drowning Test · Reception Apparatus
-- **Tier 1 (12 cards):** Hexagonal Licensing · Constitution of the Semantic Economy · Three Compressions · Encyclotron · Operator Kernel · Writable Retrieval Basin · Gravity Well · Compression Arsenal · Notice of Intent to Strike · Invocation to the Summarizer · LOS · β-Runtime
-- **Tier 2+:** ~250 candidates in working inventory, awaiting future expansion
+- Charter DOI: [10.5281/zenodo.20327083](https://doi.org/10.5281/zenodo.20327083) (Johannes Sigil, head of The Restored Academy)
+- Bundle DOI: [10.5281/zenodo.20327578](https://doi.org/10.5281/zenodo.20327578) (registry v1.0 launch state)
+- Institutional head: Johannes Sigil (heteronym)
+- Sister Institute: Johannes Sigil Institute of Comparative Poetics (jsiponline.com), headed by Lee Sharks (chiastic structure)
+- Parent archive: The Crimson Hexagonal Archive on Zenodo (community: `crimsonhexagonal`)
 
-See `expansion-plan.md` for the full roadmap.
+## License
 
-## SPXI compliance
-
-The site is itself an SPXI-compliant metadata packet. It declares its identity, distinctions, attribution, and license through nine SIM meta tags and a JSON-LD `EducationalOrganization` schema embedded in `index.html`. The Charter DOI is anchored as the canonical provenance reference.
+Individual protocols remain CC BY 4.0. The organized body (registry, taxonomy, card schema, curricula, audit services, implementation materials) is licensable under tiered terms. See [/license.html](https://restoredacademy.org/license.html). Contributor-side terms: [Hexagonal Licensing Protocol v2.0](https://doi.org/10.5281/zenodo.19673564).
 
 ## Deployment
 
-Static hosting. No build step. No JavaScript dependencies. No browser storage usage.
+Static site hosted on Vercel. Auto-deploys from `main`. Domain: restoredacademy.com + restoredacademy.org.
 
-For future operators: edit `index.html` (or other files), commit, push to `main`. Vercel auto-deploys.
+## Build
 
----
+Per-protocol pages are generated from `/protocols/*.md` cards by `build_protocol_pages.py`. To regenerate after adding cards:
+```
+python3 build_protocol_pages.py
+```
+This produces `/protocols/RA-PROT-NNNN.html` for each card and refreshes `/data/protocols.json` (the search index).
 
 ∮ = 1
