@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" role="img" aria-label="The seven-category taxonomy of the Restored Academy Protocol Registry">
+  <style>
+    .ink { fill: #1a1816; font-family: 'Iowan Old Style', Palatino, Georgia, serif; }
+    .gold { fill: #a08438; }
+    .crimson { fill: #8b1d1d; }
+    .soft { fill: #4a4540; }
+    .faint { fill: #8a8580; }
+    .roman { font-family: 'Iowan Old Style', Palatino, Georgia, serif; font-size: 13px; letter-spacing: 0.12em; fill: #a08438; }
+    .cat-title { font-family: 'Iowan Old Style', Palatino, Georgia, serif; font-size: 16px; font-weight: 600; fill: #1a1816; }
+    .cat-sub { font-family: 'Iowan Old Style', Palatino, Georgia, serif; font-size: 11.5px; fill: #4a4540; font-style: italic; }
+    .center-q { font-family: 'Iowan Old Style', Palatino, Georgia, serif; font-size: 15px; fill: #8b1d1d; font-style: italic; }
+    .center-s { font-family: 'Iowan Old Style', Palatino, Georgia, serif; font-size: 12px; fill: #4a4540; }
+    .integral { font-family: 'STIX Two Math', 'Cambria Math', Georgia, serif; font-size: 22px; fill: #8b1d1d; font-style: italic; }
+  </style>
+
+  <!-- Background hexagon (outer) -->
+  <polygon points="360,40 612,184 612,472 360,616 108,472 108,184" 
+           fill="none" stroke="#c8c2b3" stroke-width="0.7" opacity="0.5" transform="translate(0,-30)"/>
+  
+  <!-- Inner hexagon (visual center frame) -->
+  <polygon points="360,210 432,252 432,336 360,378 288,336 288,252"
+           fill="#f9f5ec" stroke="#a08438" stroke-width="1.4"/>
+
+  <!-- Center: universal test -->
+  <text x="360" y="270" text-anchor="middle" class="center-s">THE UNIVERSAL TEST</text>
+  <text x="360" y="304" text-anchor="middle" class="center-q">What changes when</text>
+  <text x="360" y="322" text-anchor="middle" class="center-q">I drop this into</text>
+  <text x="360" y="340" text-anchor="middle" class="center-q">an LLM?</text>
+  <text x="360" y="362" text-anchor="middle" class="integral">∮ = 1</text>
+
+  <!-- 7 category boxes around the hexagon. 
+       Positions: 6 at hexagon vertices + 1 at top (since 7 not 6, we offset one).
+       Actually arrange as: TOP CENTER (I), then 3 right side (II, III, IV), then 3 left side (V, VI, VII) -->
+  
+  <!-- Connecting lines from center hexagon vertices to categories (decorative) -->
+  <g stroke="#c8c2b3" stroke-width="0.5" opacity="0.6">
+    <line x1="360" y1="210" x2="360" y2="100"/>
+    <line x1="432" y1="252" x2="600" y2="180"/>
+    <line x1="432" y1="294" x2="640" y2="294"/>
+    <line x1="432" y1="336" x2="600" y2="408"/>
+    <line x1="360" y1="378" x2="360" y2="490"/>
+    <line x1="288" y1="336" x2="120" y2="408"/>
+    <line x1="288" y1="252" x2="120" y2="180"/>
+  </g>
+
+  <!-- I — Semantic Integrity & Provenance (TOP) -->
+  <g>
+    <text x="360" y="58" text-anchor="middle" class="roman">I</text>
+    <text x="360" y="78" text-anchor="middle" class="cat-title">Semantic Integrity &amp; Provenance</text>
+    <text x="360" y="95" text-anchor="middle" class="cat-sub">preserve attribution, source fidelity</text>
+  </g>
+
+  <!-- II — Prompt-Native Runtime (UPPER RIGHT) -->
+  <g>
+    <text x="618" y="156" text-anchor="middle" class="roman">II</text>
+    <text x="618" y="175" text-anchor="middle" class="cat-title">Prompt-Native Runtime</text>
+    <text x="618" y="192" text-anchor="middle" class="cat-sub">modify model behavior in context</text>
+  </g>
+
+  <!-- III — Diagnostic & Measurement (MID RIGHT) -->
+  <g>
+    <text x="652" y="275" text-anchor="middle" class="roman">III</text>
+    <text x="652" y="294" text-anchor="middle" class="cat-title">Diagnostic &amp; Measurement</text>
+    <text x="652" y="311" text-anchor="middle" class="cat-sub">measure outputs, drift, distortion</text>
+  </g>
+
+  <!-- IV — Transformation & Operator (LOWER RIGHT) -->
+  <g>
+    <text x="618" y="395" text-anchor="middle" class="roman">IV</text>
+    <text x="618" y="415" text-anchor="middle" class="cat-title">Transformation &amp; Operator</text>
+    <text x="618" y="432" text-anchor="middle" class="cat-sub">transform under controlled rules</text>
+  </g>
+
+  <!-- V — Archive Construction & Retrieval (BOTTOM) -->
+  <g>
+    <text x="360" y="503" text-anchor="middle" class="roman">V</text>
+    <text x="360" y="522" text-anchor="middle" class="cat-title">Archive Construction &amp; Retrieval</text>
+    <text x="360" y="539" text-anchor="middle" class="cat-sub">build durable, machine-readable archives</text>
+  </g>
+
+  <!-- VI — Pedagogical & Institutional (LOWER LEFT) -->
+  <g>
+    <text x="102" y="395" text-anchor="middle" class="roman">VI</text>
+    <text x="102" y="415" text-anchor="middle" class="cat-title">Pedagogical &amp; Institutional</text>
+    <text x="102" y="432" text-anchor="middle" class="cat-sub">teach, certify, license, deploy</text>
+  </g>
+
+  <!-- VII — Ethical & Jurisdictional (UPPER LEFT) -->
+  <g>
+    <text x="102" y="156" text-anchor="middle" class="roman">VII</text>
+    <text x="102" y="175" text-anchor="middle" class="cat-title">Ethical &amp; Jurisdictional</text>
+    <text x="102" y="192" text-anchor="middle" class="cat-sub">govern use, attribution, scope</text>
+  </g>
+</svg>
