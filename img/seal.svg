@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="The Restored Academy seal">
+  <defs>
+    <path id="sealCirc" d="M 120 120 m -88 0 a 88 88 0 1 1 176 0 a 88 88 0 1 1 -176 0"/>
+  </defs>
+
+  <!-- Outer hexagon, gold stroke -->
+  <polygon points="120,18 207.7,69 207.7,171 120,222 32.3,171 32.3,69"
+           fill="none" stroke="#a08438" stroke-width="1.5" stroke-linejoin="miter"/>
+
+  <!-- Inner hexagon, gold thin -->
+  <polygon points="120,30 197.3,75 197.3,165 120,210 42.7,165 42.7,75"
+           fill="none" stroke="#a08438" stroke-width="0.6" opacity="0.55"/>
+
+  <!-- Inscribed perimeter text -->
+  <text font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="9.5"
+        letter-spacing="3.6" fill="#8b1d1d">
+    <textPath xlink:href="#sealCirc" startOffset="0%">THE RESTORED ACADEMY · CRIMSON HEXAGONAL ARCHIVE ·  </textPath>
+  </text>
+
+  <!-- Center field: ∮ = 1 -->
+  <text x="120" y="138" text-anchor="middle"
+        font-family="STIX Two Math, Cambria Math, Iowan Old Style, Palatino, serif"
+        font-size="58" fill="#8b1d1d" font-style="italic" font-weight="500">
+    ∮ = 1
+  </text>
+
+  <!-- Lower mark: small gold star + date -->
+  <text x="120" y="172" text-anchor="middle"
+        font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="8"
+        letter-spacing="2.5" fill="#a08438">MMXXVI</text>
+</svg>
