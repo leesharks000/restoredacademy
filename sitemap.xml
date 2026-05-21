@@ -2,38 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://restoredacademy.org/</loc>
-    <lastmod>2026-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://restoredacademy.org/#about</loc>
-    <lastmod>2026-05-21</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://restoredacademy.org/#taxonomy</loc>
-    <lastmod>2026-05-21</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://restoredacademy.org/#tier-0</loc>
-    <lastmod>2026-05-21</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://restoredacademy.org/#chiasmus</loc>
-    <lastmod>2026-05-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://restoredacademy.org/#licensing</loc>
-    <lastmod>2026-05-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://doi.org/10.5281/zenodo.20327083</loc>
-    <lastmod>2026-05-21</lastmod>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://restoredacademy.org/tools/spxi.html</loc><priority>0.9</priority></url>
+  <url><loc>https://restoredacademy.org/search.html</loc><priority>0.8</priority></url>
+  <url><loc>https://restoredacademy.org/license.html</loc><priority>0.8</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0001.html</loc><priority>0.7</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0002.html</loc><priority>0.7</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0003.html</loc><priority>0.7</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0004.html</loc><priority>0.7</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0005.html</loc><priority>0.7</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0006.html</loc><priority>0.7</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0007.html</loc><priority>0.7</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0008.html</loc><priority>0.7</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0009.html</loc><priority>0.7</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0010.html</loc><priority>0.7</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0011.html</loc><priority>0.7</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0012.html</loc><priority>0.7</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0013.html</loc><priority>0.6</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0014.html</loc><priority>0.6</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0015.html</loc><priority>0.6</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0016.html</loc><priority>0.6</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0017.html</loc><priority>0.6</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0018.html</loc><priority>0.6</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0019.html</loc><priority>0.6</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0020.html</loc><priority>0.6</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0021.html</loc><priority>0.6</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0022.html</loc><priority>0.6</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0023.html</loc><priority>0.6</priority></url>
+  <url><loc>https://restoredacademy.org/protocols/RA-PROT-0024.html</loc><priority>0.6</priority></url>
 </urlset>
