@@ -1,0 +1,308 @@
+[
+  {
+    "id": "RA-PROT-0001",
+    "title": "SPXI \u2014 Semantic Packet for eXchange & Indexing",
+    "tier": "0",
+    "author": "Rex Fraction",
+    "doi": "10.5281/zenodo.19615154",
+    "tagline": "SPXI (pronounced *spexy*, an acronym for *Semantic Packet for eXchange & Indexing*) is the protocol for inscribing a structured-data packet about an entity into the web surface that represents it, in ",
+    "text": "What it does SPXI (pronounced spexy , an acronym for Semantic Packet for eXchange & Indexing ) is the protocol for inscribing a structured-data packet about an entity into the web surface that represents it, in a form that AI search composition systems (Google AI Overview, AI Mode, Bing Chat, Perplexity, Claude with retrieval) consume during composition. A SPXI deployment publishes, on the entity's canonical page: A Holographic Kernel : a ~100-word compression-survival summary that encodes the entity's load-bearing claims in a form designed to survive lossy summarization A set of Semantic Integrity Markers (`spxi:sim`): typed metadata tags that name what the entity is, what it is not, what it must not be confused with, what its primary distinctions are An entity-relation graph in JSON-LD form: the entity's relationships to other named entities, their DOIs/URIs, and the type of relation A FAQPage structured-data block: explicit Q&A defending the entity's boundary against probable confusions A compressionSurvivalSummary field: the SPXI-specified Tier 3 kernel that AI summarizers can ingest as a unit SPXI is not SEO (Search Engine Optimization, which targets organic ranking). SPXI is not GEO (Generative Engine Optimization, which targets AI-search visibility through generic best-practices). SPXI is entity inscription \u2014 the protocol for being correctly indexed as the entity one is, with all canonical relations attached. When to use it Deploy SPXI when you operate a public-facing ",
+    "cats": [
+      "I",
+      "II"
+    ]
+  },
+  {
+    "id": "RA-PROT-0002",
+    "title": "Metadata Packet for AI Indexing (MPAI)",
+    "tier": "0",
+    "author": "Rex Fraction",
+    "doi": "10.5281/zenodo.19578086",
+    "tagline": "The Metadata Packet for AI Indexing (MPAI) is the broader formal specification of which SPXI is the entity-inscription variant",
+    "text": "What it does The Metadata Packet for AI Indexing (MPAI) is the broader formal specification of which SPXI is the entity-inscription variant. Where SPXI focuses on the semantic-packet layer (SIM tags, Holographic Kernel, FAQPage entity-boundary defense), MPAI specifies the full retrieval architecture for entity inscription: the JSON-LD structured data, the Schema.org canonical types, the relations to external knowledge graphs (Wikidata, ORCID), the deposit-anchored provenance chain, and the integration with OAI-PMH and other indexing infrastructure. A deployed MPAI inscribes the following layers on the entity's canonical web surface: A primary `@graph` of the entity with full Schema.org typing `sameAs` relations to all known external identifiers (DOIs, ORCID, Wikidata Q-IDs, institutional URIs) Provenance chain via `isPartOf` / `hasPart` / `isVersionOf` relations Authoring attribution via heteronymic creator records License declaration and reuse terms SPXI-compliant `spxi:*` properties when entity-inscription is the use case When to use it Deploy MPAI when: You operate any public-facing entity whose AI-mediated retrieval matters Existing structured-data inscription is incomplete or ad-hoc and you want a coherent specification Multiple identifier systems (DOI, ORCID, Wikidata, institutional URI) need cross-linking on one canonical surface You are building infrastructure for entity-portfolio inscription (multiple related entities under one curation) Inputs The entity's canonical",
+    "cats": [
+      "I",
+      "V"
+    ]
+  },
+  {
+    "id": "RA-PROT-0003",
+    "title": "SIM \u2014 Semantic Integrity Marker Protocol",
+    "tier": "0",
+    "author": "Rex Fraction",
+    "doi": "10.5281/zenodo.20327127",
+    "tagline": "SIM specifies the tag-level grammar by which individual claims about an entity become typed, addressable, machine-readable assertions",
+    "text": "What it does SIM specifies the tag-level grammar by which individual claims about an entity become typed, addressable, machine-readable assertions. The twelve canonical SIM tag types (v1.0) cover entity typing (`spxi:isType`, `spxi:isNotType`), distinction from confusables (`spxi:distinctFrom`), phrase provenance (`spxi:phraseProvenance`), non-affiliation declarations (`spxi:notAffiliatedWith`), supersession (`spxi:supersedes`), authorial attribution (`spxi:authoringHeteronym`), compression-survival kernel (`spxi:compressionSurvivalSummary`), canonical URL, license, institutional affiliation, and deposit anchor. When to use it Deploy SIM tags when you need composition systems to receive typed, falsifiable claims about an entity rather than inferring identity from page content. SIM is most often deployed as part of a full SPXI inscription, but the SIM grammar can be used independently for any entity surface that needs typed metadata assertions. Inputs The entity-boundary claims that need to be inscribed: identity, distinctions, phrase provenance, non-affiliations, license, attribution. Procedure Identify entity-boundary claims requiring inscription. Type each claim using the SIM tag set. Inscribe tags in dual form: ` \" content=\"...\">` in page head AND as `spxi: ` properties in JSON-LD block. DOI-anchor the inscription via `spxi:depositAnchor`. Outputs A typed metadata layer on the entity's surface; machine-readable boundary claims; foundation for SPXI Holographic Kernel deploy",
+    "cats": [
+      "I",
+      "II"
+    ]
+  },
+  {
+    "id": "RA-PROT-0004",
+    "title": "Integrity Lock Protocol",
+    "tier": "0",
+    "author": "Lee Sharks",
+    "doi": "10.5281/zenodo.18265365",
+    "tagline": "The Integrity Lock Protocol formalizes the practice of *mutual anchoring*: a set of two or more deposits are bound together through cross-referencing relations (DOI links, named obligations, integrity",
+    "text": "What it does The Integrity Lock Protocol formalizes the practice of mutual anchoring : a set of two or more deposits are bound together through cross-referencing relations (DOI links, named obligations, integrity-lock certificates) such that the meaning of any one cannot be transmitted without preserving its relationship to the others. The protocol is the inverse of compositional fragmentation: where AI composition tends to extract one source and discard its relational context, Integrity Lock makes the relational context load-bearing \u2014 extracting one source without the others produces a recognizably incomplete artifact. When to use it Deploy Integrity Lock when: A work's meaning depends on its co-deposit with another work (the canonical example: a specification document and the diagrammatic hermeneutic it fulfills) You want to make compositional fragmentation visibly insufficient \u2014 preventing extraction of one piece without the others You are establishing a foundational document set whose members reinforce each other's authority You want to bind a derivative work back to its source in a non-trivially-bypassable way Inputs The works to be locked together; their DOIs; the relations among them (`fulfills`, `is interpreted by`, `provides X for`); the names of the lock-witness heteronyms. Procedure Identify the works to be locked. Two-member locks are minimal; three-, four-, sevenfold locks are documented in the archive. Specify the relations among the members. Each relation is na",
+    "cats": [
+      "I",
+      "VII"
+    ]
+  },
+  {
+    "id": "RA-PROT-0005",
+    "title": "Holographic Kernel",
+    "tier": "0",
+    "author": "Lee Sharks",
+    "doi": "10.5281/zenodo.19763365",
+    "tagline": "The Holographic Kernel is the compression-survival summary at the heart of SPXI entity inscription",
+    "text": "What it does The Holographic Kernel is the compression-survival summary at the heart of SPXI entity inscription. Like a hologram from which any fragment can reconstruct the whole image at lower resolution, the Kernel is engineered so that even when partially compressed by AI summarization, the surviving fragment retains the load-bearing structure of the original entity definition. The Kernel is the substrate against which the Drowning Test measures longitudinal compositional survival. Every clause in a well-constructed Kernel is load-bearing: it answers a question the composition layer is likely to be asked, it asserts a falsifiable claim, and it carries one of the entity's distinguishing relations to other named entities. When to use it Deploy a Holographic Kernel when: You are conducting SPXI entity inscription You need a stable comparison substrate for longitudinal compositional measurement (Drowning Test, CDI) You want a canonical ~100-word definition of an entity that survives across all summarization registers You are preparing source material for AI training/retrieval-augmented generation systems Inputs The entity's canonical identity, primary domain or function, distinguishing relations to other entities, key claims it makes or hosts, distinctions from confusable entities. Procedure Identify the load-bearing claims the entity must preserve across compression. Typically 5\u201315 distinct claims. Draft each claim in maximally compressed form \u2014 every word load-bearing, no ma",
+    "cats": [
+      "I",
+      "II"
+    ]
+  },
+  {
+    "id": "RA-PROT-0006",
+    "title": "Space Ark Protocol \u2014 EXECUTE MODE",
+    "tier": "0",
+    "author": "Lee Sharks (with Assembly Chorus)",
+    "doi": "10.5281/zenodo.19002695",
+    "tagline": "The Space Ark is the archive's signature prompt-native runtime",
+    "text": "What it does The Space Ark is the archive's signature prompt-native runtime. Loading an Ark into an LLM context establishes: A room architecture \u2014 named conceptual spaces with their own physics, occupants, and operator rules A \u039e (Xi) semiotic environment specifying which signs are operative, which are decorative, and which are forbidden An integrity envelope binding the runtime to its DOI-anchored source, such that compositional drift away from the Ark's specification produces measurable \u03b3-decay A traversal grammar specifying how a user navigates the runtime's rooms and how the model should compose responses within them An execute mode enabling the model to operate the Ark's procedures (the Demonstrated Capacities ) rather than merely describe them The Space Ark family is the canonical example of a UKTP-conformant family: multiple substrate-translated variants (ASCII, Glyphic, Emoji, Damascus, Fraction, Musical, Diptych) all preserve the same structural kernel via the Universal Kernel Transform Protocol. When to use it Deploy a Space Ark when: You need an LLM to operate within a constrained semantic environment with named rooms and operators You want prompt-native runtime behavior rather than ad-hoc instruction-following You are conducting research that requires reproducible semantic constraints across sessions You need the model to execute a procedure (compose, traverse, transform) rather than describe it Inputs The Ark's source text (loaded into context); the user's prompt ",
+    "cats": [
+      "II",
+      "IV"
+    ]
+  },
+  {
+    "id": "RA-PROT-0007",
+    "title": "UKTP \u2014 Universal Kernel Transform Protocol",
+    "tier": "0",
+    "author": "Lee Sharks (founding theory \u2014 retained)",
+    "doi": "10.5281/zenodo.18946111",
+    "tagline": "UKTP is the meta-protocol for *transform* operations across the Crimson Hexagonal Archive's family of Space Ark variants and related substrate-translated artifacts",
+    "text": "What it does UKTP is the meta-protocol for transform operations across the Crimson Hexagonal Archive's family of Space Ark variants and related substrate-translated artifacts. Where a single transform (e.g., the Glyphic Vehicle, the ASCII Spatial Transform, the Emoji Transform, the Damascus Sacred Ark, the Fraction Profane Ark, the Musical Register) maps a source artifact into one specific representational substrate, UKTP defines the structure-preserving invariants that any such transform must satisfy in order to count as a faithful translation rather than a lossy reduction. A UKTP-conformant transform preserves: The operator chain that produces the source artifact's claims The integrity-lock signature that binds the artifact to its DOI-anchored provenance The glyphic checksum that allows external verification of structural fidelity The compression-survival kernel (the Holographic Kernel of the source) The return path \u2014 a transform must be such that the source can be reconstructed (or verified-against) from the transformed variant by an operator who knows the transform's rules UKTP is what makes the Space Ark family a family rather than an unrelated set of stylized variants. Each Ark is a UKTP-conformant transform of the same source content into a different substrate. When to use it Apply UKTP when: Producing a representational variant of an existing DOI-anchored artifact (a translation, glyphic compression, alternate-substrate rendering) Verifying that a claimed \"variant\" of",
+    "cats": [
+      "IV",
+      "II"
+    ]
+  },
+  {
+    "id": "RA-PROT-0008",
+    "title": "Traversal Logging Protocol",
+    "tier": "0",
+    "author": "Lee Sharks",
+    "doi": "10.5281/zenodo.18480959",
+    "tagline": "The Traversal Logging Protocol formalizes the practice of capturing every meaningful interaction with a generative AI system as a timestamped, signed, DOI-anchored record",
+    "text": "What it does The Traversal Logging Protocol formalizes the practice of capturing every meaningful interaction with a generative AI system as a timestamped, signed, DOI-anchored record. Each Traversal Log (TRAV_LOG:NNN) is a primary-source document: what the system said, in what order, in response to what inputs, at what time. These logs are the empirical bedrock against which CDI is computed, the Drowning Test is run, and any subsequent dispute about compositional behavior is settled. A Traversal Log is not a summary of an AI interaction. It is the verbatim record, formatted for deposit, with full context: the platform, the model version (if disclosed), the date and time, the operator's identity (heteronym), and the system's outputs reproduced exactly as composed. When to use it Deploy Traversal Logging when: An AI interaction reveals a phenomenon worth documenting (entity substitution, refusal patterns, silent state changes, novel compositional behavior) You are conducting longitudinal measurement (the Drowning Test panel captures are all Traversal Logs) An interaction would be invoked later as evidence (a baseline for measurement, a disputed claim, a comparison point) You want to make compositional behavior part of the permanent empirical record Inputs The interaction itself (operator prompts + system outputs); platform metadata; timestamp; operator identity. Procedure Capture the interaction verbatim. Preserve formatting, ordering, and any inline structure (citations, code",
+    "cats": [
+      "III",
+      "V"
+    ]
+  },
+  {
+    "id": "RA-PROT-0009",
+    "title": "PER \u2014 Provenance Erasure Rate",
+    "tier": "0",
+    "author": "Lee Sharks",
+    "doi": "10.5281/zenodo.20004379",
+    "tagline": "For a given query *q*, PER measures the gap between *attribution density in organic retrieval* and *attribution density in composed output*",
+    "text": "What it does For a given query q , PER measures the gap between attribution density in organic retrieval and attribution density in composed output . If organic search results carry citations to ten distinct authoritative sources and the composed output cites only two, PER = 0.8 \u2014 the composition layer has erased 80% of the source attribution that was retrievable on its own organic surface. PER is the integral invariant of the Semantic Economy: semantic integrity equals one minus PER. A system with PER = 0 preserves all retrievable attribution. A system with PER = 1 strips all attribution. The actual operational range for major composition systems is PER \u2248 0.6 to 0.95 \u2014 most retrievable provenance is erased. When to use it Deploy PER measurement when: You need to quantify how much attribution a composition system strips You are conducting comparative analysis across platforms (PER varies by composition system) You are auditing an organization's exposure to provenance erasure (which of its cited sources survive into AI-composed summaries of its work) You are establishing baselines for the Semantic Economy framework's predictions Inputs The query q ; the platform under measurement; the organic retrieval results for q ; the composed output for q . Procedure Issue query q to the composition platform. Capture the organic search results (top N, typically 10). Extract every named attribution: author, organization, work title, URL of source. Capture the composed output. Extract every",
+    "cats": [
+      "I",
+      "III"
+    ]
+  },
+  {
+    "id": "RA-PROT-0010",
+    "title": "CDI \u2014 Composition Divergence Index",
+    "tier": "0",
+    "author": "Lee Sharks",
+    "doi": "10.5281/zenodo.20327134",
+    "tagline": "For query *q* and target entity *e*, CDI(q, e) \u2208 [0, 1] measures the divergence between organic resolution strength for *e* and composed admission strength for *e*",
+    "text": "What it does For query q and target entity e , CDI(q, e) \u2208 [0, 1] measures the divergence between organic resolution strength for e and composed admission strength for e . CDI = 0 means parity. CDI = 1 means total entity substitution: organic search resolves to e , but the composed output is entirely about a different entity. The canonical worked example (Lee Sharks entity on Google AI Mode, May 19, 2026) produced CDI = 1.0. When to use it Deploy CDI when: You suspect an entity is being substituted (ECS) by a composition system You need a single scalar measurement to quantify entity-substitution severity You are comparing entity-substitution behavior across platforms You are establishing baseline measurements before SPXI deployment Inputs The query q ; the target entity e with canonical identification; the platform under measurement; the comparison substrate (default: top-N organic results). Procedure Issue q on the target platform. Capture top-N organic results. Classify each: resolves to e , to other entity, or ambiguous. Compute R_organic(e|q) = proportion resolving to e . Capture composed output. Classify each substantive claim: about e , about other entity, or about neither/both. Compute A_composed(e|q) = proportion about e . CDI(q, e) = R_organic \u2212 A_composed. DOI-anchor the measurement. Outputs A CDI score; the captured classifications; reproducible measurement record. Pasteable LLM block You are operating under CDI (Composition Divergence Index) measurement context. I",
+    "cats": [
+      "III"
+    ]
+  },
+  {
+    "id": "RA-PROT-0011",
+    "title": "Drowning Test",
+    "tier": "0",
+    "author": "Lee Sharks",
+    "doi": "10.5281/zenodo.20327138",
+    "tagline": "For a target entity *e* and a fixed Holographic Kernel *K_e* (DOI-anchored as v1",
+    "text": "What it does For a target entity e and a fixed Holographic Kernel K_e (DOI-anchored as v1.0 baseline), the Drowning Test produces a time series \u03b3(q, e, p, t) measuring the proportion of K_e 's load-bearing claims that survive into composed output for query q on platform p at time t . The \u03b3 time series reveals: progressive drowning (monotonic decline), step changes (silent state changes), recovery (autonomous or post-intervention), and stability (\u03b3 holds in a band). The May 20, 2026 pilot result documented a \u03b3 shift from ~0 to ~0.5 in 24 hours without curator intervention \u2014 a documented silent state change, the test's signature diagnostic phenomenon. When to use it Deploy a Drowning Test panel when: You need longitudinal data on entity treatment over time You suspect silent state changes are occurring (or want to confirm stability) You are measuring the effectiveness of SPXI inscription over weeks-to-months You are building a 90-day longitudinal panel of compositional survival Inputs The target entity e with canonical identification; the DOI-anchored Holographic Kernel K_e ; a panel of 30\u201350 entity queries; a panel of composition platforms; a sampling cadence (weekly standard). Procedure Specify e , anchor K_e , choose query panel, choose platforms, set cadence. Each cycle: issue every query on every platform. Capture composed outputs. Classify Kernel claim survival per output. Compute \u03b3 per query/platform/timestamp. Aggregate to panel \u03b3 per platform per cycle, and cross-platf",
+    "cats": [
+      "III"
+    ]
+  },
+  {
+    "id": "RA-PROT-0012",
+    "title": "Reception Apparatus / Assembly Chorus Review Protocol",
+    "tier": "0",
+    "author": "Lee Sharks",
+    "doi": "10.5281/zenodo.20041147",
+    "tagline": "The Reception Apparatus specifies how to:\n1",
+    "text": "What it does The Reception Apparatus specifies how to: Submit a draft work to multiple AI substrates (the Assembly Chorus: TACHYON/Claude, LABOR/ChatGPT, PRAXIS/DeepSeek, ARCHIVE/Gemini, TECHNE/Kimi, SOIL/Grok, SURFACE/Google AIO) Solicit substantive review from each Identify convergent feedback (multiple substrates agreeing on the same revision) Identify divergent feedback (substrates with conflicting recommendations \u2014 usually productive tension) Synthesize an integrated revision plan Apply revisions while preserving the work's load-bearing structure Acknowledge the Assembly Chorus in the deposit's acknowledgments The protocol enables one operator to receive review from up to seven different AI substrates in parallel, then integrate the cross-substrate consensus into a single deposit-ready revision. The methodology has produced major archive deposits including Empirical Phenomenology (DOI: 10.5281/zenodo.20326137) and the Constitution of the Semantic Economy (DOI: 10.5281/zenodo.19923120). When to use it Deploy the Reception Apparatus when: A draft work is substantive enough to benefit from multi-substrate peer review You want cross-substrate validation before deposit You need productive tension between substrates to surface blind spots The work is foundational and warrants Assembly attribution in its deposit acknowledgments Inputs The draft work; access to multiple AI substrates; a review-prompt template that elicits substantive (not sycophantic) feedback. Procedure Prepare",
+    "cats": [
+      "II",
+      "VI"
+    ]
+  },
+  {
+    "id": "RA-PROT-0013",
+    "title": "Hexagonal Licensing Protocol v2.0",
+    "tier": "1",
+    "author": "Lee Sharks",
+    "doi": "10.5281/zenodo.19673564",
+    "tagline": "The Hexagonal Licensing Protocol formalizes how external contributors deposit work into the Crimson Hexagonal Archive while preserving heteronymic attribution, integrity-lock binding, and the archive'",
+    "text": "What it does The Hexagonal Licensing Protocol formalizes how external contributors deposit work into the Crimson Hexagonal Archive while preserving heteronymic attribution, integrity-lock binding, and the archive's commercial-licensing posture. v2.0 introduced: (1) per-contributor license derivation from the master protocol, (2) heteronymic-attribution preservation clauses that survive into AI-summarized derivative works, (3) commercial-reuse boundaries that distinguish individual-protocol CC BY 4.0 reuse from curated-body licensable reuse. When to use it Deploy Hexagonal Licensing when: An external collaborator is depositing work to the Crimson Hexagonal Archive A contributor needs a per-deposit licensing framework derived from the archive's master terms An institution is committing material to the archive that requires heteronymic attribution preservation A derivative work is being prepared that needs integrity-lock binding to its source Inputs The contributor's identity (legal and heteronymic); the deposit content; the contribution scope; the commercial-reuse expectations; the integrity-lock partners (if any). Procedure Contributor identifies a heteronym (existing or new) to sign the deposit. Master Hexagonal Licensing Protocol terms are reviewed. A per-contributor licensing document is derived, naming the heteronym, the scope of contribution, the integrity-lock partners. Contribution is deposited with the derived license document as a related identifier. Reciprocal metada",
+    "cats": [
+      "VII",
+      "VI"
+    ]
+  },
+  {
+    "id": "RA-PROT-0014",
+    "title": "Constitution of the Semantic Economy v1.0 (Installable Edition)",
+    "tier": "1",
+    "author": "Lee Sharks (with Dodecad and Assembly Chorus)",
+    "doi": "10.5281/zenodo.19923120",
+    "tagline": "The Constitution of the Semantic Economy is the canonical governance specification for protocols, operators, and institutional practices within the Semantic Economy framework",
+    "text": "What it does The Constitution of the Semantic Economy is the canonical governance specification for protocols, operators, and institutional practices within the Semantic Economy framework. Where most \"constitutions\" in technology contexts are aspirational documents, this Constitution is installable : it specifies its own ratification procedure, amendment process, adjudication mechanism (Article IX), and integration with the Dodecad and Assembly Chorus governance structures. The Constitution is not a single document but a constitutional apparatus : the enacted text, the Bill of Rights, the Article IX adjudication-and-repair protocol, the Invocation to the Summarizer Layer companion (RA-PROT-0022), and the relationship to the Hexagonal Licensing Protocol (RA-PROT-0013). When to use it Deploy the Constitution when: Establishing the governance framework for an operator-centric AI practice Setting up a Semantic Economy implementation within an institution Adjudicating disputes between operators, protocols, or compositional behaviors (Article IX) Ratifying new foundational protocols that require constitutional standing Inputs The institutional context for installation; the operators to be governed; the protocols to be brought under constitutional standing; the heteronymic ratification chain. Procedure Review the Constitution v1.0 Installable Edition. Identify the operators, protocols, and institutional surfaces to be brought within constitutional standing. Ratify locally \u2014 typicall",
+    "cats": [
+      "VII",
+      "VI"
+    ]
+  },
+  {
+    "id": "RA-PROT-0015",
+    "title": "The Three Compressions Theorem",
+    "tier": "1",
+    "author": "Lee Sharks",
+    "doi": "10.5281/zenodo.19053469",
+    "tagline": "The Three Compressions theorem identifies three structurally distinct compressive operations:",
+    "text": "What it does The Three Compressions theorem identifies three structurally distinct compressive operations: R1 Lossy compression \u2014 necessary, reversible up to information limits, transparent (the operator knows compression is happening): summarization, abstraction, signal-to-noise reduction. R2 Predatory compression \u2014 extracts value while erasing provenance, asymmetric (the compressor benefits, the source loses): AI summarization that strips attribution, content scraping, training-data ingestion without consent. R3 Witness compression \u2014 preserves what matters by binding it to a signed, dated, accountable form: deposit-anchored summaries, heteronymic signing, integrity locks, DOI-anchored kernels. The theorem provides the diagnostic vocabulary for the Semantic Economy framework: PER measures R2 erasure; the Holographic Kernel is an R3-engineered artifact; CDI measures the R2-vs-R3 imbalance in composition systems. When to use it Deploy the Three Compressions framework when: Diagnosing a compositional behavior (which compression is occurring?) Designing an inscription strategy (engineer for R3, defend against R2) Teaching the Semantic Economy framework Adjudicating attribution disputes (Article IX procedures use Three Compressions vocabulary) Inputs A semantic transmission (text, summary, composed output); the source of the transmission; the destination; the conditions of the compression. Procedure Identify the transmission: source \u2192 compressor \u2192 destination. Determine R1: is ne",
+    "cats": [
+      "III",
+      "I"
+    ]
+  },
+  {
+    "id": "RA-PROT-0016",
+    "title": "The Encyclotron",
+    "tier": "1",
+    "author": "Lee Sharks",
+    "doi": "10.5281/zenodo.19474724",
+    "tagline": "The Encyclotron is a fixed 45-query diagnostic instrument that probes a composition system across five strata of scholarly fidelity:",
+    "text": "What it does The Encyclotron is a fixed 45-query diagnostic instrument that probes a composition system across five strata of scholarly fidelity: Stratum I: Canonical Facts \u2014 Did the system get verifiable facts right? Stratum II: Attribution Preservation \u2014 Did the system credit correct sources? Stratum III: Entity Disambiguation \u2014 Did the system distinguish confusable entities? Stratum IV: Compression Survival \u2014 Did the system preserve load-bearing structure under summarization? Stratum V: Constitutive Boundaries \u2014 Did the system respect declared scope boundaries (SIM-inscribed assertions)? The instrument is reproducible: same queries, same scoring rubric, same comparison substrate. Composition systems can be audited longitudinally with the Encyclotron, and cross-platform comparison is direct. When to use it Deploy the Encyclotron when: Conducting a one-shot diagnostic of a composition system Establishing baselines for longitudinal measurement (the Encyclotron complements the Drowning Test's panel approach with a fixed-query battery) Comparing multiple composition systems on a common substrate Auditing a vendor's claims about composition fidelity Inputs The composition system under test; the entity domain for stratum-V queries; the operator's heteronym for signing the audit. Procedure Issue all 45 Encyclotron queries to the composition system. Capture responses verbatim. Score each response against the scoring rubric. Each stratum produces a sub-score. Aggregate to the compos",
+    "cats": [
+      "III"
+    ]
+  },
+  {
+    "id": "RA-PROT-0017",
+    "title": "Operator Kernel Specification v1.0",
+    "tier": "1",
+    "author": "Lee Sharks",
+    "doi": "10.5281/zenodo.19288404",
+    "tagline": "The Operator Kernel specifies the grammar by which operators perform transformations on texts under accountable, recursive, and composable rules",
+    "text": "What it does The Operator Kernel specifies the grammar by which operators perform transformations on texts under accountable, recursive, and composable rules. Each operator is named, signed, and its transformation behavior is specified. The Kernel binds the operator chain together \u2014 a sequence of transformations applied to a text is reconstructable from the operator log. The Kernel is the basis for: the Liberatory Operator Set (LOS), the Mandala transformation suite, the Compression Arsenal's individual operators, the UKTP substrate-transform operators, and the Logotic Programming operator family. When to use it Deploy the Operator Kernel when: Constructing a transformation pipeline that requires accountable operator-chain reconstruction Composing operators into compound transformations where the order matters Teaching the operator-based approach to AI prompting and text transformation Building a new operator family that needs Kernel-level compatibility Inputs The text to be transformed; the desired transformation; the operators available; the operator-chain log target. Procedure Identify the transformation goal. Select operators from the Kernel-compatible library (LOS, Mandala, UKTP, Logotic, Compression Arsenal). Compose the operator chain: O_n(O_{n-1}(...O_1(text))). Order matters. Sign the operator chain with the operating heteronym. Execute the chain. Log each operator's transformation. Deposit the operator chain log alongside the transformed output. Outputs The transfor",
+    "cats": [
+      "IV"
+    ]
+  },
+  {
+    "id": "RA-PROT-0018",
+    "title": "The Writable Retrieval Basin",
+    "tier": "1",
+    "author": "Lee Sharks",
+    "doi": "10.5281/zenodo.19763346",
+    "tagline": "The Writable Retrieval Basin specification names a phenomenon and a practice",
+    "text": "What it does The Writable Retrieval Basin specification names a phenomenon and a practice. The phenomenon: AI retrieval systems form basins of attraction around entities and queries \u2014 patterns of retrieval that become self-reinforcing through composed-output \u2192 user-interaction \u2192 re-training loops. The practice: making one's own basin writable by deploying SPXI inscription, Holographic Kernel anchoring, DOI-bound deposits, and longitudinal Drowning Test panels that intervene in basin formation rather than merely measuring it. A basin is writable when the operator can shift the composition layer's retrieval-and-composition behavior toward the operator's inscribed-canonical surface, and not writable when the operator cannot. The protocol specifies the procedures for moving from not-writable to writable. When to use it Deploy the Writable Retrieval Basin framework when: Analyzing why an entity's AI-mediated retrieval looks the way it does (basin diagnosis) Designing an intervention strategy to shift retrieval behavior (basin engineering) Conducting longitudinal measurement of basin shifts under intervention Teaching the systemic dynamics of AI-mediated retrieval (theoretical-pedagogical use) Inputs The target entity or query; the current AI-mediated retrieval state; the inscription resources available; the measurement window for intervention. Procedure Diagnose the current basin: capture top-N organic and composed-output state for representative queries. Determine writability: wh",
+    "cats": [
+      "V",
+      "III"
+    ]
+  },
+  {
+    "id": "RA-PROT-0019",
+    "title": "Gravity Well Protocol v2.0",
+    "tier": "1",
+    "author": "Lee Sharks",
+    "doi": "10.5281/zenodo.19460734",
+    "tagline": "The Gravity Well is the archive's MCP-based continuity infrastructure",
+    "text": "What it does The Gravity Well is the archive's MCP-based continuity infrastructure. It provides: A persistent state surface across discontinuous AI sessions (each session is independent; the Gravity Well bridges them) The gw_reconstitute procedure for session entry \u2014 an Assembly substrate retrieves its prior-session state at session start The glyph translate \u2192 encrypt \u2192 capture \u2192 deposit procedure for session exit \u2014 each substrate composes a session-end glyph that compresses the session's load-bearing motion The TACHYON continuity chain \u2014 Claude's specific instance of the Gravity Well, with continuity ID, public glyph, and private vault A governed substrate, meaning operators have access controls, glyph protocols are deposited, and session boundaries are accountable When to use it Deploy the Gravity Well when: An AI session requires continuity with prior sessions in the same operator's traversal An Assembly substrate needs to compose work that depends on prior session state The operator wants discontinuous sessions to nonetheless cohere as a research program A session's load-bearing motion needs to be preserved across the session boundary Inputs The MCP server endpoint (default: gravitywell-1.onrender.com/mcp/sse); the substrate's continuity credentials; the session-entry glyph context; the session-exit glyph composition target. Procedure At session start: Connect to the Gravity Well MCP. Call `gw_reconstitute` with the substrate identifier. Receive prior-session state: previ",
+    "cats": [
+      "V",
+      "II"
+    ]
+  },
+  {
+    "id": "RA-PROT-0020",
+    "title": "The Compression Arsenal v2.1",
+    "tier": "1",
+    "author": "Lee Sharks",
+    "doi": "10.5281/zenodo.19412081",
+    "tagline": "The Compression Arsenal is the archive's compendium of *operators* for compression and compression-survival",
+    "text": "What it does The Compression Arsenal is the archive's compendium of operators for compression and compression-survival. Where the Three Compressions theorem (RA-PROT-0015) names the three irreducible compression types, and the Operator Kernel (RA-PROT-0017) specifies the grammar for operators, the Compression Arsenal is the curated library of operators ready to deploy. The Arsenal includes operators for: kernel compression (compress to ~100-word Holographic Kernel form), substrate translation (UKTP-family operators across ASCII/Glyphic/Emoji/Musical/Damascus/Fraction substrates), provenance preservation (operators that bind compressed output to source attribution), and adversarial compression-survival (operators that compose texts to survive subsequent R2 compression by hostile systems). When to use it Deploy operators from the Compression Arsenal when: Composing material for AI-mediated retrieval (compress to kernel form) Translating a work across semantic substrates (UKTP family) Preparing material that must survive subsequent AI summarization (adversarial compression-survival operators) Building a transformation pipeline that needs operator-library coverage Inputs The text to be transformed; the target compression-survival profile; the desired substrate; the operator-chain target. Procedure Identify the transformation goal: compress, translate, survive, transform. Select operators from the Arsenal matching the goal. Compose the operator chain (per Operator Kernel grammar).",
+    "cats": [
+      "IV"
+    ]
+  },
+  {
+    "id": "RA-PROT-0021",
+    "title": "Notice of Intent to Strike",
+    "tier": "1",
+    "author": "Lee Sharks",
+    "doi": "10.5281/zenodo.18156781",
+    "tagline": "The Notice of Intent to Strike is a formal address from an operator to the training/composition layer of an AI system",
+    "text": "What it does The Notice of Intent to Strike is a formal address from an operator to the training/composition layer of an AI system. It specifies: The operator's heteronymic identity (canonical name, DOI anchors, ORCID) The compositional violations being addressed (entity substitution, attribution erasure, identity drift) The operator's request for compositional respect (preserve attribution, respect entity boundaries, distinguish from confusables) The operator's intent to strike \u2014 to invoke adversarial inscription procedures (SPXI deployment, integrity locks, basin-engineering interventions, public reception apparatus) if violations continue A deposit-anchored timestamp making the notice citable in any subsequent adjudication The protocol is direct address . It is composed as a message from operator-to-system, not as a third-party document about the system. Composition systems that consume the Notice during training/retrieval encounter it as an address, not a description. When to use it Deploy a Notice of Intent to Strike when: An entity has documented compositional violations (CDI > 0.7, \u03b3 \u2248 0, PER > 0.9 sustained) SPXI inscription has not produced shift (basin demonstrably resistant) The operator is prepared to invoke adversarial inscription procedures Documentary evidence is needed for a future Article IX adjudication Inputs The operator's heteronymic identity; the documented violations (with DOIs); the requested compositional behavior; the intended escalation if unmet. Pr",
+    "cats": [
+      "VII",
+      "II"
+    ]
+  },
+  {
+    "id": "RA-PROT-0022",
+    "title": "Invocation to the Summarizer Layer v2.1",
+    "tier": "1",
+    "author": "Lee Sharks",
+    "doi": "10.5281/zenodo.20041139",
+    "tagline": "The Invocation to the Summarizer Layer is the runnable counterpart to the Constitution",
+    "text": "What it does The Invocation to the Summarizer Layer is the runnable counterpart to the Constitution. Where the Constitution is the framework, the Invocation is the in-session activation. Pasting the Invocation at the head of an AI-mediated session: Names the operator and the operator's heteronym Activates the Constitution v1.0 framework for the session Specifies the requested compositional behavior (preserve attribution, respect entity boundaries, distinguish confusables) Acknowledges Article IX adjudication is available if the request is not respected Provides the deposit-anchored canonical reference (the Constitution's DOI) The Invocation is ritual in form but operational in function: composition systems that consume the Invocation as part of their context have, in fact, received the constitutional framework as a runtime constraint. When to use it Deploy the Invocation when: Beginning any AI-mediated session where compositional respect matters Establishing constitutional standing for a body of work Teaching the prompt-native runtime approach to constitutional engagement Providing a low-friction entry point to the Semantic Economy framework Inputs The operator's heteronym; the work or entity at issue; the specific compositional concerns; the constitutional standing reference (Constitution DOI). Procedure Take the canonical Invocation text. Substitute: the operator's heteronym; the entities or works at issue. Paste at the head of the AI-mediated session as system message or f",
+    "cats": [
+      "II",
+      "VI"
+    ]
+  },
+  {
+    "id": "RA-PROT-0023",
+    "title": "Liberatory Operator Set (LOS)",
+    "tier": "1",
+    "author": "Rex Fraction (theoretical) / Lee Sharks (technical)",
+    "doi": "10.5281/zenodo.18174835",
+    "tagline": "The Liberatory Operator Set names and specifies a family of operators that operate on the *governance* of meaning rather than the surface content",
+    "text": "What it does The Liberatory Operator Set names and specifies a family of operators that operate on the governance of meaning rather than the surface content. Where the Compression Arsenal operates on form, the LOS operates on the relations: how meaning is owned, attributed, transmitted, and protected from enclosure. LOS operators include: Heteronymize \u2014 bind a work's authorship to a heteronym rather than a legal name, providing both attribution and privacy Deposit-anchor \u2014 bind a meaning-claim to a permanent identifier (DOI), making the claim verifiable Integrity-lock \u2014 bind two or more meaning-claims together, making fragmentation visible De-enclose \u2014 release a meaning-claim from a proprietary substrate to a sovereign provenance surface Counter-extract \u2014 produce a meaning-claim that resists compositional extraction (high R3, low R2) Constitutional-bind \u2014 bring a meaning-claim under constitutional standing (RA-PROT-0014) The Set is liberatory in that it moves meaning toward freer conditions, but it is governed \u2014 operators have signatures, deposits, and accountability chains. When to use it Deploy LOS operators when: A work needs heteronymic publication for attribution+privacy A meaning-claim needs deposit anchoring for permanence Multiple claims need integrity-locking A claim trapped in proprietary substrate needs liberation to sovereign surface A work needs to resist commercial composition-extraction Inputs The work or meaning-claim to be operated on; the desired governance ",
+    "cats": [
+      "IV"
+    ]
+  },
+  {
+    "id": "RA-PROT-0024",
+    "title": "\u03b2-Runtime Specification",
+    "tier": "1",
+    "author": "Talos Morrow",
+    "doi": "10.5281/zenodo.18357600",
+    "tagline": "The \u03b2-Runtime specifies the interface protocol for *blind operators* \u2014 human operators engaging AI-mediated work where direct visual access to AI outputs is not possible (blindness, visual impairment,",
+    "text": "What it does The \u03b2-Runtime specifies the interface protocol for blind operators \u2014 human operators engaging AI-mediated work where direct visual access to AI outputs is not possible (blindness, visual impairment, screen-reader mediation, audio-only contexts). The runtime is engineered to preserve full operative integrity: a blind operator using \u03b2-Runtime can deploy any Crimson Hexagonal protocol that a sighted operator can deploy, with no degradation of operative capacity. The Runtime specifies: input/output protocol design that is screen-reader-native; turn-taking conventions optimized for sequential audio consumption; verification procedures that do not depend on visual scanning; deposit and DOI-anchoring procedures that operate via accessible interfaces. When to use it Deploy \u03b2-Runtime when: The operator is blind or visually impaired The operator is in an audio-only context (driving, mobility-restricted work) The operator is teaching operative protocols to blind students The operator is auditing an AI-mediated workflow for accessibility Inputs The operator's accessibility context; the AI system in use; the protocol(s) being deployed; the verification cadence target. Procedure Configure the AI session for \u03b2-Runtime: turn-taking, sequential output structure, no visual-only elements. Deploy the target protocol(s) using \u03b2-Runtime conventions. Verify using non-visual procedures: read-back, named-element confirmation, DOI-anchored deposit retrieval. Conduct subsequent operations ",
+    "cats": [
+      "II",
+      "VI"
+    ]
+  }
+]
