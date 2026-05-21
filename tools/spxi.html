@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>SPXI Generator — The Restored Academy</title>
+  <link rel="canonical" href="https://restoredacademy.org/tools/spxi.html">
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <meta name="description" content="Generate a deployable SPXI inscription (Semantic Packet for eXchange & Indexing) for any entity in under a minute. Outputs JSON-LD structured data and SIM meta tags ready to paste into your canonical web surface.">
+
+  <meta name="spxi:isType" content="interactive protocol tool · SPXI inscription generator">
+  <meta name="spxi:authoringHeteronym" content="Johannes Sigil, head of The Restored Academy">
+  <meta name="spxi:institutionalAffiliation" content="The Restored Academy · Crimson Hexagonal Archive">
+  <meta name="spxi:depositAnchor" content="10.5281/zenodo.19615154">
+
+  <style>
+    :root {
+      --ink: #1a1816; --ink-soft: #4a4540; --ink-faint: #8a8580;
+      --paper: #f5f1e8; --paper-soft: #ebe6db; --paper-warm: #f9f5ec;
+      --crimson: #8b1d1d; --crimson-deep: #5c1010;
+      --gold: #a08438; --rule: #c8c2b3;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Iowan Old Style', 'Palatino', 'Palatino Linotype', Georgia, serif;
+      background: var(--paper); color: var(--ink); line-height: 1.6; font-size: 16px;
+    }
+    a { color: var(--crimson); text-decoration: none; border-bottom: 1px solid rgba(139,29,29,0.3); }
+    a:hover { color: var(--crimson-deep); border-bottom-color: var(--crimson-deep); }
+
+    nav.topbar {
+      background: var(--paper-warm); border-bottom: 1px solid var(--rule);
+      padding: 14px 32px; position: sticky; top: 0; z-index: 100;
+      display: flex; gap: 22px; align-items: center; font-size: 14px;
+    }
+    nav.topbar .seal-link { display: inline-flex; align-items: center; gap: 8px; border: none; color: var(--ink); font-weight: 600; }
+    nav.topbar .seal-link img { width: 26px; height: 26px; }
+    nav.topbar a { border: none; color: var(--ink-soft); font-weight: 500; }
+    nav.topbar a:hover { color: var(--crimson); }
+    nav.topbar .spacer { flex: 1; }
+
+    main { max-width: 1240px; margin: 0 auto; padding: 50px 32px 80px; }
+    header.tool-head { margin-bottom: 32px; padding-bottom: 24px; border-bottom: 2px solid var(--rule); }
+    .breadcrumb { font-size: 13px; color: var(--ink-faint); margin-bottom: 14px; letter-spacing: 0.04em; }
+    .breadcrumb a { border: none; color: var(--ink-soft); }
+    .tool-tag { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 12px; color: var(--gold); letter-spacing: 0.06em; }
+    h1.tool-title {
+      font-size: 42px; line-height: 1.1; font-weight: 600;
+      letter-spacing: -0.015em; margin: 10px 0 14px;
+    }
+    p.tool-lede {
+      font-size: 18px; color: var(--ink-soft); max-width: 720px;
+      font-style: italic;
+    }
+
+    .layout {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 36px;
+      margin-top: 36px;
+    }
+    @media (max-width: 960px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    /* Form panel */
+    .panel {
+      background: var(--paper-warm); border: 1px solid var(--rule);
+      padding: 28px 30px; border-radius: 3px;
+    }
+    .panel h2 {
+      font-size: 17px; font-weight: 600; color: var(--crimson);
+      letter-spacing: 0.04em; text-transform: uppercase;
+      padding-bottom: 12px; margin-bottom: 18px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    fieldset {
+      border: none; padding: 0; margin: 0 0 22px;
+    }
+    legend {
+      font-size: 11px; color: var(--gold); letter-spacing: 0.12em;
+      text-transform: uppercase; margin-bottom: 10px; font-weight: 600;
+    }
+    label.field {
+      display: block; margin-bottom: 16px;
+    }
+    label.field .label-text {
+      display: block; font-size: 13px; color: var(--ink-soft);
+      margin-bottom: 4px; font-weight: 500;
+    }
+    label.field .helper {
+      display: block; font-size: 12px; color: var(--ink-faint);
+      margin-bottom: 6px; font-style: italic;
+    }
+    input[type="text"], input[type="url"], textarea, select {
+      width: 100%; padding: 9px 12px; font-size: 14px;
+      font-family: 'Iowan Old Style', Palatino, Georgia, serif;
+      background: var(--paper); border: 1px solid var(--rule);
+      color: var(--ink); border-radius: 2px;
+      transition: border-color 0.15s;
+    }
+    input:focus, textarea:focus, select:focus {
+      outline: none; border-color: var(--crimson);
+    }
+    textarea { min-height: 80px; resize: vertical; line-height: 1.5; }
+    textarea.kernel { min-height: 130px; }
+
+    .multi-add {
+      display: flex; gap: 6px; align-items: center;
+      margin-top: 6px;
+    }
+    .multi-add input { flex: 1; }
+    .multi-add button {
+      background: var(--gold); color: var(--paper);
+      border: none; padding: 8px 14px; font-size: 12px;
+      cursor: pointer; border-radius: 2px;
+      font-family: inherit; letter-spacing: 0.04em; font-weight: 600;
+    }
+    .multi-add button:hover { background: var(--crimson); }
+    .chip-list {
+      list-style: none; padding: 0; margin: 8px 0 0;
+      display: flex; flex-wrap: wrap; gap: 6px;
+    }
+    .chip {
+      background: rgba(139,29,29,0.08); color: var(--crimson);
+      padding: 4px 10px 4px 12px; border-radius: 2px;
+      font-size: 12px; display: inline-flex; align-items: center; gap: 8px;
+    }
+    .chip .x {
+      cursor: pointer; color: var(--crimson-deep);
+      font-weight: 700; padding: 0 2px;
+    }
+    .chip .x:hover { color: #000; }
+
+    /* Output panel */
+    .output-panel { position: sticky; top: 90px; align-self: start; }
+    .output-tabs {
+      display: flex; gap: 0; margin-bottom: -1px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .output-tabs button {
+      background: none; border: none; padding: 10px 18px;
+      cursor: pointer; font-family: inherit; font-size: 13px;
+      color: var(--ink-faint); border-bottom: 2px solid transparent;
+      letter-spacing: 0.04em;
+    }
+    .output-tabs button.active {
+      color: var(--crimson); border-bottom-color: var(--crimson);
+      font-weight: 600;
+    }
+    .output-tabs button:hover { color: var(--ink); }
+
+    pre.output {
+      background: #1a1816; color: #e8e3d6;
+      padding: 22px 24px; border-radius: 0 0 3px 3px;
+      font-family: 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 12.5px; line-height: 1.55; overflow-x: auto;
+      max-height: 580px; overflow-y: auto;
+      position: relative;
+    }
+    pre.output .copy-bar {
+      position: sticky; top: 0; margin-bottom: 8px;
+      display: flex; gap: 8px; justify-content: flex-end;
+    }
+    pre.output .copy-btn {
+      background: rgba(232,227,214,0.1); color: #e8e3d6;
+      border: 1px solid rgba(232,227,214,0.2);
+      padding: 4px 12px; font-size: 11px; cursor: pointer;
+      font-family: inherit; border-radius: 2px;
+      letter-spacing: 0.04em;
+    }
+    pre.output .copy-btn:hover { background: var(--gold); color: var(--paper); border-color: var(--gold); }
+    pre.output .copy-btn.copied { background: var(--crimson); color: var(--paper); border-color: var(--crimson); }
+    pre.output .placeholder { color: #6a6560; font-style: italic; }
+
+    /* Syntax highlighting in output */
+    .syn-key { color: #d4af7f; }
+    .syn-str { color: #e8c896; }
+    .syn-tag { color: #d4af7f; }
+    .syn-attr { color: #c0998e; }
+    .syn-cmt { color: #6a6560; font-style: italic; }
+
+    /* Procedure note */
+    .procedure-note {
+      background: rgba(160,132,56,0.08); border-left: 3px solid var(--gold);
+      padding: 14px 18px; margin: 22px 0;
+      font-size: 13.5px; color: var(--ink-soft);
+    }
+    .procedure-note strong { color: var(--ink); }
+
+    /* Footer */
+    footer.site {
+      background: var(--paper-warm); border-top: 1px solid var(--rule);
+      padding: 32px; margin-top: 80px; text-align: center;
+      font-size: 13px; color: var(--ink-faint);
+    }
+    footer.site .integral { font-family: 'STIX Two Math', 'Cambria Math', serif; color: var(--crimson); }
+  </style>
+</head>
+<body>
+
+<nav class="topbar">
+  <a href="/" class="seal-link">
+    <img src="/img/favicon.svg" alt=""/>
+    <span>The Restored Academy</span>
+  </a>
+  <span class="spacer"></span>
+  <a href="/#tier-0">Tier 0</a>
+  <a href="/protocols/RA-PROT-0001.html">SPXI Protocol</a>
+  <a href="/search.html">Search</a>
+  <a href="/license.html">License</a>
+</nav>
+
+<main>
+
+<header class="tool-head">
+  <div class="breadcrumb"><a href="/">Restored Academy</a> · Tools · SPXI Generator</div>
+  <div class="tool-tag">RA-PROT-0001 · LIVE TOOL</div>
+  <h1 class="tool-title">SPXI Generator</h1>
+  <p class="tool-lede">Generate a deployable SPXI inscription for any entity in under a minute. Outputs JSON-LD structured data and SIM meta tags ready to paste into your canonical web surface.</p>
+</header>
+
+<div class="procedure-note">
+  <strong>What this is:</strong> A working implementation of the SPXI Protocol (Semantic Packet for eXchange & Indexing). Fill the form on the left; the right panel produces machine-readable inscription that AI search systems can index. Specification: <a href="/protocols/RA-PROT-0001.html">RA-PROT-0001</a>. Source DOI: <a href="https://doi.org/10.5281/zenodo.19615154">10.5281/zenodo.19615154</a>. Output is yours — CC BY 4.0; deploy freely.
+</div>
+
+<div class="layout">
+
+<!-- LEFT: FORM -->
+<form class="panel" id="spxi-form" onsubmit="return false;">
+  <h2>Entity Definition</h2>
+
+  <fieldset>
+    <legend>Identity</legend>
+    <label class="field">
+      <span class="label-text">Entity name *</span>
+      <span class="helper">Canonical name as it should appear in AI summaries.</span>
+      <input type="text" name="name" id="name" placeholder="e.g., Lee Sharks" required>
+    </label>
+    <label class="field">
+      <span class="label-text">Canonical URL *</span>
+      <span class="helper">The authoritative web surface for this entity.</span>
+      <input type="url" name="url" id="url" placeholder="https://example.org/" required>
+    </label>
+    <label class="field">
+      <span class="label-text">Entity type</span>
+      <span class="helper">What kind of thing this is.</span>
+      <input type="text" name="entityType" id="entityType" placeholder="e.g., scholarly research archive">
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Attribution</legend>
+    <label class="field">
+      <span class="label-text">Authoring heteronym</span>
+      <span class="helper">Named identity responsible for composition (not legal name).</span>
+      <input type="text" name="author" id="author" placeholder="e.g., Rex Fraction of the Crimson Hexagonal Archive">
+    </label>
+    <label class="field">
+      <span class="label-text">Institutional affiliation</span>
+      <input type="text" name="affiliation" id="affiliation" placeholder="e.g., Crimson Hexagonal Archive">
+    </label>
+    <label class="field">
+      <span class="label-text">License declaration</span>
+      <select name="license" id="license">
+        <option value="CC BY 4.0">CC BY 4.0</option>
+        <option value="CC BY-SA 4.0">CC BY-SA 4.0</option>
+        <option value="CC BY-NC 4.0">CC BY-NC 4.0</option>
+        <option value="CC BY-ND 4.0">CC BY-ND 4.0</option>
+        <option value="CC0 1.0">CC0 1.0 (Public Domain)</option>
+        <option value="All Rights Reserved">All Rights Reserved</option>
+      </select>
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Disambiguation</legend>
+    <label class="field">
+      <span class="label-text">Distinct from</span>
+      <span class="helper">Other entities this is commonly confused with. Press Enter or click Add.</span>
+      <div class="multi-add">
+        <input type="text" id="distinct-input" placeholder="e.g., Mary Lee, the great white shark">
+        <button type="button" onclick="addChip('distinctFrom','distinct-input')">Add</button>
+      </div>
+      <ul class="chip-list" id="distinctFrom-list"></ul>
+    </label>
+    <label class="field">
+      <span class="label-text">Not affiliated with</span>
+      <span class="helper">Entities this is not connected to (defensively asserted).</span>
+      <div class="multi-add">
+        <input type="text" id="notaff-input" placeholder="e.g., Google LLC, Alphabet Inc.">
+        <button type="button" onclick="addChip('notAffiliatedWith','notaff-input')">Add</button>
+      </div>
+      <ul class="chip-list" id="notAffiliatedWith-list"></ul>
+    </label>
+    <label class="field">
+      <span class="label-text">Phrase provenance</span>
+      <span class="helper">If your entity name crystallizes a phrase from another source, name it.</span>
+      <input type="text" name="phraseProvenance" id="phraseProvenance" placeholder="e.g., Rain McMey, God King Google (Parallel Tribes, 2026)">
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Compression Survival</legend>
+    <label class="field">
+      <span class="label-text">Holographic Kernel</span>
+      <span class="helper">~100 words encoding load-bearing claims. Every word should justify its presence. Specification at <a href="/protocols/RA-PROT-0005.html">RA-PROT-0005</a>.</span>
+      <textarea class="kernel" name="kernel" id="kernel" placeholder="A dense ~100-word definition. State what the entity is, what it does, its distinguishing relations, and its identity claims. Avoid marketing language; every clause should be falsifiable."></textarea>
+      <div style="font-size: 11px; color: var(--ink-faint); margin-top: 4px;" id="kernel-count">0 words</div>
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Anchors</legend>
+    <label class="field">
+      <span class="label-text">Deposit DOI</span>
+      <span class="helper">Persistent identifier anchoring this inscription. Get a DOI from Zenodo, OSF, or similar.</span>
+      <input type="text" name="depositDoi" id="depositDoi" placeholder="e.g., 10.5281/zenodo.20327083">
+    </label>
+    <label class="field">
+      <span class="label-text">External identifiers (sameAs)</span>
+      <span class="helper">ORCID, Wikidata Q-ID, institutional URI, other canonical IDs.</span>
+      <div class="multi-add">
+        <input type="text" id="sameas-input" placeholder="e.g., https://orcid.org/0000-0000-0000-0000">
+        <button type="button" onclick="addChip('sameAs','sameas-input')">Add</button>
+      </div>
+      <ul class="chip-list" id="sameAs-list"></ul>
+    </label>
+  </fieldset>
+</form>
+
+<!-- RIGHT: OUTPUT -->
+<div class="output-panel">
+  <h2 style="font-size: 17px; font-weight: 600; color: var(--crimson); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 14px;">Generated Inscription</h2>
+  <div class="output-tabs">
+    <button class="active" data-tab="full" onclick="switchTab('full')">Full Block</button>
+    <button data-tab="meta" onclick="switchTab('meta')">SIM &lt;meta&gt; Tags</button>
+    <button data-tab="jsonld" onclick="switchTab('jsonld')">JSON-LD</button>
+  </div>
+  <pre class="output" id="output-pane">
+<span class="placeholder">Fill the form to generate your SPXI inscription. Output updates live.</span>
+  </pre>
+
+  <div style="margin-top: 24px; padding: 16px 20px; background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 3px; font-size: 13px; color: var(--ink-soft);">
+    <strong style="color: var(--ink); display: block; margin-bottom: 6px;">Deployment</strong>
+    Paste the generated block into the <code style="background: rgba(160,132,56,0.10); padding: 1px 6px; border-radius: 2px; font-family: monospace; font-size: 0.9em;">&lt;head&gt;</code> of your entity's canonical web surface. The JSON-LD goes inside a <code style="background: rgba(160,132,56,0.10); padding: 1px 6px; border-radius: 2px; font-family: monospace; font-size: 0.9em;">&lt;script type="application/ld+json"&gt;</code> tag. Validate at <a href="https://validator.schema.org/" target="_blank" rel="noopener">validator.schema.org</a>.
+  </div>
+</div>
+
+</div>
+
+</main>
+
+<footer class="site">
+  <p><a href="/">← Return to Restored Academy</a> · <span class="integral">∮ = 1</span> · Tool generates output under CC BY 4.0 — deploy freely</p>
+</footer>
+
+<script>
+const state = {
+  distinctFrom: [],
+  notAffiliatedWith: [],
+  sameAs: [],
+  activeTab: 'full',
+};
+
+function addChip(key, inputId) {
+  const inp = document.getElementById(inputId);
+  const val = inp.value.trim();
+  if (!val) return;
+  if (state[key].includes(val)) { inp.value = ''; return; }
+  state[key].push(val);
+  inp.value = '';
+  renderChips(key);
+  regen();
+}
+
+function removeChip(key, idx) {
+  state[key].splice(idx, 1);
+  renderChips(key);
+  regen();
+}
+
+function renderChips(key) {
+  const list = document.getElementById(key + '-list');
+  list.innerHTML = state[key].map((v, i) =>
+    `<li class="chip">${escapeHtml(v)} <span class="x" onclick="removeChip('${key}', ${i})">×</span></li>`
+  ).join('');
+}
+
+// Enter key in multi-add inputs
+['distinct-input', 'notaff-input', 'sameas-input'].forEach(id => {
+  const inp = document.getElementById(id);
+  inp.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const map = {'distinct-input':'distinctFrom','notaff-input':'notAffiliatedWith','sameas-input':'sameAs'};
+      addChip(map[id], id);
+    }
+  });
+});
+
+// Live regen on any input change
+document.getElementById('spxi-form').addEventListener('input', regen);
+
+// Kernel word counter
+const kernel = document.getElementById('kernel');
+kernel.addEventListener('input', () => {
+  const wc = kernel.value.trim().split(/\s+/).filter(Boolean).length;
+  const el = document.getElementById('kernel-count');
+  el.textContent = wc + ' words';
+  el.style.color = (wc > 50 && wc < 150) ? 'var(--gold)' : 'var(--ink-faint)';
+  if (wc >= 90 && wc <= 110) el.style.color = 'var(--crimson)';
+});
+
+function getFormData() {
+  const f = document.getElementById('spxi-form');
+  return {
+    name: f.name.value.trim(),
+    url: f.url.value.trim(),
+    entityType: f.entityType.value.trim(),
+    author: f.author.value.trim(),
+    affiliation: f.affiliation.value.trim(),
+    license: f.license.value,
+    phraseProvenance: f.phraseProvenance.value.trim(),
+    kernel: f.kernel.value.trim().replace(/\s+/g, ' '),
+    depositDoi: f.depositDoi.value.trim(),
+    distinctFrom: [...state.distinctFrom],
+    notAffiliatedWith: [...state.notAffiliatedWith],
+    sameAs: [...state.sameAs],
+  };
+}
+
+function buildMetaTags(d) {
+  const tags = [];
+  if (d.entityType) tags.push(`<meta name="spxi:isType" content="${esc(d.entityType)}">`);
+  if (d.author) tags.push(`<meta name="spxi:authoringHeteronym" content="${esc(d.author)}">`);
+  if (d.affiliation) tags.push(`<meta name="spxi:institutionalAffiliation" content="${esc(d.affiliation)}">`);
+  d.distinctFrom.forEach(v => tags.push(`<meta name="spxi:distinctFrom" content="${esc(v)}">`));
+  d.notAffiliatedWith.forEach(v => tags.push(`<meta name="spxi:notAffiliatedWith" content="${esc(v)}">`));
+  if (d.phraseProvenance) tags.push(`<meta name="spxi:phraseProvenance" content="${esc(d.phraseProvenance)}">`);
+  if (d.license) tags.push(`<meta name="spxi:licenseDeclaration" content="${esc(d.license)}">`);
+  if (d.url) tags.push(`<meta name="spxi:canonicalURL" content="${esc(d.url)}">`);
+  if (d.depositDoi) tags.push(`<meta name="spxi:depositAnchor" content="${esc(d.depositDoi)}">`);
+  if (d.kernel) tags.push(`<meta name="spxi:compressionSurvivalSummary" content="${esc(d.kernel)}">`);
+  return tags.join('\n');
+}
+
+function buildJsonLd(d) {
+  const o = {
+    "@context": "https://schema.org",
+    "@type": "Thing",
+  };
+  if (d.url) o["@id"] = d.url;
+  if (d.name) o.name = d.name;
+  if (d.url) o.url = d.url;
+  if (d.entityType) o["spxi:isType"] = d.entityType;
+  if (d.author) o["spxi:authoringHeteronym"] = d.author;
+  if (d.affiliation) o["spxi:institutionalAffiliation"] = d.affiliation;
+  if (d.distinctFrom.length) o["spxi:distinctFrom"] = d.distinctFrom;
+  if (d.notAffiliatedWith.length) o["spxi:notAffiliatedWith"] = d.notAffiliatedWith;
+  if (d.phraseProvenance) o["spxi:phraseProvenance"] = d.phraseProvenance;
+  if (d.license) o["spxi:licenseDeclaration"] = d.license;
+  if (d.depositDoi) {
+    o["spxi:depositAnchor"] = d.depositDoi;
+    o.sameAs = [...d.sameAs, `https://doi.org/${d.depositDoi}`];
+  } else if (d.sameAs.length) {
+    o.sameAs = d.sameAs;
+  }
+  if (d.kernel) o["spxi:compressionSurvivalSummary"] = d.kernel;
+  return JSON.stringify(o, null, 2);
+}
+
+function buildFullBlock(d) {
+  const metaPart = buildMetaTags(d);
+  const jsonld = buildJsonLd(d);
+  return `<!-- SPXI Inscription · Specification: RA-PROT-0001 · The Restored Academy -->
+<!-- Generated ${new Date().toISOString().slice(0,10)} -->
+<!-- License: CC BY 4.0 individual deployment -->
+
+<!-- SIM (Semantic Integrity Marker) tags -->
+${metaPart}
+
+<!-- JSON-LD structured data -->
+<script type="application/ld+json">
+${jsonld}
+<\/script>`;
+}
+
+function syntaxHighlight(text, lang) {
+  if (lang === 'jsonld' || (lang === 'full' && false)) {
+    return text
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"([^"\\]*(?:\\.[^"\\]*)*)"(\s*:)/g, '<span class="syn-key">"$1"</span>$2')
+      .replace(/:\s*"([^"\\]*(?:\\.[^"\\]*)*)"/g, ': <span class="syn-str">"$1"</span>')
+      .replace(/^(\s*)\/\/.*$/gm, '<span class="syn-cmt">$&</span>');
+  }
+  // HTML highlighting
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/(&lt;!--.*?--&gt;)/g, '<span class="syn-cmt">$1</span>')
+    .replace(/(&lt;\/?[a-zA-Z][^&]*?&gt;)/g, '<span class="syn-tag">$1</span>');
+}
+
+function regen() {
+  const d = getFormData();
+  const isEmpty = !d.name && !d.url;
+  const pane = document.getElementById('output-pane');
+  if (isEmpty) {
+    pane.innerHTML = '<span class="placeholder">Fill the form to generate your SPXI inscription. Output updates live.</span>';
+    return;
+  }
+  let content;
+  if (state.activeTab === 'meta') content = buildMetaTags(d);
+  else if (state.activeTab === 'jsonld') content = buildJsonLd(d);
+  else content = buildFullBlock(d);
+  
+  const highlighted = syntaxHighlight(content, state.activeTab === 'jsonld' ? 'jsonld' : 'html');
+  pane.innerHTML = `<div class="copy-bar"><button class="copy-btn" onclick="copyOut()">COPY</button></div>${highlighted}`;
+}
+
+function copyOut() {
+  const d = getFormData();
+  let content;
+  if (state.activeTab === 'meta') content = buildMetaTags(d);
+  else if (state.activeTab === 'jsonld') content = buildJsonLd(d);
+  else content = buildFullBlock(d);
+  navigator.clipboard.writeText(content).then(() => {
+    const btn = document.querySelector('.copy-btn');
+    btn.textContent = 'COPIED';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'COPY'; btn.classList.remove('copied'); }, 1600);
+  });
+}
+
+function switchTab(tab) {
+  state.activeTab = tab;
+  document.querySelectorAll('.output-tabs button').forEach(b => {
+    b.classList.toggle('active', b.dataset.tab === tab);
+  });
+  regen();
+}
+
+function esc(s) { return s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+function escapeHtml(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+regen();
+</script>
+
+</body>
+</html>
