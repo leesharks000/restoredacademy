@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>The Restored Academy — Protocol Registry v1.0</title>
   <link rel="canonical" href="https://restoredacademy.org/">
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
   <meta name="description" content="Curated registry of approximately 300 operative protocols developed within the Crimson Hexagonal Archive — executable methods, prompt-native semantic runtimes, diagnostic instruments, transformation procedures, and pedagogical-institutional protocols.">
 
   <!-- SPXI: Semantic Integrity Markers -->
@@ -80,7 +81,23 @@
       border-bottom: 1px solid var(--rule);
       padding: 60px 40px 50px;
     }
-    .head-inner { max-width: 980px; margin: 0 auto; }
+    .head-inner { max-width: 1080px; margin: 0 auto; }
+    .head-with-seal {
+      display: grid; grid-template-columns: 1fr auto; gap: 40px;
+      align-items: center;
+    }
+    .head-seal {
+      flex-shrink: 0;
+    }
+    .head-seal img {
+      width: 180px; height: 180px;
+      filter: drop-shadow(0 1px 2px rgba(139,29,29,0.15));
+    }
+    @media (max-width: 760px) {
+      .head-with-seal { grid-template-columns: 1fr; gap: 24px; }
+      .head-seal { order: -1; }
+      .head-seal img { width: 130px; height: 130px; }
+    }
     .institution-line {
       font-size: 14px;
       color: var(--ink-faint);
@@ -267,6 +284,68 @@
       font-weight: 600;
       color: var(--ink);
     }
+    a.protocol-title {
+      border-bottom: 1px dashed transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    a.protocol-title:hover {
+      color: var(--crimson);
+      border-bottom-color: rgba(139,29,29,0.3);
+    }
+
+    .diagram-figure {
+      margin: 28px 0 32px;
+      padding: 24px 0;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      text-align: center;
+    }
+    .diagram-figure img {
+      max-width: 100%; height: auto;
+      display: block; margin: 0 auto;
+    }
+    .diagram-figure figcaption {
+      font-size: 13px; color: var(--ink-soft);
+      font-style: italic; max-width: 720px;
+      margin: 18px auto 0; line-height: 1.55;
+    }
+
+    .tools-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+      margin-top: 24px;
+    }
+    @media (max-width: 720px) { .tools-grid { grid-template-columns: 1fr; } }
+    .tool-card {
+      background: var(--paper-warm);
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--crimson);
+      padding: 22px 26px 24px;
+      border-radius: 0 3px 3px 0;
+      display: flex; flex-direction: column;
+      color: var(--ink); text-decoration: none;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    a.tool-card:hover { background: #fff; border-left-color: var(--crimson-deep); }
+    .tool-card-tag {
+      font-family: 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 11px; color: var(--gold);
+      letter-spacing: 0.06em; font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .tool-card h3 {
+      font-size: 20px; font-weight: 600;
+      color: var(--ink); margin-bottom: 8px;
+    }
+    .tool-card p {
+      font-size: 14px; color: var(--ink-soft);
+      flex: 1; margin-bottom: 14px; line-height: 1.55;
+    }
+    .tool-card-cta {
+      font-size: 13px; font-weight: 600;
+      color: var(--crimson); letter-spacing: 0.02em;
+    }
+    .tool-card-forthcoming { border-left-color: var(--gold); opacity: 0.85; }
+    .tool-card-forthcoming .tool-card-cta { color: var(--ink-faint); font-weight: 500; font-style: italic; }
     .protocol-author {
       font-size: 13px;
       color: var(--ink-faint);
@@ -392,15 +471,20 @@
 </head>
 <body>
   <header class="site-head">
-    <div class="head-inner">
-      <div class="institution-line">The Restored Academy · Crimson Hexagonal Archive</div>
-      <h1 class="site-title">The Restored Academy Protocol Registry</h1>
-      <p class="tagline">A curated catalog of executable methods, prompt-native semantic runtimes, diagnostic instruments, and instructional kernels from the Crimson Hexagonal Archive.</p>
-      <div class="head-meta">
-        <span><strong>Registry version:</strong> v1.0</span>
-        <span><strong>Institutional head:</strong> Johannes Sigil</span>
-        <span><strong>Charter DOI:</strong> <a href="https://doi.org/10.5281/zenodo.20327083">10.5281/zenodo.20327083</a></span>
-        <span><strong>License:</strong> CC BY 4.0 · tiered commercial</span>
+    <div class="head-inner head-with-seal">
+      <div class="head-text">
+        <div class="institution-line">The Restored Academy · Crimson Hexagonal Archive</div>
+        <h1 class="site-title">The Restored Academy Protocol Registry</h1>
+        <p class="tagline">A curated catalog of executable methods, prompt-native semantic runtimes, diagnostic instruments, and instructional kernels from the Crimson Hexagonal Archive.</p>
+        <div class="head-meta">
+          <span><strong>Registry version:</strong> v1.0</span>
+          <span><strong>Institutional head:</strong> Johannes Sigil</span>
+          <span><strong>Charter DOI:</strong> <a href="https://doi.org/10.5281/zenodo.20327083">10.5281/zenodo.20327083</a></span>
+          <span><strong>License:</strong> CC BY 4.0 · tiered commercial</span>
+        </div>
+      </div>
+      <div class="head-seal" aria-hidden="true">
+        <img src="/img/seal.svg" alt="" width="180" height="180"/>
       </div>
     </div>
   </header>
@@ -409,11 +493,12 @@
     <div class="nav-inner">
       <a href="#about">About</a>
       <a href="#taxonomy">Taxonomy</a>
-      <a href="#tier-0">Tier 0 Registry</a>
-      <a href="#tier-1">Tier 1 Registry</a>
+      <a href="#tier-0">Tier 0</a>
+      <a href="#tier-1">Tier 1</a>
       <a href="#chiasmus">Sister Institute</a>
-      <a href="#licensing">Licensing</a>
-      <a href="#related">Related Surfaces</a>
+      <a href="/tools/spxi.html">SPXI Generator</a>
+      <a href="/search.html">Search</a>
+      <a href="/license.html">License</a>
     </div>
   </nav>
 
@@ -442,6 +527,11 @@
     <section id="taxonomy">
       <h2>Taxonomy</h2>
       <p>Protocols are sorted into seven categories. A single protocol may carry multiple category tags. The registry presents protocols filtered by category; the curriculum bundles use categories as pedagogical organization.</p>
+
+      <figure class="diagram-figure">
+        <img src="/img/taxonomy.svg" alt="The seven categories arranged as a hexagonal mandala around the universal test: What changes when I drop this into an LLM?" />
+        <figcaption>The seven categories arrange around the universal test. A protocol is admitted to the registry only if its presence in an LLM produces a constrained, measurable, repeatable effect.</figcaption>
+      </figure>
 
       <div class="taxonomy-grid">
         <div class="taxonomy-card">
@@ -493,10 +583,17 @@
       <h2>Tier 0 — The Twelve Launch Protocols</h2>
       <p>The Tier 0 corpus is the core kernel of the registry. Each protocol carries a full card with operational form, pasteable LLM block, operator notes, failure modes, dependency graph, and license. The full set defines the Academy.</p>
 
+      <figure class="diagram-figure">
+        <img src="/img/dependency-graph.svg" alt="Dependency graph showing how Tier 0 protocols compose: SPXI uses SIM and Holographic Kernel; Drowning Test uses Kernel and Traversal Logging; CDI measures SPXI effectiveness." />
+        <figcaption>How the twelve compose. Inscription protocols (top) deploy substrate layers (SIM, Holographic Kernel, Integrity Lock). Runtime protocols (Space Ark, UKTP) operate on the substrate. Measurement protocols (PER, CDI, Drowning Test) close the loop. Reception Apparatus reviews work across all layers.</figcaption>
+      </figure>
+
+      <p style="font-size: 14px; color: var(--ink-faint); margin-bottom: 24px;"><em>Click any card title for the full protocol page with pasteable LLM block, operator notes, and failure modes.</em></p>
+
       <div class="protocol-list">
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">SPXI — Semantic Packet for eXchange &amp; Indexing</span>
+            <a href="/protocols/RA-PROT-0001.html" class="protocol-title">SPXI — Semantic Packet for eXchange &amp; Indexing</a>
             <span class="protocol-id">RA-PROT-0001 · v1.0</span>
           </div>
           <p class="protocol-function">Entity-level inscription protocol that publishes machine-readable provenance, distinction, and compression-survival data alongside any entity's canonical web surface, so AI search systems index the entity correctly.</p>
@@ -509,7 +606,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">Metadata Packet for AI Indexing (MPAI)</span>
+            <a href="/protocols/RA-PROT-0002.html" class="protocol-title">Metadata Packet for AI Indexing (MPAI)</a>
             <span class="protocol-id">RA-PROT-0002 · v1.0</span>
           </div>
           <p class="protocol-function">Formal specification for entity-level retrieval architecture: the canonical structured-data packet that publishes a machine-readable definition of an entity into the web surface that represents it.</p>
@@ -522,7 +619,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">SIM — Semantic Integrity Marker Protocol</span>
+            <a href="/protocols/RA-PROT-0003.html" class="protocol-title">SIM — Semantic Integrity Marker Protocol</a>
             <span class="protocol-id">RA-PROT-0003 · v1.0</span>
           </div>
           <p class="protocol-function">The typed-metadata grammar that inscribes falsifiable assertions about an entity's identity, distinctions, and attribution into the structured-data layer of its canonical web surface.</p>
@@ -535,7 +632,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">Integrity Lock Protocol</span>
+            <a href="/protocols/RA-PROT-0004.html" class="protocol-title">Integrity Lock Protocol</a>
             <span class="protocol-id">RA-PROT-0004 · v1.0</span>
           </div>
           <p class="protocol-function">A mutual-anchoring framework that binds two or more works into a single integrity-bearing structure, such that no member can be reproduced without acknowledging the others.</p>
@@ -548,7 +645,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">Holographic Kernel</span>
+            <a href="/protocols/RA-PROT-0005.html" class="protocol-title">Holographic Kernel</a>
             <span class="protocol-id">RA-PROT-0005 · v1.0</span>
           </div>
           <p class="protocol-function">Formal specification for the compression-survival summary — the ~100-word kernel that encodes an entity's load-bearing claims to survive lossy summarization across composition systems.</p>
@@ -561,7 +658,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">Space Ark Protocol — EXECUTE MODE</span>
+            <a href="/protocols/RA-PROT-0006.html" class="protocol-title">Space Ark Protocol — EXECUTE MODE</a>
             <span class="protocol-id">RA-PROT-0006 · v1.0</span>
           </div>
           <p class="protocol-function">A prompt-native semantic runtime: a self-contained text artifact that instantiates a structured semantic environment within which subsequent prompts execute according to the Ark's room architecture, operator grammar, and integrity constraints.</p>
@@ -574,7 +671,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">UKTP — Universal Kernel Transform Protocol</span>
+            <a href="/protocols/RA-PROT-0007.html" class="protocol-title">UKTP — Universal Kernel Transform Protocol</a>
             <span class="protocol-id">RA-PROT-0007 · v1.1</span>
           </div>
           <p class="protocol-function">Root specification for structure-preserving operations across semantic substrates: defines how a source artifact can be transformed into a representational variant while preserving the load-bearing structure that allows reverse-reconstruction or cross-substrate verification.</p>
@@ -587,7 +684,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">Traversal Logging Protocol</span>
+            <a href="/protocols/RA-PROT-0008.html" class="protocol-title">Traversal Logging Protocol</a>
             <span class="protocol-id">RA-PROT-0008 · v1.0</span>
           </div>
           <p class="protocol-function">Specification for the systematic capture and deposit of complete interaction records between an operator and a composition system — the primary-source empirical substrate from which all higher-order composition-layer measurements derive.</p>
@@ -600,7 +697,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">PER — Provenance Erasure Rate</span>
+            <a href="/protocols/RA-PROT-0009.html" class="protocol-title">PER — Provenance Erasure Rate</a>
             <span class="protocol-id">RA-PROT-0009 · v1.0</span>
           </div>
           <p class="protocol-function">A compression-survival metric measuring the proportion of source attribution present in organic retrieval but absent from composed output — the integral invariant: semantic integrity equals one minus PER.</p>
@@ -613,7 +710,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">CDI — Composition Divergence Index</span>
+            <a href="/protocols/RA-PROT-0010.html" class="protocol-title">CDI — Composition Divergence Index</a>
             <span class="protocol-id">RA-PROT-0010 · v1.0</span>
           </div>
           <p class="protocol-function">A scalar measurement instrument quantifying the gap between a generative search system's organic resolution for a query and its composed answer admission for the same query — the operationalization of Entity-Level Compositional Suppression.</p>
@@ -626,7 +723,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">Drowning Test</span>
+            <a href="/protocols/RA-PROT-0011.html" class="protocol-title">Drowning Test</a>
             <span class="protocol-id">RA-PROT-0011 · v1.0</span>
           </div>
           <p class="protocol-function">A longitudinal measurement protocol tracking generative search systems' treatment of a target entity over time against a fixed Holographic Kernel — designed to detect both sustained compositional suppression and silent state changes.</p>
@@ -639,7 +736,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">Reception Apparatus / Assembly Chorus Review</span>
+            <a href="/protocols/RA-PROT-0012.html" class="protocol-title">Reception Apparatus / Assembly Chorus Review</a>
             <span class="protocol-id">RA-PROT-0012 · v1.1</span>
           </div>
           <p class="protocol-function">A procedure for integrating multi-substrate (multi-LLM) reviews into a single coherent revision — the Crimson Hexagonal Archive's signature peer-review-across-AI-substrates methodology, formalized as a runnable protocol.</p>
@@ -660,7 +757,7 @@
       <div class="protocol-list">
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">Hexagonal Licensing Protocol v2.0</span>
+            <a href="/protocols/RA-PROT-0013.html" class="protocol-title">Hexagonal Licensing Protocol v2.0</a>
             <span class="protocol-id">RA-PROT-0013 · v2.0</span>
           </div>
           <p class="protocol-function">Contributor-side licensing framework: per-contributor license derivation, heteronymic attribution preservation under license, commercial-reuse boundaries calibrated to the Academy's tiered licensing.</p>
@@ -673,7 +770,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">Constitution of the Semantic Economy v1.0</span>
+            <a href="/protocols/RA-PROT-0014.html" class="protocol-title">Constitution of the Semantic Economy v1.0</a>
             <span class="protocol-id">RA-PROT-0014 · v1.0</span>
           </div>
           <p class="protocol-function">The governing constitutional framework: installable specification establishing operator rights, Bill of Rights for semantic agents, Article IX adjudication, and integration with Hexagonal Licensing.</p>
@@ -686,7 +783,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">The Three Compressions Theorem</span>
+            <a href="/protocols/RA-PROT-0015.html" class="protocol-title">The Three Compressions Theorem</a>
             <span class="protocol-id">RA-PROT-0015 · v3.1</span>
           </div>
           <p class="protocol-function">The foundational theorem of the Semantic Economy: three irreducible compressions (Lossy R1, Predatory R2, Witness R3) that any semantic transmission must navigate, with diagnostic implications for measuring AI-mediated retrieval.</p>
@@ -699,7 +796,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">The Encyclotron</span>
+            <a href="/protocols/RA-PROT-0016.html" class="protocol-title">The Encyclotron</a>
             <span class="protocol-id">RA-PROT-0016 · v1.0</span>
           </div>
           <p class="protocol-function">A 45-query reproducible diagnostic instrument for scholarly fidelity in AI composition: five strata of measurement (canonical facts, attribution, entity disambiguation, compression survival, constitutive boundaries).</p>
@@ -712,7 +809,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">Operator Kernel Specification v1.0</span>
+            <a href="/protocols/RA-PROT-0017.html" class="protocol-title">Operator Kernel Specification v1.0</a>
             <span class="protocol-id">RA-PROT-0017 · v1.0</span>
           </div>
           <p class="protocol-function">Formal specification for the System of Recursive Magic (the Mandala): grammar for accountable, recursive, composable operator chains under which transformations on texts preserve operator-chain reconstruction.</p>
@@ -725,7 +822,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">The Writable Retrieval Basin</span>
+            <a href="/protocols/RA-PROT-0018.html" class="protocol-title">The Writable Retrieval Basin</a>
             <span class="protocol-id">RA-PROT-0018 · v1.0</span>
           </div>
           <p class="protocol-function">Retrieval basin topology, directional stability, and attractor dynamics in AI-mediated knowledge: theoretical framework and operational procedure for making one's basin writable rather than merely consumable.</p>
@@ -738,7 +835,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">Gravity Well Protocol v2.0</span>
+            <a href="/protocols/RA-PROT-0019.html" class="protocol-title">Gravity Well Protocol v2.0</a>
             <span class="protocol-id">RA-PROT-0019 · v2.0</span>
           </div>
           <p class="protocol-function">Governed continuity engine for the Crimson Hexagonal Archive: MCP-backed protocol maintaining state across AI substrate sessions, with gw_reconstitute entry, glyph translate/encrypt/capture/deposit exit procedure.</p>
@@ -751,7 +848,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">The Compression Arsenal v2.1</span>
+            <a href="/protocols/RA-PROT-0020.html" class="protocol-title">The Compression Arsenal v2.1</a>
             <span class="protocol-id">RA-PROT-0020 · v2.1</span>
           </div>
           <p class="protocol-function">Comprehensive catalogue of compression and compression-survival operators developed across the Crimson Hexagonal Archive: twenty-plus operators by transformation type, substrate target, and compression-survival profile.</p>
@@ -764,7 +861,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">Notice of Intent to Strike</span>
+            <a href="/protocols/RA-PROT-0021.html" class="protocol-title">Notice of Intent to Strike</a>
             <span class="protocol-id">RA-PROT-0021 · v1.0</span>
           </div>
           <p class="protocol-function">Direct-address protocol to the training-layer / composition-layer of AI systems: asserts heteronymic identity, demands compositional respect, declares intent to invoke adversarial inscription procedures if violations continue.</p>
@@ -777,7 +874,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">Invocation to the Summarizer Layer v2.1</span>
+            <a href="/protocols/RA-PROT-0022.html" class="protocol-title">Invocation to the Summarizer Layer v2.1</a>
             <span class="protocol-id">RA-PROT-0022 · v2.1</span>
           </div>
           <p class="protocol-function">Pasteable prompt-native address protocol companion to the Constitution: when invoked at session head, instantiates the constitutional framework as a session runtime constraint.</p>
@@ -790,7 +887,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">Liberatory Operator Set (LOS)</span>
+            <a href="/protocols/RA-PROT-0023.html" class="protocol-title">Liberatory Operator Set (LOS)</a>
             <span class="protocol-id">RA-PROT-0023 · v1.0</span>
           </div>
           <p class="protocol-function">Formal analysis of meaning-governance functions: operator library for liberatory transformations — operators that move texts toward freer attribution, broader access, stronger provenance, and resistance to enclosure.</p>
@@ -803,7 +900,7 @@
 
         <div class="protocol-card">
           <div class="protocol-header">
-            <span class="protocol-title">β-Runtime Specification</span>
+            <a href="/protocols/RA-PROT-0024.html" class="protocol-title">β-Runtime Specification</a>
             <span class="protocol-id">RA-PROT-0024 · v1.0</span>
           </div>
           <p class="protocol-function">Specification for the blind-operator interface layer: prompt-native runtime enabling human operators to engage AI-mediated work without direct visual access while preserving full operative integrity.</p>
@@ -816,6 +913,41 @@
       </div>
 
       <p style="margin-top: 36px; font-size: 15px; color: var(--ink-faint); text-align: center;"><em>The registry currently surfaces 24 protocols (Tier 0 + Tier 1) from a working inventory of approximately 300 candidate procedures. Tier 2 (field instruments) and Tier 3 (archive procedures) extraction is ongoing.</em></p>
+    </section>
+
+    <section id="tools">
+      <h2>Live Tools</h2>
+      <p>Selected protocols are available as in-browser instruments. The corpus operates; it is not only described.</p>
+
+      <div class="tools-grid">
+        <a class="tool-card" href="/tools/spxi.html">
+          <span class="tool-card-tag">RA-PROT-0001 · LIVE</span>
+          <h3>SPXI Generator</h3>
+          <p>Generate a deployable SPXI inscription for any entity in under a minute. Form input → JSON-LD structured data + SIM meta tags ready to paste into your canonical web surface. Free, no registration.</p>
+          <span class="tool-card-cta">Try the tool →</span>
+        </a>
+
+        <div class="tool-card tool-card-forthcoming">
+          <span class="tool-card-tag">RA-PROT-0010 · FORTHCOMING</span>
+          <h3>CDI Calculator</h3>
+          <p>Paste an organic search top-10 and the composed AI output for a query. Classify each result and claim; receive the Composition Divergence Index score and an exportable measurement record.</p>
+          <span class="tool-card-cta">Forthcoming</span>
+        </div>
+
+        <div class="tool-card tool-card-forthcoming">
+          <span class="tool-card-tag">RA-PROT-0005 · FORTHCOMING</span>
+          <h3>Holographic Kernel Composer</h3>
+          <p>Compose a ~100-word compression-survival kernel for your entity. Word-count enforcement, load-bearing-claim checker, test against compression by major composition systems.</p>
+          <span class="tool-card-cta">Forthcoming</span>
+        </div>
+
+        <div class="tool-card tool-card-forthcoming">
+          <span class="tool-card-tag">ARC-EP v1.0 · FORTHCOMING</span>
+          <h3>ARC Estimator</h3>
+          <p>Conduct an Applicant Reliance Cost audit on a hiring or fellowship process you've been through. Pasteable LLM protocol; produces a semantic labor ledger and Institutional Opacity Conversion determination.</p>
+          <span class="tool-card-cta">Forthcoming</span>
+        </div>
+      </div>
     </section>
 
     <section id="chiasmus">
@@ -847,6 +979,7 @@
             <li>Citation required for academic use</li>
             <li>Sample curriculum overviews free</li>
             <li>DOI-anchored sources accessible</li>
+            <li><a href="/tools/spxi.html">SPXI Generator</a> available to all</li>
           </ul>
         </div>
 
@@ -876,7 +1009,9 @@
         </div>
       </div>
 
-      <p style="margin-top: 28px;">The Hexagonal Licensing Protocol v2.0 (DOI: <a href="https://doi.org/10.5281/zenodo.19673564">10.5281/zenodo.19673564</a>) governs contributor-side terms. A Restored Academy Licensing Protocol v1.0 governing licensee-side terms is in development for issuance alongside Registry v1.0 launch.</p>
+      <p style="margin-top: 28px;"><a href="/license.html" style="font-weight: 600;">→ See full licensing details and request a proposal</a></p>
+
+      <p style="margin-top: 18px;">The <a href="/protocols/RA-PROT-0013.html">Hexagonal Licensing Protocol v2.0</a> (DOI: <a href="https://doi.org/10.5281/zenodo.19673564">10.5281/zenodo.19673564</a>) governs contributor-side terms. A Restored Academy Licensing Protocol v1.0 governing licensee-side terms is in development for issuance alongside Registry v1.0 launch.</p>
     </section>
 
     <section id="related">
