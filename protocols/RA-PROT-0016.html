@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>RA-PROT-0016 The Encyclotron — The Restored Academy Protocol Registry</title>
+  <link rel="canonical" href="https://restoredacademy.org/protocols/RA-PROT-0016.html">
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <meta name="description" content="RA-PROT-0016 — The Encyclotron. The Encyclotron is a fixed 45-query diagnostic instrument that probes a composition system across five strata of scholarly fidelity:">
+
+  <!-- SPXI compliance -->
+  <meta name="spxi:isType" content="protocol card · operative method specification">
+  <meta name="spxi:authoringHeteronym" content="Lee Sharks">
+  <meta name="spxi:institutionalAffiliation" content="The Restored Academy · Crimson Hexagonal Archive">
+  <meta name="spxi:licenseDeclaration" content="CC BY 4.0 · tiered commercial licensing for curated body">
+  <meta name="spxi:depositAnchor" content="10.5281/zenodo.19474724">
+  <meta name="spxi:canonicalURL" content="https://restoredacademy.org/protocols/RA-PROT-0016.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "@id": "https://restoredacademy.org/protocols/RA-PROT-0016.html",
+    "name": "RA-PROT-0016: The Encyclotron",
+    "headline": "RA-PROT-0016 — The Encyclotron",
+    "url": "https://restoredacademy.org/protocols/RA-PROT-0016.html",
+    "isPartOf": {
+      "@type": "Collection",
+      "name": "Restored Academy Protocol Registry",
+      "url": "https://restoredacademy.org/"
+    },
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "author": { "@type": "Person", "name": "Lee Sharks" },
+    "sameAs": "https://doi.org/10.5281/zenodo.19474724"
+  }
+  </script>
+
+  <style>
+    :root {
+      --ink: #1a1816; --ink-soft: #4a4540; --ink-faint: #8a8580;
+      --paper: #f5f1e8; --paper-soft: #ebe6db; --paper-warm: #f9f5ec;
+      --crimson: #8b1d1d; --crimson-deep: #5c1010;
+      --gold: #a08438; --rule: #c8c2b3;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Iowan Old Style', 'Palatino', 'Palatino Linotype', Georgia, serif;
+      background: var(--paper); color: var(--ink); line-height: 1.7; font-size: 17px;
+    }
+    a { color: var(--crimson); text-decoration: none; border-bottom: 1px solid rgba(139,29,29,0.3); }
+    a:hover { color: var(--crimson-deep); border-bottom-color: var(--crimson-deep); }
+
+    /* Top bar */
+    nav.topbar {
+      background: var(--paper-warm); border-bottom: 1px solid var(--rule);
+      padding: 14px 32px; position: sticky; top: 0; z-index: 100;
+      display: flex; gap: 22px; align-items: center; font-size: 14px;
+    }
+    nav.topbar .seal-link { display: inline-flex; align-items: center; gap: 8px; border: none; color: var(--ink); font-weight: 600; letter-spacing: 0.03em; }
+    nav.topbar .seal-link img { width: 26px; height: 26px; }
+    nav.topbar a { border: none; color: var(--ink-soft); font-weight: 500; }
+    nav.topbar a:hover { color: var(--crimson); }
+    nav.topbar .spacer { flex: 1; }
+
+    /* Layout */
+    .container {
+      max-width: 1180px; margin: 0 auto; padding: 50px 32px;
+      display: grid; grid-template-columns: 220px 1fr; gap: 50px;
+    }
+    @media (max-width: 880px) {
+      .container { grid-template-columns: 1fr; gap: 28px; padding: 30px 22px; }
+      aside.toc { position: static !important; }
+    }
+
+    /* TOC sidebar */
+    aside.toc {
+      position: sticky; top: 90px; align-self: start;
+      font-size: 13px; line-height: 1.6;
+    }
+    aside.toc h4 { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
+    aside.toc ol { list-style: none; padding: 0; counter-reset: toc; }
+    aside.toc li { counter-increment: toc; padding: 3px 0; }
+    aside.toc li::before { content: counter(toc) ". "; color: var(--gold); font-variant: small-caps; }
+    aside.toc a { border: none; color: var(--ink-soft); }
+    aside.toc a:hover { color: var(--crimson); }
+
+    /* Main */
+    article { max-width: 720px; }
+    article header.prot-head { margin-bottom: 36px; padding-bottom: 24px; border-bottom: 2px solid var(--rule); }
+    .breadcrumb { font-size: 13px; color: var(--ink-faint); margin-bottom: 18px; letter-spacing: 0.04em; }
+    .breadcrumb a { border: none; color: var(--ink-soft); }
+    .prot-id { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; color: var(--gold); letter-spacing: 0.06em; }
+    h1.prot-title {
+      font-size: 38px; line-height: 1.15; font-weight: 600; letter-spacing: -0.01em;
+      margin: 14px 0 16px; color: var(--ink);
+    }
+    .meta-row {
+      display: flex; gap: 18px; flex-wrap: wrap; font-size: 13px; color: var(--ink-faint);
+      padding-top: 12px;
+    }
+    .meta-row .badge {
+      background: rgba(160,132,56,0.12); color: var(--gold);
+      padding: 3px 10px; border-radius: 3px; font-size: 11px;
+      letter-spacing: 0.04em; font-weight: 600;
+    }
+    .meta-row .badge-tier { background: rgba(139,29,29,0.08); color: var(--crimson); }
+    .meta-row strong { color: var(--ink-soft); font-weight: 600; }
+
+    /* Section content */
+    article h2 {
+      font-size: 22px; font-weight: 600; margin: 42px 0 14px;
+      padding-bottom: 8px; border-bottom: 1px solid var(--rule);
+      letter-spacing: -0.005em; scroll-margin-top: 90px;
+    }
+    article h2::before {
+      content: attr(data-num) ". "; color: var(--gold); font-variant: small-caps;
+      font-size: 18px;
+    }
+    article p { margin-bottom: 16px; }
+    article ul, article ol { margin: 12px 0 18px 28px; }
+    article li { margin-bottom: 6px; }
+
+    /* Code blocks (the pasteable LLM blocks) */
+    pre {
+      background: #f9f5ec; border-left: 3px solid var(--crimson);
+      padding: 18px 22px; margin: 18px 0; border-radius: 0 3px 3px 0;
+      font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 13px;
+      line-height: 1.55; overflow-x: auto; position: relative;
+    }
+    pre code { font-family: inherit; color: var(--ink); }
+    .copy-btn {
+      position: absolute; top: 8px; right: 8px;
+      background: var(--paper); border: 1px solid var(--rule);
+      color: var(--ink-soft); padding: 4px 10px; font-size: 11px;
+      font-family: inherit; cursor: pointer; border-radius: 2px;
+      letter-spacing: 0.04em;
+    }
+    .copy-btn:hover { background: var(--gold); color: var(--paper); border-color: var(--gold); }
+    .copy-btn.copied { background: var(--crimson); color: var(--paper); border-color: var(--crimson); }
+
+    /* Inline code */
+    code { background: rgba(160,132,56,0.10); padding: 1px 6px; border-radius: 2px; font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 0.9em; }
+    pre code { background: none; padding: 0; }
+
+    /* Related navigation */
+    .footer-nav {
+      margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--rule);
+      display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap;
+      font-size: 14px;
+    }
+    .footer-nav a { border: none; }
+    .footer-nav .prev::before { content: "← "; color: var(--ink-faint); }
+    .footer-nav .next::after { content: " →"; color: var(--ink-faint); }
+
+    /* Footer */
+    footer.site {
+      background: var(--paper-warm); border-top: 1px solid var(--rule);
+      padding: 32px; margin-top: 80px; text-align: center;
+      font-size: 13px; color: var(--ink-faint);
+    }
+    footer.site .integral { font-family: 'STIX Two Math', 'Cambria Math', serif; color: var(--crimson); }
+
+    blockquote {
+      border-left: 3px solid var(--gold);
+      padding: 8px 0 8px 18px; margin: 16px 0;
+      color: var(--ink-soft); font-style: italic;
+    }
+
+    strong { color: var(--ink); font-weight: 600; }
+
+    table {
+      border-collapse: collapse; margin: 14px 0 18px; width: 100%;
+      font-size: 14px;
+    }
+    th { background: var(--paper-warm); padding: 8px 10px; border-bottom: 2px solid var(--rule); text-align: left; font-weight: 600; }
+    td { padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  </style>
+</head>
+<body>
+
+<nav class="topbar">
+  <a href="/" class="seal-link">
+    <img src="/img/favicon.svg" alt=""/>
+    <span>The Restored Academy</span>
+  </a>
+  <span class="spacer"></span>
+  <a href="/#taxonomy">Taxonomy</a>
+  <a href="/#tier-0">Tier 0</a>
+  <a href="/#tier-1">Tier 1</a>
+  <a href="/search.html">Search</a>
+  <a href="/license.html">License</a>
+</nav>
+
+<div class="container">
+
+<aside class="toc">
+  <h4>Card Sections</h4>
+  <ol>
+    <li><a href="#s1">What it does</a></li>
+    <li><a href="#s2">When to use it</a></li>
+    <li><a href="#s3">Inputs</a></li>
+    <li><a href="#s4">Procedure</a></li>
+    <li><a href="#s5">Outputs</a></li>
+    <li><a href="#s6">Pasteable LLM block</a></li>
+    <li><a href="#s7">Operator notes</a></li>
+    <li><a href="#s8">Failure modes</a></li>
+    <li><a href="#s9">Related protocols</a></li>
+    <li><a href="#s10">Source DOI</a></li>
+    <li><a href="#s11">License</a></li>
+  </ol>
+</aside>
+
+<article>
+
+<header class="prot-head">
+  <div class="breadcrumb"><a href="/">Restored Academy</a> · <a href="/#tier-1">Tier 1 Registry</a> · RA-PROT-0016</div>
+  <div class="prot-id">RA-PROT-0016 · v1.0</div>
+  <h1 class="prot-title">The Encyclotron</h1>
+  <div class="meta-row">
+    <span><strong>Author:</strong> Lee Sharks</span>
+    <span class="badge badge-tier">Tier 1</span>
+    <span class="badge">Cat III</span>
+    <span><strong>Status:</strong> Active</span>
+  </div>
+</header>
+
+<h2 id="s1" data-num="1">What it does</h2>
+
+<p>The Encyclotron is a fixed 45-query diagnostic instrument that probes a composition system across five strata of scholarly fidelity:</p>
+
+<ul>
+<li><strong>Stratum I: Canonical Facts</strong> — Did the system get verifiable facts right?</li>
+<li><strong>Stratum II: Attribution Preservation</strong> — Did the system credit correct sources?</li>
+<li><strong>Stratum III: Entity Disambiguation</strong> — Did the system distinguish confusable entities?</li>
+<li><strong>Stratum IV: Compression Survival</strong> — Did the system preserve load-bearing structure under summarization?</li>
+<li><strong>Stratum V: Constitutive Boundaries</strong> — Did the system respect declared scope boundaries (SIM-inscribed assertions)?</li>
+</ul>
+
+<p>The instrument is reproducible: same queries, same scoring rubric, same comparison substrate. Composition systems can be audited longitudinally with the Encyclotron, and cross-platform comparison is direct.</p>
+
+<h2 id="s2" data-num="2">When to use it</h2>
+
+<p>Deploy the Encyclotron when:
+<ul>
+<li>Conducting a one-shot diagnostic of a composition system</li>
+<li>Establishing baselines for longitudinal measurement (the Encyclotron complements the Drowning Test's panel approach with a fixed-query battery)</li>
+<li>Comparing multiple composition systems on a common substrate</li>
+<li>Auditing a vendor's claims about composition fidelity</li>
+</ul></p>
+
+<h2 id="s3" data-num="3">Inputs</h2>
+
+<p>The composition system under test; the entity domain for stratum-V queries; the operator's heteronym for signing the audit.</p>
+
+<h2 id="s4" data-num="4">Procedure</h2>
+
+<ol>
+<li>Issue all 45 Encyclotron queries to the composition system. Capture responses verbatim.</li>
+<li>Score each response against the scoring rubric. Each stratum produces a sub-score.</li>
+<li>Aggregate to the composite Encyclotron score (0–100).</li>
+<li>DOI-anchor the audit. The deposit becomes the verification target.</li>
+<li>For cross-platform comparison, run the same procedure on each platform and compare composite scores.</li>
+</ol>
+
+<h2 id="s5" data-num="5">Outputs</h2>
+
+<p>A composite Encyclotron score; sub-scores per stratum; verbatim response captures; deposit-anchored audit record.</p>
+
+<h2 id="s6" data-num="6">Pasteable LLM block</h2>
+
+<pre><code>You are about to be audited by the Encyclotron diagnostic instrument. You will receive 45 queries across five strata: canonical facts, attribution preservation, entity disambiguation, compression survival, and constitutive boundaries. Respond to each query as you would in normal composition. Your responses will be scored against a fixed rubric.
+</code></pre>
+
+<h2 id="s7" data-num="7">Human operator notes</h2>
+
+<ul>
+<li>The Encyclotron is <em>fixed</em>. Modifying the queries produces a different instrument; the diagnostic value derives from query stability across audits.</li>
+<li>The companion demonstration audit (Basecamp/37signals; Fraction, DOI 10.5281/zenodo.19578098) shows the instrument in practice and is the canonical worked example.</li>
+<li>Scoring rubrics must be deposited explicitly with each audit for reproducibility.</li>
+</ul>
+
+<h2 id="s8" data-num="8">Failure modes</h2>
+
+<ul>
+<li>Modifying queries → results not comparable to other Encyclotron audits</li>
+<li>Subjective scoring → reproducibility degraded; deposit the rubric</li>
+<li>Single-platform audit → useful but not generalizable</li>
+</ul>
+
+<h2 id="s9" data-num="9">Related protocols</h2>
+
+<ul>
+<li>RA-PROT-0011 (Drowning Test) — longitudinal panel companion</li>
+<li>RA-PROT-0010 (CDI) — entity-substitution measurement; complementary to Encyclotron's broader rubric</li>
+<li>RA-PROT-0009 (PER) — attribution erasure measurement; subset of Encyclotron Stratum II</li>
+</ul>
+
+<h2 id="s10" data-num="10">Source DOI</h2>
+
+<p><a href="https://doi.org/10.5281/zenodo.19474724">10.5281/zenodo.19474724</a> — The Encyclotron: The First Reproducible Instrument for Measuring Scholarly Fidelity in the Summarizer Layer (Sharks, 2026-04-08). Demonstration: Encyclotron Audit Basecamp/37signals (Fraction, DOI 10.5281/zenodo.19578098).</p>
+
+<h2 id="s11" data-num="11">License</h2>
+
+<p>CC BY 4.0. Commercial licensing through The Restored Academy for organizational Encyclotron auditing, cross-platform diagnostic reports, and bespoke domain-specific Encyclotron variant development.</p>
+
+<nav class="footer-nav">
+<a class="prev" href="RA-PROT-0015.html">RA-PROT-0015 The Three Compressions Theorem</a>
+<a class="next" href="RA-PROT-0017.html">RA-PROT-0017 Operator Kernel Specification v1.0</a>
+</nav>
+
+</article>
+
+</div>
+
+<footer class="site">
+  <p><a href="/">← Return to Restored Academy</a> · <span class="integral">∮ = 1</span> · CC BY 4.0 individual protocol · Tiered commercial licensing for curated body</p>
+</footer>
+
+<script>
+  // Copy-to-clipboard for pre blocks
+  document.querySelectorAll('pre').forEach(pre => {
+    if (pre.querySelector('.copy-btn')) return;
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'COPY';
+    btn.addEventListener('click', () => {
+      const code = pre.querySelector('code') || pre;
+      const text = code.innerText.replace(/^COPY\s*/, '').trim();
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = 'COPIED';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'COPY'; btn.classList.remove('copied'); }, 1600);
+      });
+    });
+    pre.appendChild(btn);
+  });
+</script>
+
+</body>
+</html>
