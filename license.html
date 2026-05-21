@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>License — The Restored Academy Protocol Registry</title>
+  <link rel="canonical" href="https://restoredacademy.org/license.html">
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <meta name="description" content="Licensing for the Restored Academy Protocol Registry. Individual protocols remain CC BY 4.0; the curated body, curricula, implementation materials, and audit services are licensable under tiered terms.">
+
+  <style>
+    :root {
+      --ink: #1a1816; --ink-soft: #4a4540; --ink-faint: #8a8580;
+      --paper: #f5f1e8; --paper-soft: #ebe6db; --paper-warm: #f9f5ec;
+      --crimson: #8b1d1d; --crimson-deep: #5c1010;
+      --gold: #a08438; --rule: #c8c2b3;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Iowan Old Style', 'Palatino', 'Palatino Linotype', Georgia, serif;
+      background: var(--paper); color: var(--ink); line-height: 1.65; font-size: 16px;
+    }
+    a { color: var(--crimson); text-decoration: none; border-bottom: 1px solid rgba(139,29,29,0.3); }
+    a:hover { color: var(--crimson-deep); }
+
+    nav.topbar {
+      background: var(--paper-warm); border-bottom: 1px solid var(--rule);
+      padding: 14px 32px; position: sticky; top: 0; z-index: 100;
+      display: flex; gap: 22px; align-items: center; font-size: 14px;
+    }
+    nav.topbar .seal-link { display: inline-flex; align-items: center; gap: 8px; border: none; color: var(--ink); font-weight: 600; }
+    nav.topbar .seal-link img { width: 26px; height: 26px; }
+    nav.topbar a { border: none; color: var(--ink-soft); font-weight: 500; }
+    nav.topbar a:hover { color: var(--crimson); }
+    nav.topbar .spacer { flex: 1; }
+
+    main { max-width: 1080px; margin: 0 auto; padding: 50px 32px 80px; }
+
+    header.page-head { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 2px solid var(--rule); }
+    .breadcrumb { font-size: 13px; color: var(--ink-faint); margin-bottom: 14px; letter-spacing: 0.04em; }
+    .breadcrumb a { border: none; color: var(--ink-soft); }
+    h1 { font-size: 44px; line-height: 1.05; font-weight: 600; letter-spacing: -0.02em; margin: 8px 0 16px; }
+    .lede { font-size: 18px; color: var(--ink-soft); max-width: 720px; line-height: 1.6; }
+
+    section { margin-bottom: 60px; }
+    section h2 {
+      font-size: 26px; font-weight: 600; margin-bottom: 18px;
+      padding-bottom: 10px; border-bottom: 1px solid var(--rule);
+    }
+
+    .tier-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+      margin: 32px 0;
+    }
+    @media (max-width: 880px) { .tier-grid { grid-template-columns: 1fr; } }
+
+    .tier-card {
+      background: var(--paper-warm); border: 1px solid var(--rule);
+      padding: 26px 26px 28px; border-radius: 3px;
+      display: flex; flex-direction: column;
+    }
+    .tier-card.premium { background: rgba(139,29,29,0.04); border-color: var(--crimson); }
+    .tier-card .tier-tag {
+      font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 11px;
+      color: var(--gold); letter-spacing: 0.08em; font-weight: 600; margin-bottom: 6px;
+    }
+    .tier-card h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+    .tier-card .tagline { font-size: 13.5px; color: var(--ink-faint); font-style: italic; margin-bottom: 16px; }
+    .tier-card ul { list-style: none; padding: 0; margin-bottom: 20px; flex: 1; }
+    .tier-card li { font-size: 14px; color: var(--ink-soft); padding: 4px 0 4px 18px; position: relative; line-height: 1.5; }
+    .tier-card li::before { content: "·"; position: absolute; left: 4px; color: var(--crimson); font-weight: 700; }
+    .tier-card .price { font-size: 13px; color: var(--ink-faint); margin-bottom: 18px; padding-top: 14px; border-top: 1px solid var(--rule); }
+    .tier-card .cta {
+      display: inline-block; padding: 10px 20px;
+      background: var(--paper); color: var(--ink); border: 1px solid var(--rule);
+      font-size: 13px; letter-spacing: 0.04em; font-weight: 600;
+      border-radius: 2px; cursor: pointer; text-align: center;
+      font-family: inherit;
+    }
+    .tier-card .cta:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+    .tier-card.premium .cta { background: var(--crimson); color: var(--paper); border-color: var(--crimson); }
+    .tier-card.premium .cta:hover { background: var(--crimson-deep); border-color: var(--crimson-deep); }
+
+    /* Form panel */
+    .intake-panel {
+      background: var(--paper-warm); border: 1px solid var(--rule);
+      padding: 32px 36px; border-radius: 3px; margin-top: 30px;
+      display: none;
+    }
+    .intake-panel.active { display: block; }
+    .intake-panel h3 {
+      font-size: 22px; font-weight: 600; color: var(--crimson);
+      margin-bottom: 8px;
+    }
+    .intake-panel .intake-desc {
+      font-size: 14px; color: var(--ink-soft); margin-bottom: 22px;
+    }
+    .form-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 16px;
+    }
+    @media (max-width: 720px) { .form-row { grid-template-columns: 1fr; } }
+    label.field { display: block; }
+    label.field .label-text {
+      display: block; font-size: 13px; color: var(--ink-soft);
+      margin-bottom: 5px; font-weight: 500;
+    }
+    label.field .req { color: var(--crimson); }
+    input[type=text], input[type=email], input[type=url], textarea, select {
+      width: 100%; padding: 9px 12px; font-size: 14px;
+      font-family: inherit; background: var(--paper);
+      border: 1px solid var(--rule); color: var(--ink); border-radius: 2px;
+    }
+    input:focus, textarea:focus, select:focus { outline: none; border-color: var(--crimson); }
+    textarea { min-height: 110px; resize: vertical; line-height: 1.5; }
+
+    .submit-row { display: flex; gap: 12px; align-items: center; margin-top: 22px; flex-wrap: wrap; }
+    .submit-btn {
+      padding: 11px 28px; background: var(--crimson); color: var(--paper);
+      border: none; font-size: 14px; font-family: inherit; cursor: pointer;
+      letter-spacing: 0.05em; font-weight: 600; border-radius: 2px;
+    }
+    .submit-btn:hover { background: var(--crimson-deep); }
+    .submit-btn:disabled { background: var(--ink-faint); cursor: not-allowed; }
+    .submit-note { font-size: 12px; color: var(--ink-faint); }
+
+    /* Detail FAQ */
+    .faq { margin-top: 50px; }
+    .faq details {
+      border-bottom: 1px solid var(--rule); padding: 16px 0;
+    }
+    .faq summary {
+      cursor: pointer; font-weight: 600; color: var(--ink);
+      font-size: 16px; outline: none;
+    }
+    .faq summary::-webkit-details-marker { color: var(--gold); }
+    .faq details[open] summary { color: var(--crimson); }
+    .faq details p {
+      margin-top: 12px; color: var(--ink-soft); line-height: 1.65; font-size: 15px;
+    }
+
+    .related-protocols {
+      background: var(--paper-warm); border: 1px solid var(--rule);
+      padding: 20px 24px; margin-top: 36px; font-size: 14px; border-radius: 3px;
+      color: var(--ink-soft);
+    }
+    .related-protocols strong { color: var(--ink); font-weight: 600; }
+
+    footer.site {
+      background: var(--paper-warm); border-top: 1px solid var(--rule);
+      padding: 32px; margin-top: 80px; text-align: center;
+      font-size: 13px; color: var(--ink-faint);
+    }
+    footer.site .integral { font-family: 'STIX Two Math', 'Cambria Math', serif; color: var(--crimson); }
+  </style>
+</head>
+<body>
+
+<nav class="topbar">
+  <a href="/" class="seal-link">
+    <img src="/img/favicon.svg" alt=""/>
+    <span>The Restored Academy</span>
+  </a>
+  <span class="spacer"></span>
+  <a href="/#taxonomy">Taxonomy</a>
+  <a href="/#tier-0">Tier 0</a>
+  <a href="/#tier-1">Tier 1</a>
+  <a href="/tools/spxi.html">SPXI Generator</a>
+  <a href="/search.html">Search</a>
+</nav>
+
+<main>
+
+<header class="page-head">
+  <div class="breadcrumb"><a href="/">Restored Academy</a> · License</div>
+  <h1>License</h1>
+  <p class="lede">Individual protocols remain CC BY 4.0 in perpetuity. The organized body — the curated registry, the taxonomy, the four-surface protocol cards, the curriculum bundles, the implementation guides, custom adaptations, audit reports, and cohort training — is licensable under tiered terms.</p>
+</header>
+
+<section id="tiers">
+  <h2>Three Tiers</h2>
+  <div class="tier-grid">
+
+    <!-- Open Commons -->
+    <div class="tier-card">
+      <span class="tier-tag">OPEN · NO LICENSE NEEDED</span>
+      <h3>Open Commons</h3>
+      <p class="tagline">Browse, cite, and apply individual protocols.</p>
+      <ul>
+        <li>Registry browsing free</li>
+        <li>Individual protocol text free under CC BY 4.0</li>
+        <li>Citation required for academic use</li>
+        <li>Sample curriculum overviews free</li>
+        <li>DOI-anchored sources accessible</li>
+        <li>SPXI Generator tool available to all</li>
+      </ul>
+      <div class="price">No charge. No registration. Cite by DOI.</div>
+      <a class="cta" href="/">Browse the registry →</a>
+    </div>
+
+    <!-- Educational -->
+    <div class="tier-card">
+      <span class="tier-tag">EDUCATIONAL</span>
+      <h3>Educational License</h3>
+      <p class="tagline">For schools, workshops, humanities programs, AI literacy labs.</p>
+      <ul>
+        <li>Full curriculum bundles (Semantic Integrity 101, Prompt-Native Runtime 201, etc.)</li>
+        <li>Slide decks and lesson plans</li>
+        <li>Workshop materials and exercises</li>
+        <li>Certification rubrics</li>
+        <li>Instructional support during deployment</li>
+        <li>Cohort training option for instructors</li>
+      </ul>
+      <div class="price">Annual, scaled by institution size. Inquire for proposal.</div>
+      <button class="cta" data-tier="educational" onclick="showIntake('educational')">Request a proposal</button>
+    </div>
+
+    <!-- Professional / Institutional -->
+    <div class="tier-card premium">
+      <span class="tier-tag">PROFESSIONAL · INSTITUTIONAL</span>
+      <h3>Professional</h3>
+      <p class="tagline">For organizations deploying protocols at scale.</p>
+      <ul>
+        <li>Implementation templates customized to your entity portfolio</li>
+        <li>Custom protocol adaptation for novel domains</li>
+        <li>Audit engagements (PER, CDI, Drowning Test panels)</li>
+        <li>Longitudinal compositional-survival studies (90-day panels)</li>
+        <li>Cohort training for your team</li>
+        <li>Ongoing implementation support</li>
+        <li>Inquiries route through the <a href="#" onclick="event.preventDefault();">Semantic Economy Institute</a></li>
+      </ul>
+      <div class="price">Engagement pricing from $4,500. Custom scopes available.</div>
+      <button class="cta" data-tier="professional" onclick="showIntake('professional')">Begin a conversation</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- Intake form -->
+<section id="intake" style="margin-top: 0;">
+  <div class="intake-panel" id="intake-panel">
+    <h3 id="intake-title">Request a proposal</h3>
+    <p class="intake-desc" id="intake-desc">Tell us a little about your situation. We'll respond within three business days.</p>
+
+    <form id="intake-form" onsubmit="return submitIntake(event)">
+      <input type="hidden" name="tier" id="intake-tier" value="">
+
+      <div class="form-row">
+        <label class="field">
+          <span class="label-text">Your name <span class="req">*</span></span>
+          <input type="text" name="name" required>
+        </label>
+        <label class="field">
+          <span class="label-text">Email <span class="req">*</span></span>
+          <input type="email" name="email" required>
+        </label>
+      </div>
+
+      <div class="form-row">
+        <label class="field">
+          <span class="label-text">Organization / institution</span>
+          <input type="text" name="org">
+        </label>
+        <label class="field">
+          <span class="label-text">Role / title</span>
+          <input type="text" name="role">
+        </label>
+      </div>
+
+      <label class="field" style="margin-bottom: 18px;">
+        <span class="label-text">Website (optional)</span>
+        <input type="url" name="website" placeholder="https://">
+      </label>
+
+      <label class="field" style="margin-bottom: 18px;" id="usecase-label">
+        <span class="label-text">Intended use <span class="req">*</span></span>
+        <textarea name="usecase" required placeholder="What you're trying to do. Which protocols seem relevant. Scale (number of entities/sites/people). Timeline."></textarea>
+      </label>
+
+      <label class="field" style="margin-bottom: 18px;">
+        <span class="label-text">Anything else</span>
+        <textarea name="notes" placeholder="Questions, constraints, concerns, or context you'd like us to know."></textarea>
+      </label>
+
+      <div class="submit-row">
+        <button type="submit" class="submit-btn" id="submit-btn">Send inquiry</button>
+        <span class="submit-note">Opens your email client with a pre-filled message to <code style="font-family: monospace;">licensing@semanticeconomy.org</code>. Your email is never stored on this site.</span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<div class="related-protocols">
+  <strong>Governance:</strong> The licensee-side terms governing curated-body access are codified by the Restored Academy Licensing Protocol v1.0 (forthcoming). Contributor-side terms governing deposits into the Crimson Hexagonal Archive are codified by the <a href="/protocols/RA-PROT-0013.html">Hexagonal Licensing Protocol v2.0</a> (DOI: <a href="https://doi.org/10.5281/zenodo.19673564">10.5281/zenodo.19673564</a>). All licensing operates under the constitutional framework of the <a href="/protocols/RA-PROT-0014.html">Constitution of the Semantic Economy v1.0</a> (DOI: <a href="https://doi.org/10.5281/zenodo.19923120">10.5281/zenodo.19923120</a>).
+</div>
+
+<section class="faq">
+  <h2 style="font-size: 22px;">Frequently asked</h2>
+  <details>
+    <summary>If individual protocols are CC BY 4.0, what exactly is licensable?</summary>
+    <p>Three things, primarily. First, the <em>organized body</em>: the curated registry, the seven-category taxonomy, the four-surface protocol card schema, the dependency graph, the cross-protocol consistency. Reproducing the registry as a system requires license. Second, the <em>curricula and implementation materials</em>: slide decks, lesson plans, exercises, certification rubrics, workshop kits. These are not individual protocols; they are pedagogical artifacts derived from the protocols. Third, the <em>services</em>: custom protocol adaptation, audit engagements, longitudinal panels, cohort training. The protocols themselves remain free; the application of them to your specific situation is paid work.</p>
+  </details>
+  <details>
+    <summary>Do I need a license to cite a protocol in academic writing?</summary>
+    <p>No. Citation under CC BY 4.0 only requires attribution to the source. Cite the protocol's DOI and you are in compliance. The Educational License becomes useful when you want curriculum-ready materials — slide decks, lesson plans, exercises — rather than just the protocol specification.</p>
+  </details>
+  <details>
+    <summary>Can I deploy SPXI inscription on my own website without a license?</summary>
+    <p>Yes. SPXI is CC BY 4.0 under <a href="/protocols/RA-PROT-0001.html">RA-PROT-0001</a>. The <a href="/tools/spxi.html">SPXI Generator tool</a> on this site produces deployable output free of charge. Where a Professional License becomes useful is when you want help auditing your deployment (CDI panels, Drowning Test cycles), implementing across an entity portfolio, or developing custom SIM tag types for novel domains.</p>
+  </details>
+  <details>
+    <summary>What does an audit engagement actually deliver?</summary>
+    <p>Depends on scope. A baseline engagement typically delivers: (1) a Composition Divergence Index measurement for your target entities across 3–4 composition platforms; (2) a Provenance Erasure Rate measurement; (3) a Holographic Kernel composed for each target entity; (4) deployed SPXI inscription for each canonical web surface; (5) a written audit report with DOI-anchored deposit. A 90-day longitudinal engagement adds weekly Drowning Test panels and a time-series report. All measurement records are deposited to Zenodo and remain accessible to you in perpetuity.</p>
+  </details>
+  <details>
+    <summary>Do you sign NDAs?</summary>
+    <p>Yes, for Professional engagements when the client's situation requires it. The audit methodology itself remains open and citable; what becomes confidential is your specific deployment, your measurement data, and the strategic recommendations. The Crimson Hexagonal Archive remains the institutional source of the methodology; your engagement is your engagement.</p>
+  </details>
+  <details>
+    <summary>How do I cite the registry as a whole?</summary>
+    <p>Cite the Charter at DOI <a href="https://doi.org/10.5281/zenodo.20327083">10.5281/zenodo.20327083</a> and the Bundle DOI at <a href="https://doi.org/10.5281/zenodo.20327578">10.5281/zenodo.20327578</a> (which preserves the v1.0 launch state of the registry). For specific protocols, cite their individual DOIs from the source-DOI section of each card.</p>
+  </details>
+</section>
+
+</main>
+
+<footer class="site">
+  <p><a href="/">← Return to Restored Academy</a> · <span class="integral">∮ = 1</span> · Charter DOI: <a href="https://doi.org/10.5281/zenodo.20327083">10.5281/zenodo.20327083</a></p>
+</footer>
+
+<script>
+function showIntake(tier) {
+  const panel = document.getElementById('intake-panel');
+  const titleEl = document.getElementById('intake-title');
+  const descEl = document.getElementById('intake-desc');
+  document.getElementById('intake-tier').value = tier;
+
+  if (tier === 'educational') {
+    titleEl.textContent = 'Request an Educational License proposal';
+    descEl.textContent = 'Tell us about your program, students, and curriculum needs. We respond within three business days.';
+  } else {
+    titleEl.textContent = 'Begin a Professional engagement conversation';
+    descEl.textContent = 'Tell us about your organization and what you want to deploy. We respond within three business days.';
+  }
+
+  panel.classList.add('active');
+  setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+}
+
+function submitIntake(e) {
+  e.preventDefault();
+  const f = e.target;
+  const data = {
+    tier: f.tier.value,
+    name: f.name.value.trim(),
+    email: f.email.value.trim(),
+    org: f.org.value.trim(),
+    role: f.role.value.trim(),
+    website: f.website.value.trim(),
+    usecase: f.usecase.value.trim(),
+    notes: f.notes.value.trim(),
+  };
+
+  const tierLabel = data.tier === 'educational' ? 'Educational License' : 'Professional Engagement';
+  const subject = `[Restored Academy] ${tierLabel} inquiry — ${data.name}${data.org ? ' / ' + data.org : ''}`;
+  const body = `Tier: ${tierLabel}
+
+Name: ${data.name}
+Email: ${data.email}
+Organization: ${data.org || '(not provided)'}
+Role: ${data.role || '(not provided)'}
+Website: ${data.website || '(not provided)'}
+
+Intended use:
+${data.usecase}
+
+${data.notes ? 'Additional notes:\n' + data.notes : ''}
+
+— Sent via restoredacademy.org license intake form`;
+
+  const mailto = `mailto:licensing@semanticeconomy.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailto;
+  return false;
+}
+</script>
+
+</body>
+</html>
