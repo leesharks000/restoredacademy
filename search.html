@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Search — Restored Academy Protocol Registry</title>
+  <link rel="canonical" href="https://restoredacademy.org/search.html">
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <meta name="description" content="Search the 24-card Restored Academy Protocol Registry. Filter by tier, category, author, or full-text.">
+
+  <style>
+    :root {
+      --ink: #1a1816; --ink-soft: #4a4540; --ink-faint: #8a8580;
+      --paper: #f5f1e8; --paper-soft: #ebe6db; --paper-warm: #f9f5ec;
+      --crimson: #8b1d1d; --crimson-deep: #5c1010;
+      --gold: #a08438; --rule: #c8c2b3;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Iowan Old Style', 'Palatino', 'Palatino Linotype', Georgia, serif;
+      background: var(--paper); color: var(--ink); line-height: 1.6; font-size: 16px;
+    }
+    a { color: var(--crimson); text-decoration: none; border-bottom: 1px solid rgba(139,29,29,0.3); }
+    a:hover { color: var(--crimson-deep); }
+    
+    nav.topbar {
+      background: var(--paper-warm); border-bottom: 1px solid var(--rule);
+      padding: 14px 32px; position: sticky; top: 0; z-index: 100;
+      display: flex; gap: 22px; align-items: center; font-size: 14px;
+    }
+    nav.topbar .seal-link { display: inline-flex; align-items: center; gap: 8px; border: none; color: var(--ink); font-weight: 600; }
+    nav.topbar .seal-link img { width: 26px; height: 26px; }
+    nav.topbar a { border: none; color: var(--ink-soft); font-weight: 500; }
+    nav.topbar a:hover { color: var(--crimson); }
+    nav.topbar .spacer { flex: 1; }
+
+    main { max-width: 980px; margin: 0 auto; padding: 50px 32px 80px; }
+    header.page-head { margin-bottom: 32px; padding-bottom: 22px; border-bottom: 2px solid var(--rule); }
+    .breadcrumb { font-size: 13px; color: var(--ink-faint); margin-bottom: 14px; letter-spacing: 0.04em; }
+    .breadcrumb a { border: none; color: var(--ink-soft); }
+    h1 { font-size: 38px; line-height: 1.1; font-weight: 600; letter-spacing: -0.015em; margin: 8px 0 10px; }
+    .lede { color: var(--ink-soft); font-style: italic; font-size: 16px; }
+
+    .search-bar {
+      background: var(--paper-warm); border: 1px solid var(--rule);
+      padding: 24px 26px; border-radius: 3px; margin-bottom: 32px;
+    }
+    #search-input {
+      width: 100%; padding: 14px 18px; font-size: 18px;
+      font-family: inherit; background: var(--paper);
+      border: 1px solid var(--rule); border-radius: 2px;
+      color: var(--ink);
+    }
+    #search-input:focus { outline: none; border-color: var(--crimson); }
+
+    .filters {
+      display: flex; gap: 24px; margin-top: 18px; flex-wrap: wrap;
+      align-items: center; font-size: 14px;
+    }
+    .filter-group {
+      display: flex; gap: 6px; align-items: center;
+    }
+    .filter-group label {
+      font-size: 12px; color: var(--ink-faint); letter-spacing: 0.06em;
+      text-transform: uppercase; font-weight: 600; margin-right: 4px;
+    }
+    .filter-chip {
+      padding: 4px 12px; border: 1px solid var(--rule);
+      background: var(--paper); color: var(--ink-soft);
+      font-size: 12px; cursor: pointer; border-radius: 2px;
+      font-family: inherit; letter-spacing: 0.04em;
+    }
+    .filter-chip:hover { border-color: var(--gold); color: var(--gold); }
+    .filter-chip.active { background: var(--crimson); color: var(--paper); border-color: var(--crimson); }
+
+    .results-count {
+      font-size: 13px; color: var(--ink-faint); margin-bottom: 18px;
+      letter-spacing: 0.04em;
+    }
+
+    .protocol-card {
+      background: var(--paper-warm); border-left: 3px solid var(--crimson);
+      padding: 18px 22px; border-radius: 0 3px 3px 0;
+      margin-bottom: 14px; display: block; color: var(--ink);
+      border-bottom: none;
+    }
+    .protocol-card:hover { background: #fff; border-left-color: var(--crimson-deep); }
+    .protocol-card .card-header {
+      display: flex; justify-content: space-between; align-items: baseline;
+      flex-wrap: wrap; gap: 10px; margin-bottom: 6px;
+    }
+    .protocol-card .card-id { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 12px; color: var(--gold); letter-spacing: 0.04em; }
+    .protocol-card .card-title { font-size: 18px; font-weight: 600; color: var(--ink); }
+    .protocol-card .card-tagline { font-size: 14px; color: var(--ink-soft); margin: 6px 0 10px; }
+    .protocol-card .card-meta { font-size: 11.5px; color: var(--ink-faint); display: flex; gap: 14px; flex-wrap: wrap; padding-top: 8px; border-top: 1px dashed var(--rule); }
+    .protocol-card .badge { background: rgba(160,132,56,0.12); color: var(--gold); padding: 2px 8px; border-radius: 3px; font-size: 11px; letter-spacing: 0.02em; }
+    .protocol-card .badge-tier { background: rgba(139,29,29,0.08); color: var(--crimson); }
+
+    .empty {
+      text-align: center; padding: 60px 20px; color: var(--ink-faint);
+      font-style: italic;
+    }
+
+    footer.site {
+      background: var(--paper-warm); border-top: 1px solid var(--rule);
+      padding: 32px; margin-top: 80px; text-align: center;
+      font-size: 13px; color: var(--ink-faint);
+    }
+    footer.site .integral { font-family: 'STIX Two Math', 'Cambria Math', serif; color: var(--crimson); }
+
+    mark { background: rgba(160,132,56,0.30); color: var(--ink); padding: 0 2px; }
+  </style>
+</head>
+<body>
+
+<nav class="topbar">
+  <a href="/" class="seal-link">
+    <img src="/img/favicon.svg" alt=""/>
+    <span>The Restored Academy</span>
+  </a>
+  <span class="spacer"></span>
+  <a href="/#taxonomy">Taxonomy</a>
+  <a href="/#tier-0">Tier 0</a>
+  <a href="/#tier-1">Tier 1</a>
+  <a href="/tools/spxi.html">SPXI Generator</a>
+  <a href="/license.html">License</a>
+</nav>
+
+<main>
+
+<header class="page-head">
+  <div class="breadcrumb"><a href="/">Restored Academy</a> · Search</div>
+  <h1>Browse the Registry</h1>
+  <p class="lede">Search across all 24 protocol cards. Filter by tier or category.</p>
+</header>
+
+<div class="search-bar">
+  <input type="search" id="search-input" placeholder="Search by name, ID, author, or text within cards…" autofocus>
+  <div class="filters">
+    <div class="filter-group">
+      <label>Tier:</label>
+      <button class="filter-chip active" data-filter="tier" data-value="all">All</button>
+      <button class="filter-chip" data-filter="tier" data-value="0">0</button>
+      <button class="filter-chip" data-filter="tier" data-value="1">1</button>
+    </div>
+    <div class="filter-group">
+      <label>Category:</label>
+      <button class="filter-chip active" data-filter="cat" data-value="all">All</button>
+      <button class="filter-chip" data-filter="cat" data-value="I">I</button>
+      <button class="filter-chip" data-filter="cat" data-value="II">II</button>
+      <button class="filter-chip" data-filter="cat" data-value="III">III</button>
+      <button class="filter-chip" data-filter="cat" data-value="IV">IV</button>
+      <button class="filter-chip" data-filter="cat" data-value="V">V</button>
+      <button class="filter-chip" data-filter="cat" data-value="VI">VI</button>
+      <button class="filter-chip" data-filter="cat" data-value="VII">VII</button>
+    </div>
+  </div>
+</div>
+
+<div class="results-count" id="results-count"></div>
+<div id="results-list"></div>
+
+</main>
+
+<footer class="site">
+  <p><a href="/">← Return to Restored Academy</a> · <span class="integral">∮ = 1</span></p>
+</footer>
+
+<script>
+let protocols = [];
+let state = { query: '', tier: 'all', cat: 'all' };
+
+fetch('/data/protocols.json')
+  .then(r => r.json())
+  .then(data => { protocols = data; render(); })
+  .catch(err => {
+    document.getElementById('results-list').innerHTML = '<div class="empty">Could not load search index. Try a hard refresh.</div>';
+  });
+
+document.getElementById('search-input').addEventListener('input', e => {
+  state.query = e.target.value.trim().toLowerCase();
+  render();
+});
+
+document.querySelectorAll('.filter-chip').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const filter = btn.dataset.filter;
+    const value = btn.dataset.value;
+    state[filter] = value;
+    document.querySelectorAll(`.filter-chip[data-filter="${filter}"]`).forEach(b => {
+      b.classList.toggle('active', b.dataset.value === value);
+    });
+    render();
+  });
+});
+
+function render() {
+  const q = state.query;
+  let results = protocols.filter(p => {
+    if (state.tier !== 'all' && p.tier !== state.tier) return false;
+    if (state.cat !== 'all' && !p.cats.includes(state.cat)) return false;
+    if (!q) return true;
+    const haystack = (p.id + ' ' + p.title + ' ' + p.author + ' ' + p.tagline + ' ' + p.text).toLowerCase();
+    return haystack.includes(q);
+  });
+
+  document.getElementById('results-count').textContent = 
+    `${results.length} of ${protocols.length} protocols` + (q ? ` matching "${state.query}"` : '');
+
+  const list = document.getElementById('results-list');
+  if (results.length === 0) {
+    list.innerHTML = '<div class="empty">No protocols match your filters.</div>';
+    return;
+  }
+  list.innerHTML = results.map(p => `
+    <a href="/protocols/${p.id}.html" class="protocol-card">
+      <div class="card-header">
+        <span class="card-title">${highlight(p.title, q)}</span>
+        <span class="card-id">${p.id}</span>
+      </div>
+      <div class="card-tagline">${highlight(p.tagline, q)}</div>
+      <div class="card-meta">
+        <span>${p.author}</span>
+        <span class="badge badge-tier">Tier ${p.tier}</span>
+        ${p.cats.map(c => `<span class="badge">Cat ${c}</span>`).join('')}
+        ${p.doi ? `<span style="font-family: 'SF Mono', monospace;">${p.doi}</span>` : ''}
+      </div>
+    </a>
+  `).join('');
+}
+
+function highlight(text, q) {
+  if (!q) return escapeHtml(text);
+  const safe = escapeHtml(text);
+  const re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+  return safe.replace(re, '<mark>$1</mark>');
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+</script>
+
+</body>
+</html>
