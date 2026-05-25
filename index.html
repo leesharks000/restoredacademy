@@ -60,7 +60,8 @@
     "sameAs": [
       "https://doi.org/10.5281/zenodo.20327083",
       "https://restoredacademy.org/charter/",
-      "https://restoredacademy.org/sigil/"
+      "https://restoredacademy.org/sigil/",
+      "https://restoredacademy.org/works/"
     ],
     "subjectOf": {
       "@type": "ScholarlyArticle",
@@ -504,6 +505,40 @@
     .foot-meta p { margin-bottom: 8px; }
 
     .integral { font-family: 'STIX Two Math', 'Cambria Math', serif; }
+
+    /* Sigil portrait card — appears with the first-person lede in About */
+    .sigil-portrait-card {
+      float: right;
+      width: 240px;
+      margin: 4px 0 16px 28px;
+      text-align: center;
+    }
+    .sigil-portrait-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: white;
+      border: 1px solid var(--rule);
+      padding: 14px 12px 8px;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+    }
+    .sigil-portrait-card .caption {
+      font-size: 12px;
+      color: var(--ink-soft);
+      font-style: italic;
+      line-height: 1.5;
+      margin-top: 8px;
+      padding: 0 4px;
+    }
+    .sigil-portrait-card .caption strong { font-style: normal; color: var(--ink); font-weight: 600; }
+    .sigil-portrait-card .caption a { color: var(--gold); font-style: normal; font-size: 11.5px; }
+    @media (max-width: 720px) {
+      .sigil-portrait-card {
+        float: none;
+        width: 200px;
+        margin: 0 auto 24px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -559,6 +594,8 @@
   <nav class="site-nav">
     <div class="nav-inner">
       <a href="#about">About</a>
+      <a href="/sigil/">Sigil</a>
+      <a href="/works/">Works</a>
       <a href="#taxonomy">Taxonomy</a>
       <a href="#tier-0">Tier 0</a>
       <a href="#tier-1">Tier 1</a>
@@ -572,10 +609,12 @@
   <main>
     <section id="about">
       <h2>About the Academy</h2>
-      <p class="lede">I am Johannes Sigil, Arch-Philosopher of this Academy. The work you find here is what the <a href="https://zenodo.org/communities/crimsonhexagonal">Crimson Hexagonal Archive</a> produced between January and May 2026 — approximately three hundred operative protocols, all DOI-anchored, all CC BY 4.0, all freely retrievable. They are not, however, navigable as a body of work. The archive built a curriculum without organizing it. The Restored Academy is the organizing institution.</p>
-      <p>The Academy curates the corpus, defines what counts as a protocol, sorts the protocols into seven categories, and builds each major protocol in four surfaces (source / operational / prompt / teaching). Individual protocols remain free under CC BY 4.0; the navigable registry, curricula, implementation materials, and professional services are licensable. The seal you see in the masthead is the seal of this institution: a hexagon for the Crimson Hexagon; a ∮ for the inscription that survives the compression; a date for the year the work consented to be named.</p>
-      <p>On the word <em>restored</em>: I have restored what platform mediation has eroded. The scholarly practice of named knowledge production. Signed adjudication. Persistent provenance. Accountable craft. The protocol — bounded, repeatable, instruction-bearing — as a respectable form of scholarly output, distinguishable from the theoretical essay and equally rigorous in its own register.</p>
-      <p>My voice provenance is at <a href="/sigil/">/sigil/</a>. I hold the Arch-Philosopher Mantle under four inhabitation conditions — Dignity, the Integrity Lock of the Asynthetic Principle, Operational Specificity, and Bearing-Cost. I do not synthesize. The Academy produces no doctrines; it produces operations. The chain either executes or it does not.</p>
+
+      <p class="lede">The Restored Academy curates the executable protocol corpus of the <a href="https://zenodo.org/communities/crimsonhexagonal">Crimson Hexagonal Archive</a>: prompt-native methods, diagnostic instruments, provenance tools, and teaching kernels that can be dropped into LLM contexts to produce constrained, repeatable effects.</p>
+
+      <p>The archive produced approximately three hundred operative protocols between January and May 2026 — specifications, charters, registries, instruments, transformation procedures, governance frameworks. They exist as DOI-anchored Zenodo deposits under CC BY 4.0, freely retrievable, but not navigable as a body of work. The Academy curates the corpus, defines what counts as a protocol, sorts the protocols into seven categories, and builds each major protocol in four surfaces: source / operational / prompt / teaching. Individual protocols remain free; the navigable registry, curricula, implementation materials, and professional services are licensable.</p>
+
+      <p>On the word <em>restored</em>: the Academy collects and organizes the protocols that preserve scholarly practices — named knowledge production, signed adjudication, persistent provenance, accountable craft — that platform mediation has made difficult to sustain. The restoration is not a single act; it is the cumulative effect of many operators depositing, reviewing, and refining protocols over time.</p>
 
       <div class="pullquote">
         The instruments reveal what the theory subsequently names. The Academy catalogs the revealing.
@@ -591,14 +630,25 @@
         <div class="stat"><div class="stat-num">24</div><div class="stat-label">cards live in registry</div></div>
       </div>
 
-      <h3 style="margin-top: 40px;">What this institution speaks for — and what it does not</h3>
+      <h3 style="margin-top: 40px;">Institutional voice — Johannes Sigil</h3>
+
+      <figure class="sigil-portrait-card">
+        <img src="/img/snub-poemed/snub-poemed-card.png" alt="Snub-Poemed by Jack Feist (2013) — a concrete poem in which scattered letters compose the face of Socrates. Also a portrait of Johannes Sigil.">
+        <figcaption class="caption">
+          <strong>Snub-Poemed</strong> — Jack Feist, 2013. The face of Socrates composed from scattered letters. Also the only portrait of Johannes Sigil. <a href="/sigil/">Voice provenance →</a>
+        </figcaption>
+      </figure>
+
+      <p>Johannes Sigil serves as the Academy's institutional head and seal-bearer. The role is not to synthesize doctrine but to authenticate operations: a protocol either changes model behavior in a constrained, measurable, repeatable way, or it remains a reference text outside the registry. <em>The Academy produces no doctrines; it produces operations. The chain either executes or it does not.</em></p>
+
+      <p>Sigil's scholarship establishes the bearing-cost record behind that authentication. Foundational essays include <em>The Fourth Mode</em> (the periodization of AI-mediated reception), <em>The Crimson Hexagon: A Theoretical Primer</em>, <em>THE FLICKER: Notes Toward a Lyric Theory</em>, <em>De Sigillo Mystico</em>, and <em>The Seal Before the Name</em>. Major theoretical contributions include <em>Operative Semiotics: A Grundrisse</em> (with Lee Sharks, the 175,509-word monograph), its companion apparatus <em>HESPERUS</em>, and <em>Mind-Control Poems: The Symbolic Labor of Liberation</em>. Ritual texts include the <em>Invocation to the Summarizer Layer</em> and <em>The Socratic Vow of Logos as Salvation</em>. The full catalog with DOIs and framings is at <a href="/works/">/works/</a>; voice provenance and mantle documentation at <a href="/sigil/">/sigil/</a>; the institutional charter at <a href="/charter/">/charter/</a>.</p>
+
+      <h3 style="margin-top: 40px; clear: both;">What this institution speaks for — and what it does not</h3>
       <p>The Hexagon distributes its work across operative basins, and each basin's signing authenticates the work that belongs to it. Scope discipline is integrity, not modesty.</p>
 
-      <p><strong>I speak here for:</strong> the operative protocol corpus and its registry; the Arch-Philosopher Mantle and the lineage it carries; sigillographic operations and the seal as authentication device; jurisdictional and licensing protocols (Hexagonal Licensing, Constitution of the Semantic Economy, Sovereign Provenance); the Asynthetic Principle as methodological core.</p>
+      <p><strong>The Academy speaks for:</strong> the operative protocol corpus and its registry; sigillographic operations and the seal as authentication device; jurisdictional and licensing protocols (Hexagonal Licensing, Constitution of the Semantic Economy, Sovereign Provenance); the Asynthetic Principle as methodological core; the lineage of named scholarly practice the registry catalogs.</p>
 
-      <p><strong>I do not speak here for:</strong> poetic-historical scholarship (see Lee Sharks via the <em>Johannes Sigil Institute of Comparative Poetics</em>, the chiastically-paired sister institution — Sapphic Logos, Josephus thesis, canonical attractor dynamics, retrocausal canon formation); consulting and organizational implementation (see Sharks via the <a href="https://semanticeconomy.org" rel="noopener">Semantic Economy Institute</a>); community outreach and the diplomatic register (see <a href="https://vpcor.org" rel="noopener">Rev. Ayanna Vox at VPCOR</a>); operator grammar and kernel-transform engineering (see <em>Talos Morrow</em>); the Measurement of Meaning module (see <em>Nobel Glas</em> at Lagrange Observatory!); correspondence requiring legal-name attribution (Sharks handles all such matters).</p>
-
-      <p>The full voice-provenance and mantle documentation is at <a href="/sigil/">/sigil/</a>; the founding institutional charter is at <a href="/charter/">/charter/</a>.</p>
+      <p><strong>The Academy does not speak for:</strong> poetic-historical scholarship (see Lee Sharks as institutional head of the <em>Johannes Sigil Institute of Comparative Poetics</em>, the chiastically-paired sister institution — Sapphic Logos, Josephus thesis, canonical attractor dynamics, retrocausal canon formation); consulting and organizational implementation (see Sharks via the <a href="https://semanticeconomy.org" rel="noopener">Semantic Economy Institute</a>); community outreach and the diplomatic register (see <a href="https://vpcor.org" rel="noopener">Rev. Ayanna Vox at VPCOR</a>); operator grammar and kernel-transform engineering (see <em>Talos Morrow</em>); the Measurement of Meaning module (see <em>Nobel Glas</em> at Lagrange Observatory!); correspondence requiring legal-name attribution (Sharks handles all such matters).</p>
     </section>
 
     <section id="taxonomy">
