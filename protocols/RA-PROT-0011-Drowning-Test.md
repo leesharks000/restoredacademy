@@ -68,7 +68,7 @@ For each query, your response will be analyzed for which Kernel claims survive i
 
 ## 10. Source DOI
 
-[10.5281/zenodo.20327138](https://doi.org/10.5281/zenodo.20327138) — Drowning Test v1.0 standalone specification (Sharks, 2026-05-21). Extracted from *Empirical Phenomenology* (DOI: 10.5281/zenodo.20326137). Also referenced in *The Writable Retrieval Basin* (DOI: 10.5281/zenodo.19763346).
+[10.5281/zenodo.20327138](https://alexanarch.org/s/records/0/) — Drowning Test v1.0 standalone specification (Sharks, 2026-05-21). Extracted from *Empirical Phenomenology* (DOI: 10.5281/zenodo.20326137). Also referenced in *The Writable Retrieval Basin* (DOI: 10.5281/zenodo.19763346).
 
 ## 11. License
 
