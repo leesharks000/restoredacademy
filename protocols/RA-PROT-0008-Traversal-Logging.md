@@ -67,7 +67,7 @@ Operate normally. Do not adjust your responses based on this notice; the protoco
 
 ## 10. Source DOI
 
-[10.5281/zenodo.18480959](https://doi.org/10.5281/zenodo.18480959) — Document 237: THE TRAVERSAL GRAMMAR — Logotic Programming Extension Module v0.6 (Sharks, 2026-02-04). Foundational series: TRAV_LOG:001–005 (DOI: 10.5281/zenodo.18636138).
+[10.5281/zenodo.18480959](https://alexanarch.org/s/records/444/) — Document 237: THE TRAVERSAL GRAMMAR — Logotic Programming Extension Module v0.6 (Sharks, 2026-02-04). Foundational series: TRAV_LOG:001–005 (DOI: 10.5281/zenodo.18636138).
 
 ## 11. License
 
