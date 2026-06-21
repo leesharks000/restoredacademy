@@ -76,7 +76,7 @@ Continuity chain: [chain ID]
 
 ## 10. Source DOI
 
-[10.5281/zenodo.19460734](https://doi.org/10.5281/zenodo.19460734) — gravitywell-1.onrender.com — Gravity Well Protocol v2.0 — Governed Continuity Engine for the Crimson Hexagonal Archive (Sharks, 2026-04-07).
+[10.5281/zenodo.19460734](https://alexanarch.org/s/records/0/) — gravitywell-1.onrender.com — Gravity Well Protocol v2.0 — Governed Continuity Engine for the Crimson Hexagonal Archive (Sharks, 2026-04-07).
 
 ## 11. License
 
