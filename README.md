@@ -23,7 +23,7 @@ Book-as-website meets technical reference. Warm paper background (#f5f1e8), crim
 
 ## Authority
 
-- Charter DOI: [10.5281/zenodo.20327083](https://doi.org/10.5281/zenodo.20327083) (Johannes Sigil, head of The Restored Academy)
+- Charter DOI: [10.5281/zenodo.20327083](https://alexanarch.org/s/records/0/) (Johannes Sigil, head of The Restored Academy)
 - Bundle DOI: [10.5281/zenodo.20327578](https://doi.org/10.5281/zenodo.20327578) (registry v1.0 launch state)
 - Institutional head: Johannes Sigil (heteronym)
 - Sister Institute: Johannes Sigil Institute of Comparative Poetics (jsiponline.com), headed by Lee Sharks (chiastic structure)
@@ -31,7 +31,7 @@ Book-as-website meets technical reference. Warm paper background (#f5f1e8), crim
 
 ## License
 
-Individual protocols remain CC BY 4.0. The organized body (registry, taxonomy, card schema, curricula, audit services, implementation materials) is licensable under tiered terms. See [/license.html](https://restoredacademy.org/license.html). Contributor-side terms: [Hexagonal Licensing Protocol v2.0](https://doi.org/10.5281/zenodo.19673564).
+Individual protocols remain CC BY 4.0. The organized body (registry, taxonomy, card schema, curricula, audit services, implementation materials) is licensable under tiered terms. See [/license.html](https://restoredacademy.org/license.html). Contributor-side terms: [Hexagonal Licensing Protocol v2.0](https://alexanarch.org/s/records/0/).
 
 ## Deployment
 
