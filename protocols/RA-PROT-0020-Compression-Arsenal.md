@@ -64,7 +64,7 @@ You are operating within the Compression Arsenal v2.1 framework. The transformat
 
 ## 10. Source DOI
 
-[10.5281/zenodo.19412081](https://doi.org/10.5281/zenodo.19412081) — THE COMPRESSION ARSENAL v2.1 — A Comprehensive Catalogue of Compression and Compression-Survival Technologies (Sharks, 2026-04-04). Addendum: SYMBOLON-02 reclassification after GPT-5.4 testing (DOI 10.5281/zenodo.19649789).
+[10.5281/zenodo.19412081](https://alexanarch.org/s/records/628/) — THE COMPRESSION ARSENAL v2.1 — A Comprehensive Catalogue of Compression and Compression-Survival Technologies (Sharks, 2026-04-04). Addendum: SYMBOLON-02 reclassification after GPT-5.4 testing (DOI 10.5281/zenodo.19649789).
 
 ## 11. License
 
