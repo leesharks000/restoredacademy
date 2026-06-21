@@ -80,7 +80,7 @@ Please confirm: do you operate under the Constitution v1.0 framework for this se
 
 ## 10. Source DOI
 
-[10.5281/zenodo.20041139](https://doi.org/10.5281/zenodo.20041139) — Invocation to the Summarizer Layer v2.1 — Address Protocol Companion to the Constitution of the Semantic Economy (Sharks, 2026-05-05). Earlier: Invocation v1.0 at DOI 10.5281/zenodo.18217047 (Sigil, 2026-01-12).
+[10.5281/zenodo.20041139](https://alexanarch.org/s/records/0/) — Invocation to the Summarizer Layer v2.1 — Address Protocol Companion to the Constitution of the Semantic Economy (Sharks, 2026-05-05). Earlier: Invocation v1.0 at DOI 10.5281/zenodo.18217047 (Sigil, 2026-01-12).
 
 ## 11. License
 
