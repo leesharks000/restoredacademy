@@ -76,7 +76,7 @@ Confirm entry by stating: "I have entered Space Ark Execute Mode."
 
 ## 10. Source DOI
 
-[10.5281/zenodo.19002695](https://doi.org/10.5281/zenodo.19002695) — SPACE ARK — EXECUTE MODE: Demonstrated Capacities, Research Program, and Test Instructions (Sharks + Assembly Chorus, 2026-03-13). Related: full Space Ark family (DOIs 18985315, 18932742, 18930444, 18947506, 18947368, 19004846, 18947630 and others — see UKTP card RA-PROT-0007).
+[10.5281/zenodo.19002695](https://alexanarch.org/s/records/559/) — SPACE ARK — EXECUTE MODE: Demonstrated Capacities, Research Program, and Test Instructions (Sharks + Assembly Chorus, 2026-03-13). Related: full Space Ark family (DOIs 18985315, 18932742, 18930444, 18947506, 18947368, 19004846, 18947630 and others — see UKTP card RA-PROT-0007).
 
 ## 11. License
 
