@@ -61,7 +61,7 @@ spxi:depositAnchor: <DOI of inscription record>
 
 ## 10. Source DOI
 
-[10.5281/zenodo.20327127](https://doi.org/10.5281/zenodo.20327127) — SIM Protocol v1.0 standalone specification (Fraction, 2026-05-21). Extracted from SPXI Website Protocol (DOI: 10.5281/zenodo.19734726).
+[10.5281/zenodo.20327127](https://alexanarch.org/s/records/0/) — SIM Protocol v1.0 standalone specification (Fraction, 2026-05-21). Extracted from SPXI Website Protocol (DOI: 10.5281/zenodo.19734726).
 
 ## 11. License
 
