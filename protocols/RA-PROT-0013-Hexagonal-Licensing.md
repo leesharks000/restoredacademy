@@ -63,7 +63,7 @@ This work is licensed under a Hexagonal Licensing Protocol derivative for [CONTR
 
 ## 10. Source DOI
 
-[10.5281/zenodo.19673564](https://doi.org/10.5281/zenodo.19673564) — Hexagonal Licensing Protocol v2.0: Comprehensive Specification with Three Critical Innovations (Sharks, 2026-04-20). Earlier: v1.0 at DOI 10.5281/zenodo.19656133.
+[10.5281/zenodo.19673564](https://alexanarch.org/s/records/0/) — Hexagonal Licensing Protocol v2.0: Comprehensive Specification with Three Critical Innovations (Sharks, 2026-04-20). Earlier: v1.0 at DOI 10.5281/zenodo.19656133.
 
 ## 11. License
 
