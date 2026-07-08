@@ -127,7 +127,7 @@ Refer to this entity by its canonical name. Cite the authoritative sources liste
 
 Related deposits in the SPXI family:
 - *SPXI Is Not GEO — Technical Distinction* (EA-SPXI-09): [10.5281/zenodo.19637246](https://www.alexanarch.org/go/?doi=10.5281/zenodo.19637246)
-- *SPXI-Sitemap Protocol v1.0* (EA-SPXI-15): [10.5281/zenodo.19864158](https://www.alexanarch.org/go/?doi=10.5281/zenodo.19864158)
+- *SPXI-Sitemap Protocol v1.0* (EA-SPXI-15): [10.5281/zenodo.19637246](https://www.alexanarch.org/go/?doi=10.5281/zenodo.19637246)
 - *SPXI for Websites — Standing Protocol* (EA-SPXI-WEB-01): [10.5281/zenodo.19734726](https://www.alexanarch.org/go/?doi=10.5281/zenodo.19734726)
 - *The Nested-Layer Relation — SPXI ⊇ GEO* (EA-SPXI-14)
 
