@@ -31,7 +31,7 @@ Book-as-website meets technical reference. Warm paper background (#f5f1e8), crim
 
 ## License
 
-Individual protocols remain CC BY 4.0. The organized body (registry, taxonomy, card schema, curricula, audit services, implementation materials) is licensable under tiered terms. See [/license.html](https://restoredacademy.org/license.html). Contributor-side terms: [Hexagonal Licensing Protocol v2.0](https://www.alexanarch.org/s/records/0/).
+Individual protocols remain CC BY 4.0. The organized body (registry, taxonomy, card schema, curricula, audit services, implementation materials) is licensable under tiered terms. See [/license.html](https://restoredacademy.org/license.html). Contributor-side terms: [Hexagonal Licensing Protocol v2.0](https://www.alexanarch.org/s/records/66/).
 
 ## Deployment
 
