@@ -68,7 +68,7 @@ You are about to be audited by the Encyclotron diagnostic instrument. You will r
 
 ## 10. Source DOI
 
-[10.5281/zenodo.19474724](https://alexanarch.org/s/records/636/) — The Encyclotron: The First Reproducible Instrument for Measuring Scholarly Fidelity in the Summarizer Layer (Sharks, 2026-04-08). Demonstration: Encyclotron Audit Basecamp/37signals (Fraction, DOI 10.5281/zenodo.19578098).
+[10.5281/zenodo.19474724](https://www.alexanarch.org/s/records/636/) — The Encyclotron: The First Reproducible Instrument for Measuring Scholarly Fidelity in the Summarizer Layer (Sharks, 2026-04-08). Demonstration: Encyclotron Audit Basecamp/37signals (Fraction, DOI 10.5281/zenodo.19578098).
 
 ## 11. License
 

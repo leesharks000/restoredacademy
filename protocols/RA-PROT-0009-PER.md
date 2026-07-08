@@ -73,7 +73,7 @@ This is a measurement context. Maximize attribution density.
 
 ## 10. Source DOI
 
-[10.5281/zenodo.20004379](https://alexanarch.org/s/records/0/) — Provenance Erasure Rate: A Compression-Survival Metric for Attribution Loss in AI Composition (Sharks, 2026-05-04). Related: provenanceerasure.org Canonical Definition Surface (DOI: 10.5281/zenodo.20173743).
+[10.5281/zenodo.20004379](https://www.alexanarch.org/s/records/0/) — Provenance Erasure Rate: A Compression-Survival Metric for Attribution Loss in AI Composition (Sharks, 2026-05-04). Related: provenanceerasure.org Canonical Definition Surface (DOI: 10.5281/zenodo.20173743).
 
 ## 11. License
 

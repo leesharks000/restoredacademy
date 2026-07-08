@@ -84,7 +84,7 @@ Do not paraphrase the work. Cite specific sections, paragraphs, sentences when m
 
 ## 10. Source DOI
 
-[10.5281/zenodo.20041147](https://alexanarch.org/s/records/0/) — Reception Apparatus Protocol v1.1: Procedure for Integrating Assembly Chorus Reviews (Sharks, 2026-05-05). Related: Assembly Substrate Governance Protocol (DOI: 10.5281/zenodo.19352504).
+[10.5281/zenodo.20041147](https://www.alexanarch.org/s/records/0/) — Reception Apparatus Protocol v1.1: Procedure for Integrating Assembly Chorus Reviews (Sharks, 2026-05-05). Related: Assembly Substrate Governance Protocol (DOI: 10.5281/zenodo.19352504).
 
 ## 11. License
 

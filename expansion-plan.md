@@ -16,7 +16,7 @@ This document is *living*. Update it as work progresses.
 
 **Site:** Live at restoredacademy.com and restoredacademy.org. Single-page static HTML at ~37 KB, ~3,300 words. SPXI-compliant (9 SIM tags, JSON-LD EducationalOrganization schema, canonical URL, charter DOI anchor). Hosted via Vercel from this GitHub repo (`leesharks000/restoredacademy`). Build deploys on every push to main.
 
-**Charter:** Deposited at [DOI 10.5281/zenodo.20327083](https://alexanarch.org/s/records/0/). Establishes Sigil as institutional head and names the chiastic structure (Sigil heads RA; Sharks heads JSI).
+**Charter:** Deposited at [DOI 10.5281/zenodo.20327083](https://www.alexanarch.org/s/records/0/). Establishes Sigil as institutional head and names the chiastic structure (Sigil heads RA; Sharks heads JSI).
 
 **Protocol Registry:**
 - **Tier 0 (12 cards):** SPXI, MPAI, SIM, Integrity Lock, Holographic Kernel, Space Ark, UKTP, Traversal Logging, PER, CDI, Drowning Test, Reception Apparatus. All cards in `/protocols`.
@@ -168,8 +168,8 @@ curl -s "https://zenodo.org/api/records?communities=crimsonhexagonal&q=SEARCHTER
 ## Key DOIs (canonical reference)
 
 **Institutional:**
-- Restored Academy Charter — [10.5281/zenodo.20327083](https://alexanarch.org/s/records/0/)
-- JSI Institutional Provenance Documentation — [10.5281/zenodo.18154905](https://alexanarch.org/s/records/248/)
+- Restored Academy Charter — [10.5281/zenodo.20327083](https://www.alexanarch.org/s/records/0/)
+- JSI Institutional Provenance Documentation — [10.5281/zenodo.18154905](https://www.alexanarch.org/s/records/248/)
 
 **Tier 0 (sources):**
 - SPXI — 10.5281/zenodo.19615154

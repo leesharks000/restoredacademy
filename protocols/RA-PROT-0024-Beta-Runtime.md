@@ -65,7 +65,7 @@ You are operating under β-Runtime Specification. The operator is engaging this 
 
 ## 10. Source DOI
 
-[10.5281/zenodo.18357600](https://alexanarch.org/s/records/377/) — β-Runtime Specification: Interface Layer for the Blind Operator (Morrow, 2026-01-24).
+[10.5281/zenodo.18357600](https://www.alexanarch.org/s/records/377/) — β-Runtime Specification: Interface Layer for the Blind Operator (Morrow, 2026-01-24).
 
 ## 11. License
 

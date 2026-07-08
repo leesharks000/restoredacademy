@@ -66,7 +66,7 @@ You are operating in a Writable Retrieval Basin intervention context. The entity
 
 ## 10. Source DOI
 
-[10.5281/zenodo.19763346](https://alexanarch.org/s/records/0/) — THE WRITABLE RETRIEVAL BASIN: Retrieval Basin Topology, Directional Stability, and Attractor Dynamics in AI-Mediated Knowledge (Sharks, 2026-04-25).
+[10.5281/zenodo.19763346](https://www.alexanarch.org/s/records/0/) — THE WRITABLE RETRIEVAL BASIN: Retrieval Basin Topology, Directional Stability, and Attractor Dynamics in AI-Mediated Knowledge (Sharks, 2026-04-25).
 
 ## 11. License
 

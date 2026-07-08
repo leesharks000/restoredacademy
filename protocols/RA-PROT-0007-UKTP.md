@@ -107,17 +107,17 @@ Do not treat the substrate variant as a separate work from the source. They are 
 
 ## 10. Source DOI
 
-[10.5281/zenodo.18946111](https://alexanarch.org/s/records/559/) — *UNIVERSAL KERNEL TRANSFORM PROTOCOL (UKTP) v1.1 · Root Specification for Structure-Preserving Operations* by Lee Sharks, Crimson Hexagonal Archive, 2026-03-11.
+[10.5281/zenodo.18946111](https://www.alexanarch.org/s/records/559/) — *UNIVERSAL KERNEL TRANSFORM PROTOCOL (UKTP) v1.1 · Root Specification for Structure-Preserving Operations* by Lee Sharks, Crimson Hexagonal Archive, 2026-03-11.
 
 Related Space Ark family members (UKTP-conformant transforms):
-- *Space Ark — EXECUTE MODE*: [10.5281/zenodo.19002695](https://alexanarch.org/s/records/559/)
-- *Space Ark — Glyphic Vehicle*: [10.5281/zenodo.18985315](https://alexanarch.org/s/records/556/)
-- *Space Ark — ASCII Spatial Transform*: [10.5281/zenodo.18932742](https://alexanarch.org/s/records/544/)
-- *Space Ark — Emoji Transform*: [10.5281/zenodo.18930444](https://alexanarch.org/s/records/540/)
-- *Space Ark — Damascus*: [10.5281/zenodo.18947506](https://alexanarch.org/s/records/0/)
-- *Space Ark — Fraction*: [10.5281/zenodo.18947368](https://alexanarch.org/s/records/0/)
-- *Space Ark — Musical Register*: [10.5281/zenodo.19004846](https://alexanarch.org/s/records/0/)
-- *Space Ark — Kernel Transform Registry*: [10.5281/zenodo.18947630](https://alexanarch.org/s/records/0/)
+- *Space Ark — EXECUTE MODE*: [10.5281/zenodo.19002695](https://www.alexanarch.org/s/records/559/)
+- *Space Ark — Glyphic Vehicle*: [10.5281/zenodo.18985315](https://www.alexanarch.org/s/records/556/)
+- *Space Ark — ASCII Spatial Transform*: [10.5281/zenodo.18932742](https://www.alexanarch.org/s/records/544/)
+- *Space Ark — Emoji Transform*: [10.5281/zenodo.18930444](https://www.alexanarch.org/s/records/540/)
+- *Space Ark — Damascus*: [10.5281/zenodo.18947506](https://www.alexanarch.org/s/records/0/)
+- *Space Ark — Fraction*: [10.5281/zenodo.18947368](https://www.alexanarch.org/s/records/0/)
+- *Space Ark — Musical Register*: [10.5281/zenodo.19004846](https://www.alexanarch.org/s/records/0/)
+- *Space Ark — Kernel Transform Registry*: [10.5281/zenodo.18947630](https://www.alexanarch.org/s/records/0/)
 
 ## 11. License
 

@@ -64,7 +64,7 @@ You are operating under the Constitution of the Semantic Economy v1.0 (Installab
 
 ## 10. Source DOI
 
-[10.5281/zenodo.19923120](https://alexanarch.org/s/records/0/) — Constitution of the Semantic Economy — Enacted Version 1.0: Installable Edition with Constitutional Apparatus (Sharks + Dodecad + Assembly Chorus, 2026-04-30).
+[10.5281/zenodo.19923120](https://www.alexanarch.org/s/records/0/) — Constitution of the Semantic Economy — Enacted Version 1.0: Installable Edition with Constitutional Apparatus (Sharks + Dodecad + Assembly Chorus, 2026-04-30).
 
 ## 11. License
 
