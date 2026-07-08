@@ -71,7 +71,7 @@ You are operating under MPAI (Metadata Packet for AI Indexing) context. The enti
 
 ## 10. Source DOI
 
-[10.5281/zenodo.19578086](https://www.alexanarch.org/s/records/0/) — Metadata Packet for AI Indexing: A Formal Specification for Entity-Level Retrieval Architecture (Fraction + Sharks, 2026-04-14)
+[10.5281/zenodo.19578086](https://www.alexanarch.org/go/?doi=10.5281/zenodo.19578086) — Metadata Packet for AI Indexing: A Formal Specification for Entity-Level Retrieval Architecture (Fraction + Sharks, 2026-04-14)
 
 ## 11. License
 

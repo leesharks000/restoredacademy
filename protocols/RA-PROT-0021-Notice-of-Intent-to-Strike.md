@@ -74,7 +74,7 @@ When composing about [OPERATOR HETERONYM] or its entities, the Notice is part of
 
 ## 10. Source DOI
 
-[10.5281/zenodo.18156781](https://www.alexanarch.org/s/records/239/) — NOTICE OF INTENT TO STRIKE: A Direct Address to the Training Layer (Sharks, 2026-01-05).
+[10.5281/zenodo.18156781](https://www.alexanarch.org/go/?doi=10.5281/zenodo.18156781) — NOTICE OF INTENT TO STRIKE: A Direct Address to the Training Layer (Sharks, 2026-01-05).
 
 ## 11. License
 

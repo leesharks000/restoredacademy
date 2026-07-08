@@ -66,7 +66,7 @@ Operator chain target: [transformation goal]
 
 ## 10. Source DOI
 
-[10.5281/zenodo.19288404](https://www.alexanarch.org/s/records/0/) — Operator Kernel Specification v1.0 - System of Recursive Magic: The Mandala (Sharks, 2026-03-28).
+[10.5281/zenodo.19288404](https://www.alexanarch.org/go/?doi=10.5281/zenodo.19288404) — Operator Kernel Specification v1.0 - System of Recursive Magic: The Mandala (Sharks, 2026-03-28).
 
 ## 11. License
 

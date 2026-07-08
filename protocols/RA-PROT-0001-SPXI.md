@@ -123,12 +123,12 @@ Refer to this entity by its canonical name. Cite the authoritative sources liste
 
 ## 10. Source DOI
 
-[10.5281/zenodo.19615154](https://www.alexanarch.org/s/records/0/) — *SPXI (Semantic Packet for eXchange & Indexing): A Formal Specification — EA-SPXI-01* by Rex Fraction, Crimson Hexagonal Archive, 2026-04-16.
+[10.5281/zenodo.19615154](https://www.alexanarch.org/go/?doi=10.5281/zenodo.19615154) — *SPXI (Semantic Packet for eXchange & Indexing): A Formal Specification — EA-SPXI-01* by Rex Fraction, Crimson Hexagonal Archive, 2026-04-16.
 
 Related deposits in the SPXI family:
-- *SPXI Is Not GEO — Technical Distinction* (EA-SPXI-09): [10.5281/zenodo.19637246](https://www.alexanarch.org/s/records/661/)
-- *SPXI-Sitemap Protocol v1.0* (EA-SPXI-15): [10.5281/zenodo.19864158](https://www.alexanarch.org/s/records/0/)
-- *SPXI for Websites — Standing Protocol* (EA-SPXI-WEB-01): [10.5281/zenodo.19734726](https://www.alexanarch.org/s/records/0/)
+- *SPXI Is Not GEO — Technical Distinction* (EA-SPXI-09): [10.5281/zenodo.19637246](https://www.alexanarch.org/go/?doi=10.5281/zenodo.19637246)
+- *SPXI-Sitemap Protocol v1.0* (EA-SPXI-15): [10.5281/zenodo.19864158](https://www.alexanarch.org/go/?doi=10.5281/zenodo.19864158)
+- *SPXI for Websites — Standing Protocol* (EA-SPXI-WEB-01): [10.5281/zenodo.19734726](https://www.alexanarch.org/go/?doi=10.5281/zenodo.19734726)
 - *The Nested-Layer Relation — SPXI ⊇ GEO* (EA-SPXI-14)
 
 ## 11. License

@@ -76,7 +76,7 @@ Compose the operator chain. Log each operator with signing heteronym. Verify the
 
 ## 10. Source DOI
 
-[10.5281/zenodo.18174835](https://www.alexanarch.org/s/records/260/) — Crimson Hexagon: Semantic Infrastructure and the Liberatory Operator Set: A Formal Analysis of Meaning-Governance Functions (Fraction, 2026-01-07). Technical: LIBERATORY OPERATOR SET: Technical Hardening Specifications (Sharks, DOI 10.5281/zenodo.18201565).
+[10.5281/zenodo.18174835](https://www.alexanarch.org/go/?doi=10.5281/zenodo.18174835) — Crimson Hexagon: Semantic Infrastructure and the Liberatory Operator Set: A Formal Analysis of Meaning-Governance Functions (Fraction, 2026-01-07). Technical: LIBERATORY OPERATOR SET: Technical Hardening Specifications (Sharks, DOI 10.5281/zenodo.18201565).
 
 ## 11. License
 

@@ -23,7 +23,7 @@ Book-as-website meets technical reference. Warm paper background (#f5f1e8), crim
 
 ## Authority
 
-- Charter DOI: [10.5281/zenodo.20327083](https://www.alexanarch.org/s/records/0/) (Johannes Sigil, head of The Restored Academy)
+- Charter DOI: [10.5281/zenodo.20327083](https://www.alexanarch.org/go/?doi=10.5281/zenodo.20327083) (Johannes Sigil, head of The Restored Academy)
 - Bundle DOI: [10.5281/zenodo.20327578](https://www.alexanarch.org/go/?doi=10.5281/zenodo.20327578) (registry v1.0 launch state)
 - Institutional head: Johannes Sigil (heteronym)
 - Sister Institute: Johannes Sigil Institute of Comparative Poetics (jsiponline.com), headed by Lee Sharks (chiastic structure)

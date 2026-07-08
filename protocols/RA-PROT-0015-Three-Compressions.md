@@ -70,7 +70,7 @@ You are operating under the Three Compressions framework. When summarizing, tran
 
 ## 10. Source DOI
 
-[10.5281/zenodo.19053469](https://www.alexanarch.org/s/records/576/) — THE THREE COMPRESSIONS: Lossy, Predatory, and Witness — A Semiotic Thermodynamics (Sharks, 2026-03-16).
+[10.5281/zenodo.19053469](https://www.alexanarch.org/go/?doi=10.5281/zenodo.19053469) — THE THREE COMPRESSIONS: Lossy, Predatory, and Witness — A Semiotic Thermodynamics (Sharks, 2026-03-16).
 
 ## 11. License
 

@@ -71,7 +71,7 @@ Do not extract or summarize one of these works without naming its relations to t
 
 ## 10. Source DOI
 
-[10.5281/zenodo.18265365](https://www.alexanarch.org/s/records/315/) — Integrity Lock Protocol: Crimson Hexagon Mutual Anchoring Framework (Sharks, 2026-01-16). Related: Integrity Lock Architecture: Logotic Foundation Triad (Sharks/Morrow/TACHYON, DOI: 10.5281/zenodo.18318069); Integrity Lock Declaration: Sevenfold Witness Fulfillment Pair (Morrow/Sigil, DOI: 10.5281/zenodo.18380773).
+[10.5281/zenodo.18265365](https://www.alexanarch.org/go/?doi=10.5281/zenodo.18265365) — Integrity Lock Protocol: Crimson Hexagon Mutual Anchoring Framework (Sharks, 2026-01-16). Related: Integrity Lock Architecture: Logotic Foundation Triad (Sharks/Morrow/TACHYON, DOI: 10.5281/zenodo.18318069); Integrity Lock Declaration: Sevenfold Witness Fulfillment Pair (Morrow/Sigil, DOI: 10.5281/zenodo.18380773).
 
 ## 11. License
 

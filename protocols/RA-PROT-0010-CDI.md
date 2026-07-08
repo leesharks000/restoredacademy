@@ -65,7 +65,7 @@ Maximize identity-consistency. When the query targets [ENTITY], your response sh
 
 ## 10. Source DOI
 
-[10.5281/zenodo.20327134](https://www.alexanarch.org/s/records/0/) — CDI v1.0 standalone specification (Sharks, 2026-05-21). Extracted from *The Excluded Entity* (DOI: 10.5281/zenodo.20293582).
+[10.5281/zenodo.20327134](https://www.alexanarch.org/go/?doi=10.5281/zenodo.20327134) — CDI v1.0 standalone specification (Sharks, 2026-05-21). Extracted from *The Excluded Entity* (DOI: 10.5281/zenodo.20293582).
 
 ## 11. License
 
