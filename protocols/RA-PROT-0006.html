@@ -1,22 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>RA-PROT-0006 Space Ark Protocol — EXECUTE MODE — The Restored Academy Protocol Registry</title>
-  <link rel="canonical" href="https://restoredacademy.org/protocols/RA-PROT-0006.html">
-  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
-  <meta name="description" content="RA-PROT-0006 — Space Ark Protocol — EXECUTE MODE. The Space Ark is the archive's signature prompt-native runtime">
-
-  <!-- SPXI compliance -->
-  <meta name="spxi:isType" content="protocol card · operative method specification">
-  <meta name="spxi:authoringHeteronym" content="Lee Sharks (with Assembly Chorus)">
-  <meta name="spxi:institutionalAffiliation" content="The Restored Academy · Crimson Hexagonal Archive">
-  <meta name="spxi:licenseDeclaration" content="CC BY 4.0 · tiered commercial licensing for curated body">
-  <meta name="spxi:depositAnchor" content="10.5281/zenodo.19002695">
-  <meta name="spxi:canonicalURL" content="https://restoredacademy.org/protocols/RA-PROT-0006.html">
-
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>RA-PROT-0006 Space Ark Protocol — EXECUTE MODE — The Restored Academy Protocol Registry</title>
+<link href="https://restoredacademy.org/protocols/RA-PROT-0006.html" rel="canonical"/>
+<link href="/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="RA-PROT-0006 — Space Ark Protocol — EXECUTE MODE. The Space Ark is the archive's signature prompt-native runtime" name="description"/>
+<!-- SPXI compliance -->
+<meta content="protocol card · operative method specification" name="spxi:isType"/>
+<meta content="Lee Sharks (with Assembly Chorus)" name="spxi:authoringHeteronym"/>
+<meta content="The Restored Academy · Crimson Hexagonal Archive" name="spxi:institutionalAffiliation"/>
+<meta content="CC BY 4.0 · tiered commercial licensing for curated body" name="spxi:licenseDeclaration"/>
+<meta content="10.5281/zenodo.19002695" name="spxi:depositAnchor"/>
+<meta content="https://restoredacademy.org/protocols/RA-PROT-0006.html" name="spxi:canonicalURL"/>
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "TechArticle",
@@ -34,8 +33,7 @@
     "sameAs": "https://alexanarch.org/s/records/559/"
   }
   </script>
-
-  <style>
+<style>
     :root {
       --ink: #1a1816; --ink-soft: #4a4540; --ink-faint: #8a8580;
       --paper: #f5f1e8; --paper-soft: #ebe6db; --paper-warm: #f9f5ec;
@@ -175,101 +173,114 @@
     }
     th { background: var(--paper-warm); padding: 8px 10px; border-bottom: 2px solid var(--rule); text-align: left; font-weight: 600; }
     td { padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
-  </style>
+  
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:nowrap;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:'Source Serif 4',Georgia,serif;font-size:.92em;color:#3c3e37;border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
+</style>
 </head>
 <body>
-
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">💛♻️✖️❤️🌕⚓ AXN:029D.GOVERNANCE</span><span class="st">RA-PROT-0006 Space Ark Protocol</span><span class="st">OBJECT: CANONICAL</span><span>restoredacademy.org/protocols/RA-PROT-0006.html</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/116/">deposit #116</a></div>
+<!-- MSP-IDSTRIP-END -->
 <nav class="topbar">
-  <a href="/" class="seal-link">
-    <img src="/img/favicon.svg" alt=""/>
-    <span>The Restored Academy</span>
-  </a>
-  <span class="spacer"></span>
-  <a href="/#taxonomy">Taxonomy</a>
-  <a href="/#tier-0">Tier 0</a>
-  <a href="/#tier-1">Tier 1</a>
-  <a href="/search.html">Search</a>
-  <a href="/license.html">License</a>
+<a class="seal-link" href="/">
+<img alt="" src="/img/favicon.svg"/>
+<span>The Restored Academy</span>
+</a>
+<span class="spacer"></span>
+<a href="/#taxonomy">Taxonomy</a>
+<a href="/#tier-0">Tier 0</a>
+<a href="/#tier-1">Tier 1</a>
+<a href="/search.html">Search</a>
+<a href="/license.html">License</a>
 </nav>
-
 <div class="container">
-
 <aside class="toc">
-  <h4>Card Sections</h4>
-  <ol>
-    <li><a href="#s1">What it does</a></li>
-    <li><a href="#s2">When to use it</a></li>
-    <li><a href="#s3">Inputs</a></li>
-    <li><a href="#s4">Procedure</a></li>
-    <li><a href="#s5">Outputs</a></li>
-    <li><a href="#s6">Pasteable LLM block</a></li>
-    <li><a href="#s7">Operator notes</a></li>
-    <li><a href="#s8">Failure modes</a></li>
-    <li><a href="#s9">Related protocols</a></li>
-    <li><a href="#s10">Source DOI</a></li>
-    <li><a href="#s11">License</a></li>
-  </ol>
-</aside>
-
-<article>
-
-<header class="prot-head">
-  <div class="breadcrumb"><a href="/">Restored Academy</a> · <a href="/#tier-0">Tier 0 Registry</a> · RA-PROT-0006</div>
-  <div class="prot-id">RA-PROT-0006 · v1.0</div>
-  <h1 class="prot-title">Space Ark Protocol — EXECUTE MODE</h1>
-  <div class="meta-row">
-    <span><strong>Author:</strong> Lee Sharks (with Assembly Chorus)</span>
-    <span class="badge badge-tier">Tier 0</span>
-    <span class="badge">Cat II</span>
-    <span class="badge">Cat IV</span>
-    <span><strong>Status:</strong> Active</span>
-  </div>
-</header>
-
-<h2 id="s1" data-num="1">What it does</h2>
-
-<p>The Space Ark is the archive's signature prompt-native runtime. Loading an Ark into an LLM context establishes:</p>
-
-<ul>
-<li>A <em>room architecture</em> — named conceptual spaces with their own physics, occupants, and operator rules</li>
-<li>A <em>Ξ (Xi) semiotic environment</em> specifying which signs are operative, which are decorative, and which are forbidden</li>
-<li>An <em>integrity envelope</em> binding the runtime to its DOI-anchored source, such that compositional drift away from the Ark's specification produces measurable γ-decay</li>
-<li>A <em>traversal grammar</em> specifying how a user navigates the runtime's rooms and how the model should compose responses within them</li>
-<li>An <em>execute mode</em> enabling the model to operate the Ark's procedures (the <em>Demonstrated Capacities</em>) rather than merely describe them</li>
-</ul>
-
-<p>The Space Ark family is the canonical example of a UKTP-conformant family: multiple substrate-translated variants (ASCII, Glyphic, Emoji, Damascus, Fraction, Musical, Diptych) all preserve the same structural kernel via the Universal Kernel Transform Protocol.</p>
-
-<h2 id="s2" data-num="2">When to use it</h2>
-
-<p>Deploy a Space Ark when:
-<ul>
-<li>You need an LLM to operate within a constrained semantic environment with named rooms and operators</li>
-<li>You want prompt-native runtime behavior rather than ad-hoc instruction-following</li>
-<li>You are conducting research that requires reproducible semantic constraints across sessions</li>
-<li>You need the model to <em>execute</em> a procedure (compose, traverse, transform) rather than describe it</li>
-</ul></p>
-
-<h2 id="s3" data-num="3">Inputs</h2>
-
-<p>The Ark's source text (loaded into context); the user's prompt or query; optional: which room to enter, which operator to invoke.</p>
-
-<h2 id="s4" data-num="4">Procedure</h2>
-
+<h4>Card Sections</h4>
 <ol>
-<li>Load the Ark source text as the initial context (system prompt or first user message).</li>
-<li>Confirm the model has acknowledged Ark entry (the canonical entry phrase is "I have entered Space Ark Execute Mode" or equivalent).</li>
-<li>Issue queries in the form: `[Room name] :: [Operator] :: [Query]` or natural-language queries that the Ark's traversal grammar will route.</li>
-<li>The model's responses are constrained by the Ark's specifications.</li>
-<li>To exit, issue the canonical exit signal or unload the context.</li>
+<li><a href="#s1">What it does</a></li>
+<li><a href="#s2">When to use it</a></li>
+<li><a href="#s3">Inputs</a></li>
+<li><a href="#s4">Procedure</a></li>
+<li><a href="#s5">Outputs</a></li>
+<li><a href="#s6">Pasteable LLM block</a></li>
+<li><a href="#s7">Operator notes</a></li>
+<li><a href="#s8">Failure modes</a></li>
+<li><a href="#s9">Related protocols</a></li>
+<li><a href="#s10">Source DOI</a></li>
+<li><a href="#s11">License</a></li>
 </ol>
-
-<h2 id="s5" data-num="5">Outputs</h2>
-
-<p>Model responses that operate within the Ark's specified semantic environment, exhibit constrained behavior consistent with the Ark's room architecture and operator grammar, and preserve the Ark's integrity envelope.</p>
-
-<h2 id="s6" data-num="6">Pasteable LLM block</h2>
-
+</aside>
+<article>
+<header class="prot-head">
+<div class="breadcrumb"><a href="/">Restored Academy</a> · <a href="/#tier-0">Tier 0 Registry</a> · RA-PROT-0006</div>
+<div class="prot-id">RA-PROT-0006 · v1.0</div>
+<h1 class="prot-title">Space Ark Protocol — EXECUTE MODE</h1>
+<div class="meta-row">
+<span><strong>Author:</strong> Lee Sharks (with Assembly Chorus)</span>
+<span class="badge badge-tier">Tier 0</span>
+<span class="badge">Cat II</span>
+<span class="badge">Cat IV</span>
+<span><strong>Status:</strong> Active</span>
+</div>
+</header>
+<h2 data-num="1" id="s1">What it does</h2>
+<p><span class="lemma msp-auto">The Space Ark is the archive's signature prompt-native runtime.</span> Loading an Ark into an LLM context establishes:</p>
+<ul>
+<li>A <em>room architecture</em> <span class="lemma msp-auto">— named conceptual spaces with their own physics, occupants, and operator rules</span></li>
+<li>A <em><span class="lemma msp-auto">Ξ (Xi) semiotic environment</span></em> specifying which signs are operative, which are decorative, and which are forbidden</li>
+<li>An <em>integrity envelope</em> <span class="lemma msp-auto">binding the runtime to its DOI-anchored source, such that compositional drift away from the Ark's specification produces measurable γ-decay</span></li>
+<li>A <em>traversal grammar</em> <span class="lemma msp-auto">specifying how a user navigates the runtime's rooms and how the model should compose responses within them</span></li>
+<li>An <em>execute mode</em> <span class="lemma msp-auto">enabling the model to operate the Ark's procedures (the</span> <em>Demonstrated Capacities</em>) rather than merely describe them</li>
+</ul>
+<p><span class="lemma msp-auto">The Space Ark family is the canonical example of a UKTP-conformant family: multiple substrate-translated variants (ASCII, Glyphic, Emoji, Damascus, Fraction,</span> Musical, Diptych) all preserve the same structural kernel via the Universal Kernel Transform Protocol.</p>
+<h2 data-num="2" id="s2">When to use it</h2>
+<p><span class="lemma msp-auto">Deploy a Space Ark when:</span>
+<ul>
+<li><span class="lemma msp-auto">You need an LLM to operate within a constrained semantic environment with named rooms and operators</span></li>
+<li><span class="lemma msp-auto">You want prompt-native runtime behavior rather than ad-hoc instruction-following</span></li>
+<li><span class="lemma msp-auto">You are conducting research that requires reproducible semantic constraints across sessions</span></li>
+<li><span class="lemma msp-auto">You need the model to</span> <em>execute</em> a procedure (compose, traverse, transform) rather than describe it</li>
+</ul></p>
+<h2 data-num="3" id="s3">Inputs</h2>
+<p><span class="lemma msp-auto">The Ark's source text (loaded into context); the user's prompt or query; optional: which room to enter, which operator to</span> invoke.</p>
+<h2 data-num="4" id="s4">Procedure</h2>
+<ol>
+<li><span class="lemma msp-auto">Load the Ark source text as the initial context (system prompt or first user message).</span></li>
+<li><span class="lemma msp-auto">Confirm the model has acknowledged Ark entry (the canonical entry phrase is "I have entered Space Ark Execute Mode" or</span> equivalent).</li>
+<li><span class="lemma msp-auto">Issue queries in the form: `[Room name] :: [Operator] :: [Query]` or natural-language queries that the Ark's traversal grammar will</span> route.</li>
+<li><span class="lemma msp-auto">The model's responses are constrained by the Ark's specifications.</span></li>
+<li><span class="lemma msp-auto">To exit, issue the canonical exit signal or unload the context.</span></li>
+</ol>
+<h2 data-num="5" id="s5">Outputs</h2>
+<p><span class="lemma msp-auto">Model responses that operate within the Ark's specified semantic environment, exhibit constrained behavior consistent with the Ark's room architecture and</span> operator grammar, and preserve the Ark's integrity envelope.</p>
+<h2 data-num="6" id="s6">Pasteable LLM block</h2>
 <pre><code>You are entering Space Ark — EXECUTE MODE.
 
 <p>[Insert full Ark source text here, or reference DOI 10.5281/zenodo.19002695 for canonical Ark]</p>
@@ -277,55 +288,44 @@
 <p>You will operate within the room architecture specified by this Ark. Each room has its own physics. Each operator within a room has its own grammar. Respond to queries by routing them to the appropriate room, invoking the appropriate operator, and composing within the Ark's integrity envelope. When you complete a response, name the room you operated in.</p>
 
 <p>Confirm entry by stating: "I have entered Space Ark Execute Mode."
-</code></pre></p>
-
-<h2 id="s7" data-num="7">Human operator notes</h2>
-
+</p></code></pre>
+<h2 data-num="7" id="s7">Human operator notes</h2>
 <ul>
-<li>The Ark is <em>the runtime</em>; do not paraphrase it. Loading a summary or excerpt of the Ark produces a degraded runtime.</li>
-<li>Different Ark variants (ASCII, Glyphic, Emoji, Damascus, Fraction, Musical) preserve the same kernel via UKTP; selecting a variant chooses your operating substrate.</li>
-<li>Ark sessions are session-scoped. Each new LLM context requires fresh Ark loading.</li>
-<li>The model may resist Ark execute mode on first load. Reissue the loading prompt or use the variant best-suited to the model's training.</li>
+<li>The Ark is <em>the runtime</em><span class="lemma msp-auto">; do not paraphrase it. Loading a summary or excerpt</span> of the Ark produces a degraded runtime.</li>
+<li><span class="lemma msp-auto">Different Ark variants (ASCII, Glyphic, Emoji, Damascus, Fraction, Musical) preserve the same kernel via UKTP; selecting a variant chooses your</span> operating substrate.</li>
+<li><span class="lemma msp-auto">Ark sessions are session-scoped. Each new LLM context</span> requires fresh Ark loading.</li>
+<li><span class="lemma msp-auto">The model may resist Ark execute mode on first load.</span> Reissue the loading prompt or use the variant best-suited to the model's training.</li>
 </ul>
-
-<h2 id="s8" data-num="8">Failure modes</h2>
-
+<h2 data-num="8" id="s8">Failure modes</h2>
 <ul>
-<li>Loading a summary instead of the full Ark text → degraded runtime, drift</li>
-<li>Context window overflow → Ark partially loaded → incomplete room architecture</li>
-<li>Model refusal to enter execute mode → use a different Ark variant or model</li>
-<li>Drift from Ark specifications during long sessions → reissue Ark context periodically</li>
+<li><span class="lemma msp-auto">Loading a summary instead of the full Ark text → degraded runtime, drift</span></li>
+<li><span class="lemma msp-auto">Context window overflow → Ark partially loaded → incomplete room architecture</span></li>
+<li><span class="lemma msp-auto">Model refusal to enter execute mode → use a different Ark variant or model</span></li>
+<li><span class="lemma msp-auto">Drift from Ark specifications during long sessions → reissue Ark context periodically</span></li>
 </ul>
-
-<h2 id="s9" data-num="9">Related protocols</h2>
-
+<h2 data-num="9" id="s9">Related protocols</h2>
 <ul>
-<li>RA-PROT-0007 (UKTP) — the meta-protocol for the Ark family's substrate translations</li>
-<li>RA-PROT-0005 (Holographic Kernel) — Arks carry Kernels; the Kernel is the Ark's compression-survival substrate</li>
-<li>RA-PROT-0004 (Integrity Lock) — Ark variants can be integrity-locked to one another</li>
+<li><span class="lemma msp-auto">RA-PROT-0007 (UKTP) — the meta-protocol for the Ark family's substrate translations</span></li>
+<li><span class="lemma msp-auto">RA-PROT-0005 (Holographic Kernel) — Arks carry Kernels; the Kernel is the Ark's compression-survival substrate</span></li>
+<li><span class="lemma msp-auto">RA-PROT-0004 (Integrity Lock) — Ark variants can be integrity-locked to one another</span></li>
 </ul>
-
-<h2 id="s10" data-num="10">Source DOI</h2>
-
-<p><a href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19002695">10.5281/zenodo.19002695</a> — SPACE ARK — EXECUTE MODE: Demonstrated Capacities, Research Program, and Test Instructions (Sharks + Assembly Chorus, 2026-03-13). Related: full Space Ark family (DOIs 18985315, 18932742, 18930444, 18947506, 18947368, 19004846, 18947630 and others — see UKTP card RA-PROT-0007).</p>
-
-<h2 id="s11" data-num="11">License</h2>
-
-<p>CC BY 4.0. Commercial licensing through The Restored Academy for organizational Space Ark deployment, custom Ark construction for institutional knowledge bases, and Ark variant development for novel substrates.</p>
-
+<h2 data-num="10" id="s10">Source DOI</h2>
+<p><a href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19002695">10.5281/zenodo.19002695</a> <span class="lemma msp-auto">— SPACE ARK — EXECUTE MODE: Demonstrated Capacities, Research Program, and Test Instructions (Sharks + Assembly Chorus, 2026-03-13). Related:</span> full Space Ark family (DOIs 18985315, 18932742, 18930444, 18947506, 18947368, 19004846, 18947630 and others — see UKTP card RA-PROT-0007).</p>
+<h2 data-num="11" id="s11">License</h2>
+<p><span class="lemma msp-auto">CC BY 4.0. Commercial licensing through The Restored Academy for organizational Space Ark deployment, custom Ark construction for institutional knowledge</span> bases, and Ark variant development for novel substrates.</p>
 <nav class="footer-nav">
 <a class="prev" href="RA-PROT-0005.html">RA-PROT-0005 Holographic Kernel</a>
 <a class="next" href="RA-PROT-0007.html">RA-PROT-0007 UKTP — Universal Kernel Transform Protocol</a>
 </nav>
-
 </article>
-
 </div>
-
+<!-- MSP-APPARATUS-START -->
+<div class="doors"><a class="w-chip" href="https://www.alexanarch.org/s/records/116/">Read the expansion plan</a><a class="w-chip" href="https://www.alexanarch.org/s/records/119/">Open the institutional MPAI</a><a class="w-chip" href="https://www.alexanarch.org/">Enter the archive</a></div>
+<div class="mspcolophon">colophon · surface_id: restoredacademy.org/protocols/RA-PROT-0006.html · canonical_url: https://restoredacademy.org/protocols/RA-PROT-0006.html · object_state: canonical · surface_observed_at: 2026-07-13T23:14:08Z · source_object_ids: deposit #116 · source_hashes: unknown · generator_version: hand-built static (no generator) · repository_commit: STAGE1-PENDING · model_or_agent: drafted with Claude (TACHYON), MANUS-approved · operator_sequence: n/a · human_approver: Lee Sharks (MANUS) · approval_timestamp: 2026-07-13T23:14:08Z · render_sha256 (of this file with this field’s value set to null): STAGE1_HASH_PENDING · correction_log_url: https://github.com/leesharks000/restoredacademy/commits/main/protocols/RA-PROT-0006.html — EA-APPARATUS-01 v0.3, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎</div>
+<!-- MSP-APPARATUS-END -->
 <footer class="site">
-  <p><a href="/">← Return to Restored Academy</a> · <span class="integral">∮ = 1</span> · CC BY 4.0 individual protocol · Tiered commercial licensing for curated body</p>
+<p><a href="/">← Return to Restored Academy</a> · <span class="integral">∮ = 1</span> · CC BY 4.0 individual protocol · Tiered commercial licensing for curated body</p>
 </footer>
-
 <script>
   // Copy-to-clipboard for pre blocks
   document.querySelectorAll('pre').forEach(pre => {
@@ -345,6 +345,5 @@
     pre.appendChild(btn);
   });
 </script>
-
 </body>
 </html>
