@@ -1,0 +1,29 @@
+{
+  "surface_id": "restoredacademy.org",
+  "canonical_url": "https://restoredacademy.org/",
+  "axn": "AXN:029D.GOVERNANCE.💛♻️✖️❤️🌕⚓",
+  "deposit_number": 116,
+  "title": "The Restored Academy — Expansion Plan",
+  "object_state": "canonical",
+  "tier": 1,
+  "register": "narrative",
+  "skin": {},
+  "doors": [
+    {
+      "label": "Read the expansion plan",
+      "href": "https://www.alexanarch.org/s/records/116/"
+    },
+    {
+      "label": "Open the institutional MPAI",
+      "href": "https://www.alexanarch.org/s/records/119/"
+    },
+    {
+      "label": "Enter the archive",
+      "href": "https://www.alexanarch.org/"
+    }
+  ],
+  "index_files": [
+    "index.html"
+  ],
+  "notes": "Tier 1 mechanical. Protocol registry surface. Nuclei pending Session C."
+}
