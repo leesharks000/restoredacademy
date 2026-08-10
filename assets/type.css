@@ -1,0 +1,64 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   RESTORED ACADEMY — TYPE LAYER
+   Johannes Sigil Institute · The Restored Academy
+
+   Loaded BEFORE each page's own <style> block, so nothing here can override
+   an existing page rule. Additive only.
+
+   WHY THIS EXISTS. The site had no self-hosted fonts. Its serif was
+   'Iowan Old Style', which ships on macOS and nowhere else — so on Windows,
+   Android and most Linux the whole site silently fell back to Georgia or a
+   default. It was rendering as a different design depending on who looked at
+   it, and that is the single largest reason it read as unfinished.
+
+   The faces are the fleet's: Pagella for the serif, IBM Plex Mono for the
+   mono, already self-hosted on axnidentifiers and persistentidentifiers.
+   Adopting them is what makes the three sites feel like one apparatus.
+
+   WHAT IS DELIBERATELY NOT HERE. No colour. The Restored Academy's crimson on
+   paper is its own, and distinct from axnidentifiers' umber-and-vellum. The
+   sleekness comes from consistent type and a token system, not from taking
+   another surface's palette.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+@font-face{font-family:'Pagella';src:url('/assets/fonts/Pagella-400.woff2')format('woff2');
+font-weight:400;font-display:swap}
+@font-face{font-family:'Pagella';src:url('/assets/fonts/Pagella-700.woff2')format('woff2');
+font-weight:700;font-display:swap}
+@font-face{font-family:'Pagella';src:url('/assets/fonts/Pagella-400i.woff2')format('woff2');
+font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'PlexM';src:url('/assets/fonts/IBMPlexMono-400.woff2')format('woff2');
+font-weight:400;font-display:swap}
+@font-face{font-family:'PlexM';src:url('/assets/fonts/IBMPlexMono-600.woff2')format('woff2');
+font-weight:600;font-display:swap}
+
+:root{
+  /* the two families the site actually needs, plus math where math appears */
+  --serif:'Pagella',Palatino,'Book Antiqua',Georgia,serif;
+  --mono:'PlexM',ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+  --math:'STIX Two Math','Cambria Math',Georgia,serif;
+
+  /* a scale, rather than twenty-one accumulated sizes.
+     step ≈ 1.2; every page-level size should resolve to one of these. */
+  --fs-micro:10px;    /* station labels, plate numbers, calibration strips */
+  --fs-fine:11.5px;   /* chip text, metadata, captions */
+  --fs-small:13px;    /* apparatus, notes, table cells */
+  --fs-body:17.5px;   /* running prose — matches the fleet */
+  --fs-lead:19px;     /* opening paragraphs, pull statements */
+  --fs-h3:21px;
+  --fs-h2:26px;
+  --fs-h1:clamp(31px,6.2vw,58px);
+
+  --lh-tight:1.15;
+  --lh-body:1.62;
+  --lh-loose:1.75;
+
+  --tr-wide:.16em;    /* uppercase mono labels */
+  --tr-mid:.08em;
+  --tr-tight:-.012em; /* display serif */
+}
+
+/* Baseline only. Page rules that follow will win any conflict. */
+body{font-family:var(--serif);font-size:var(--fs-body);line-height:var(--lh-body);
+-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+code,kbd,samp,pre,.mono{font-family:var(--mono)}

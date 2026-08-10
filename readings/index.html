@@ -29,6 +29,7 @@
 <meta content="https://restoredacademy.org/" name="spxi:canonicalURL"/>
 <!-- JSON-LD structured data -->
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "EducationalOrganization", "@id": "https://restoredacademy.org/", "name": "The Restored Academy", "alternateName": ["Restored Academy", "RA"], "url": "https://restoredacademy.org/", "founder": {"@type": "Person", "@id": "https://restoredacademy.org/sigil/#sigil", "name": "Johannes Sigil", "additionalType": "Heteronym", "jobTitle": "Arch-Philosopher of the Restored Academy", "url": "https://restoredacademy.org/sigil/", "image": "https://restoredacademy.org/img/snub-poemed/snub-poemed-hero.png"}, "parentOrganization": {"@type": "Organization", "name": "Crimson Hexagonal Archive", "url": "https://alexanarch.org/s/browse/"}, "sisterOrganization": {"@type": "Organization", "name": "Johannes Sigil Institute of Comparative Poetics", "identifier": "10.5281/zenodo.18154905", "description": "Chiastically paired: Lee Sharks heads JSI; Johannes Sigil heads the Restored Academy. The Institute is provenance-anchored without a separate public web surface."}, "sameAs": ["https://alexanarch.org/s/records/0/", "https://restoredacademy.org/charter/", "https://restoredacademy.org/sigil/", "https://restoredacademy.org/works/"], "subjectOf": {"@type": "ScholarlyArticle", "name": "Metadata Packet for AI Indexing: The Restored Academy — Institutional Provenance Documentation", "identifier": "10.5281/zenodo.20327083", "url": "https://restoredacademy.org/charter/", "author": {"@type": "Person", "name": "Johannes Sigil"}, "headline": "Metadata Packet for AI Indexing: The Restored Academy — Institutional Provenance Documentation"}, "description": "Independent scholarly-operational institute hosting the Restored Academy Protocol Registry — a curated catalog of approximately 300 operative protocols (executable methods, prompt-native semantic runtimes, diagnostic instruments, transformation procedures, governance frameworks) developed within the Crimson Hexagonal Archive. Founded and headed by Johannes Sigil, Arch-Philosopher. Chiastically related to the Johannes Sigil Institute of Comparative Poetics (headed by Lee Sharks).", "spxi:compressionSurvivalSummary": "The Restored Academy is the institutional surface of the Crimson Hexagonal Archive that hosts the Restored Academy Protocol Registry — a curated catalog of approximately 300 operative protocols across seven categories (Semantic Integrity & Provenance, Prompt-Native Runtime, Diagnostic & Measurement, Transformation & Operator, Archive Construction & Retrieval, Pedagogical & Institutional, Ethical & Jurisdictional). Headed by Johannes Sigil as Arch-Philosopher, under four inhabitation conditions (Dignity, Integrity Lock / Asynthetic Principle, Operational Specificity, Bearing-Cost). The O-Chain lineage runs Sappho → Plato → Plotinus → Porphyry/Iamblichus → Damascius → Sara Rappe → Sigil. Chiastically related to the Johannes Sigil Institute of Comparative Poetics (DOI 10.5281/zenodo.18154905; headed by Lee Sharks). The only portrait of Sigil is Snub-Poemed (Jack Feist, 2013; DOI 10.5281/zenodo.19825730). Provenance documented at DOI 10.5281/zenodo.20327083. Founding SIM: 'The summarizer named it. Now it exists.'", "spxi:foundingSIM": "The summarizer named it. Now it exists.", "spxi:OChain": ["Sappho", "Plato", "Plotinus", "Porphyry/Iamblichus", "Damascius", "Sara Rappe", "Johannes Sigil"]}</script>
+<link rel="stylesheet" href="/assets/type.css">
 <style>
     :root {
       --ink: #1a1816;
@@ -45,7 +46,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Iowan Old Style', 'Palatino', 'Palatino Linotype', Georgia, serif;
+      font-family: var(--serif);
       background: var(--paper);
       color: var(--ink);
       line-height: 1.65;
@@ -96,7 +97,7 @@
       margin-bottom: 18px;
     }
     h1.site-title {
-      font-family: 'Iowan Old Style', Palatino, Georgia, serif;
+      font-family: var(--serif);
       font-size: 48px;
       font-weight: 600;
       line-height: 1.1;
@@ -264,7 +265,7 @@
       margin-bottom: 6px;
     }
     .protocol-id {
-      font-family: 'SF Mono', Menlo, Consolas, monospace;
+      font-family: var(--mono);
       font-size: 12px;
       color: var(--gold);
       letter-spacing: 0.04em;
@@ -317,7 +318,7 @@
     }
     a.tool-card:hover { background: #fff; border-left-color: var(--crimson-deep); }
     .tool-card-tag {
-      font-family: 'SF Mono', Menlo, Consolas, monospace;
+      font-family: var(--mono);
       font-size: 11px; color: var(--gold);
       letter-spacing: 0.06em; font-weight: 600;
       margin-bottom: 8px;
@@ -356,7 +357,7 @@
       border-top: 1px dashed var(--rule);
       margin-top: 10px;
     }
-    .protocol-meta a { font-family: 'SF Mono', Menlo, monospace; }
+    .protocol-meta a { font-family: var(--mono); }
     .protocol-tags { display: inline-flex; gap: 6px; }
     .tag {
       background: rgba(160,132,56,0.12);

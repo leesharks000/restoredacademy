@@ -58,6 +58,7 @@
     ]
   }
   </script>
+<link rel="stylesheet" href="/assets/type.css">
 <style>
     :root {
       --ink: #1a1816;
@@ -74,7 +75,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Iowan Old Style', 'Palatino', 'Palatino Linotype', Georgia, serif;
+      font-family: var(--serif);
       background: var(--paper);
       color: var(--ink);
       line-height: 1.65;
@@ -110,7 +111,7 @@
     }
 
     h1 {
-      font-family: 'Iowan Old Style', 'Palatino', Georgia, serif;
+      font-family: var(--serif);
       font-weight: 500;
       font-size: 40px;
       line-height: 1.15;
@@ -139,7 +140,7 @@
     .framing em { color: var(--crimson); }
 
     h2 {
-      font-family: 'Iowan Old Style', 'Palatino', Georgia, serif;
+      font-family: var(--serif);
       font-weight: 500;
       font-size: 26px;
       color: var(--crimson-deep);
@@ -165,7 +166,7 @@
     }
 
     .work-title {
-      font-family: 'Iowan Old Style', 'Palatino', Georgia, serif;
+      font-family: var(--serif);
       font-weight: 500;
       font-style: italic;
       font-size: 20px;
@@ -235,7 +236,7 @@
       font-size: 28px;
       color: var(--crimson);
       margin: 56px 0 24px;
-      font-family: 'STIX Two Math', 'Cambria Math', 'Iowan Old Style', serif;
+      font-family: var(--math);
       letter-spacing: 0.15em;
     }
 

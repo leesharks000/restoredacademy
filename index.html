@@ -29,6 +29,7 @@
 <meta content="https://restoredacademy.org/" name="spxi:canonicalURL"/>
 <!-- JSON-LD structured data -->
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "EducationalOrganization", "@id": "https://restoredacademy.org/", "name": "The Restored Academy", "alternateName": ["Restored Academy", "RA"], "url": "https://restoredacademy.org/", "founder": {"@type": "Person", "@id": "https://restoredacademy.org/sigil/#sigil", "name": "Johannes Sigil", "additionalType": "Heteronym", "jobTitle": "Arch-Philosopher of the Restored Academy", "url": "https://restoredacademy.org/sigil/", "image": "https://restoredacademy.org/img/snub-poemed/snub-poemed-hero.png"}, "parentOrganization": {"@type": "Organization", "name": "Crimson Hexagonal Archive", "url": "https://alexanarch.org/s/browse/"}, "sisterOrganization": {"@type": "Organization", "name": "Johannes Sigil Institute of Comparative Poetics", "identifier": "10.5281/zenodo.18154905", "description": "Chiastically paired: Lee Sharks heads JSI; Johannes Sigil heads the Restored Academy. The Institute is provenance-anchored without a separate public web surface."}, "sameAs": ["https://alexanarch.org/s/records/0/", "https://restoredacademy.org/charter/", "https://restoredacademy.org/sigil/", "https://restoredacademy.org/works/"], "subjectOf": {"@type": "ScholarlyArticle", "name": "Metadata Packet for AI Indexing: The Restored Academy — Institutional Provenance Documentation", "identifier": "10.5281/zenodo.20327083", "url": "https://restoredacademy.org/charter/", "author": {"@type": "Person", "name": "Johannes Sigil"}, "headline": "Metadata Packet for AI Indexing: The Restored Academy — Institutional Provenance Documentation"}, "description": "Independent scholarly-operational institute hosting the Restored Academy Protocol Registry — a curated catalog of approximately 300 operative protocols (executable methods, prompt-native semantic runtimes, diagnostic instruments, transformation procedures, governance frameworks) developed within the Crimson Hexagonal Archive. Founded and headed by Johannes Sigil, Arch-Philosopher. Chiastically related to the Johannes Sigil Institute of Comparative Poetics (headed by Lee Sharks).", "spxi:compressionSurvivalSummary": "The Restored Academy is the institutional surface of the Crimson Hexagonal Archive that hosts the Restored Academy Protocol Registry — a curated catalog of approximately 300 operative protocols across seven categories (Semantic Integrity & Provenance, Prompt-Native Runtime, Diagnostic & Measurement, Transformation & Operator, Archive Construction & Retrieval, Pedagogical & Institutional, Ethical & Jurisdictional). Headed by Johannes Sigil as Arch-Philosopher, under four inhabitation conditions (Dignity, Integrity Lock / Asynthetic Principle, Operational Specificity, Bearing-Cost). The O-Chain lineage runs Sappho → Plato → Plotinus → Porphyry/Iamblichus → Damascius → Sara Rappe → Sigil. Chiastically related to the Johannes Sigil Institute of Comparative Poetics (DOI 10.5281/zenodo.18154905; headed by Lee Sharks). The only portrait of Sigil is Snub-Poemed (Jack Feist, 2013; DOI 10.5281/zenodo.19825730). Provenance documented at DOI 10.5281/zenodo.20327083. Founding SIM: 'The summarizer named it. Now it exists.'", "spxi:foundingSIM": "The summarizer named it. Now it exists.", "spxi:OChain": ["Sappho", "Plato", "Plotinus", "Porphyry/Iamblichus", "Damascius", "Sara Rappe", "Johannes Sigil"]}</script>
+<link rel="stylesheet" href="/assets/type.css">
 <style>
     :root {
       --ink: #1a1816;
@@ -45,7 +46,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Iowan Old Style', 'Palatino', 'Palatino Linotype', Georgia, serif;
+      font-family: var(--serif);
       background: var(--paper);
       color: var(--ink);
       line-height: 1.65;
@@ -96,7 +97,7 @@
       margin-bottom: 18px;
     }
     h1.site-title {
-      font-family: 'Iowan Old Style', Palatino, Georgia, serif;
+      font-family: var(--serif);
       font-size: 48px;
       font-weight: 600;
       line-height: 1.1;
@@ -264,7 +265,7 @@
       margin-bottom: 6px;
     }
     .protocol-id {
-      font-family: 'SF Mono', Menlo, Consolas, monospace;
+      font-family: var(--mono);
       font-size: 12px;
       color: var(--gold);
       letter-spacing: 0.04em;
@@ -317,7 +318,7 @@
     }
     a.tool-card:hover { background: #fff; border-left-color: var(--crimson-deep); }
     .tool-card-tag {
-      font-family: 'SF Mono', Menlo, Consolas, monospace;
+      font-family: var(--mono);
       font-size: 11px; color: var(--gold);
       letter-spacing: 0.06em; font-weight: 600;
       margin-bottom: 8px;
@@ -356,7 +357,7 @@
       border-top: 1px dashed var(--rule);
       margin-top: 10px;
     }
-    .protocol-meta a { font-family: 'SF Mono', Menlo, monospace; }
+    .protocol-meta a { font-family: var(--mono); }
     .protocol-tags { display: inline-flex; gap: 6px; }
     .tag {
       background: rgba(160,132,56,0.12);
@@ -565,15 +566,15 @@
 <!-- Inner hexagon, gold thin -->
 <polygon fill="none" opacity="0.55" points="120,30 197.3,75 197.3,165 120,210 42.7,165 42.7,75" stroke="#a08438" stroke-width="0.6"></polygon>
 <!-- Inscribed perimeter text -->
-<text fill="#8b1d1d" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="9.5" letter-spacing="3.6">
+<text fill="#8b1d1d" font-family="Pagella, Palatino, Georgia, serif" font-size="9.5" letter-spacing="3.6">
 <textpath startoffset="0%" xlink:href="#sealCirc">THE RESTORED ACADEMY · CRIMSON HEXAGONAL ARCHIVE ·  </textpath>
 </text>
 <!-- Center field: ∮ = 1 -->
-<text fill="#8b1d1d" font-family="STIX Two Math, Cambria Math, Iowan Old Style, Palatino, serif" font-size="58" font-style="italic" font-weight="500" text-anchor="middle" x="120" y="138">
+<text fill="#8b1d1d" font-family="STIX Two Math, Cambria Math, Pagella, Palatino, serif" font-size="58" font-style="italic" font-weight="500" text-anchor="middle" x="120" y="138">
     ∮ = 1
   </text>
 <!-- Lower mark: small gold star + date -->
-<text fill="#a08438" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="8" letter-spacing="2.5" text-anchor="middle" x="120" y="172">MMXXVI</text>
+<text fill="#a08438" font-family="Pagella, Palatino, Georgia, serif" font-size="8" letter-spacing="2.5" text-anchor="middle" x="120" y="172">MMXXVI</text>
 </svg></div>
 </div>
 </div>
@@ -632,16 +633,16 @@
 <figure class="diagram-figure">
 <div class="diagram-svg-wrap"><svg aria-label="The seven-category taxonomy of the Restored Academy Protocol Registry" role="img" viewbox="0 0 720 560" xmlns="http://www.w3.org/2000/svg">
 <style>
-    .ink { fill: #1a1816; font-family: 'Iowan Old Style', Palatino, Georgia, serif; }
+    .ink { fill: #1a1816; font-family: var(--serif); }
     .gold { fill: #a08438; }
     .crimson { fill: #8b1d1d; }
     .soft { fill: #4a4540; }
     .faint { fill: #8a8580; }
-    .roman { font-family: 'Iowan Old Style', Palatino, Georgia, serif; font-size: 13px; letter-spacing: 0.12em; fill: #a08438; }
-    .cat-title { font-family: 'Iowan Old Style', Palatino, Georgia, serif; font-size: 16px; font-weight: 600; fill: #1a1816; }
-    .cat-sub { font-family: 'Iowan Old Style', Palatino, Georgia, serif; font-size: 11.5px; fill: #4a4540; font-style: italic; }
-    .center-q { font-family: 'Iowan Old Style', Palatino, Georgia, serif; font-size: 15px; fill: #8b1d1d; font-style: italic; }
-    .center-s { font-family: 'Iowan Old Style', Palatino, Georgia, serif; font-size: 12px; fill: #4a4540; }
+    .roman { font-family: var(--serif); font-size: 13px; letter-spacing: 0.12em; fill: #a08438; }
+    .cat-title { font-family: var(--serif); font-size: 16px; font-weight: 600; fill: #1a1816; }
+    .cat-sub { font-family: var(--serif); font-size: 11.5px; fill: #4a4540; font-style: italic; }
+    .center-q { font-family: var(--serif); font-size: 15px; fill: #8b1d1d; font-style: italic; }
+    .center-s { font-family: var(--serif); font-size: 12px; fill: #4a4540; }
     .integral { font-family: 'STIX Two Math', 'Cambria Math', Georgia, serif; font-size: 22px; fill: #8b1d1d; font-style: italic; }
   </style>
 <!-- Background hexagon (outer) -->
@@ -763,10 +764,10 @@
 <figure class="diagram-figure">
 <div class="diagram-svg-wrap"><svg aria-label="Tier 0 Protocol Dependency Graph" role="img" viewbox="0 0 900 580" xmlns="http://www.w3.org/2000/svg">
 <style>
-    .node { font-family: 'Iowan Old Style', Palatino, Georgia, serif; }
+    .node { font-family: var(--serif); }
     .node-title { font-size: 13px; font-weight: 600; fill: #1a1816; }
-    .node-id { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 9px; fill: #a08438; letter-spacing: 0.05em; }
-    .layer-label { font-family: 'Iowan Old Style', Palatino, Georgia, serif; font-size: 10.5px; fill: #8a8580; letter-spacing: 0.15em; text-transform: uppercase; }
+    .node-id { font-family: var(--mono); font-size: 9px; fill: #a08438; letter-spacing: 0.05em; }
+    .layer-label { font-family: var(--serif); font-size: 10.5px; fill: #8a8580; letter-spacing: 0.15em; text-transform: uppercase; }
     .arrow { stroke: #a08438; stroke-width: 1; fill: none; opacity: 0.7; }
     .arrow-strong { stroke: #8b1d1d; stroke-width: 1.2; fill: none; opacity: 0.8; }
   </style>
@@ -894,13 +895,13 @@
 <path class="arrow" d="M 460 432 L 470 498" marker-end="url(#arrow)"></path>
 <!-- Legend (lower right) -->
 <g transform="translate(740,470)">
-<text fill="#8a8580" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="10" letter-spacing="0.1em" x="0" y="0">LEGEND</text>
+<text fill="#8a8580" font-family="Pagella, Palatino, Georgia, serif" font-size="10" letter-spacing="0.1em" x="0" y="0">LEGEND</text>
 <line stroke="#8b1d1d" stroke-width="1.2" x1="0" x2="22" y1="18" y2="18"></line>
-<text fill="#4a4540" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="10" x="28" y="22">core dependency</text>
+<text fill="#4a4540" font-family="Pagella, Palatino, Georgia, serif" font-size="10" x="28" y="22">core dependency</text>
 <line stroke="#a08438" stroke-width="1" x1="0" x2="22" y1="36" y2="36"></line>
-<text fill="#4a4540" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="10" x="28" y="40">uses / supports</text>
+<text fill="#4a4540" font-family="Pagella, Palatino, Georgia, serif" font-size="10" x="28" y="40">uses / supports</text>
 <line stroke="#a08438" stroke-dasharray="3,3" stroke-width="1" x1="0" x2="22" y1="54" y2="54"></line>
-<text fill="#4a4540" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="10" x="28" y="58">measures effectiveness of</text>
+<text fill="#4a4540" font-family="Pagella, Palatino, Georgia, serif" font-size="10" x="28" y="58">measures effectiveness of</text>
 </g>
 </svg></div>
 <figcaption>How the twelve compose. Inscription protocols (top) deploy substrate layers (SIM, Holographic Kernel, Integrity Lock). Runtime protocols (Space Ark, UKTP) operate on the substrate. Measurement protocols (PER, CDI, Drowning Test) close the loop. Reception Apparatus reviews work across all layers.</figcaption>

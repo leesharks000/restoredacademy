@@ -75,6 +75,7 @@
     "spxi:lineage": ["Sappho", "Plato", "Plotinus", "Porphyry/Iamblichus", "Damascius", "Sara Rappe", "Johannes Sigil"]
   }
   </script>
+<link rel="stylesheet" href="/assets/type.css">
 <style>
     :root {
       --ink: #1a1816;
@@ -91,7 +92,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Iowan Old Style', 'Palatino', 'Palatino Linotype', Georgia, serif;
+      font-family: var(--serif);
       background: var(--paper);
       color: var(--ink);
       line-height: 1.65;
@@ -138,7 +139,7 @@
     }
 
     h1 {
-      font-family: 'Iowan Old Style', 'Palatino', Georgia, serif;
+      font-family: var(--serif);
       font-weight: 500;
       font-size: 44px;
       line-height: 1.1;
@@ -204,7 +205,7 @@
     }
 
     h2 {
-      font-family: 'Iowan Old Style', 'Palatino', Georgia, serif;
+      font-family: var(--serif);
       font-weight: 500;
       font-size: 28px;
       color: var(--crimson-deep);
@@ -215,7 +216,7 @@
     }
 
     h3 {
-      font-family: 'Iowan Old Style', 'Palatino', Georgia, serif;
+      font-family: var(--serif);
       font-weight: 500;
       font-style: italic;
       font-size: 20px;
@@ -259,7 +260,7 @@
     .condition::before {
       counter-increment: cond;
       content: counter(cond, upper-roman) ".";
-      font-family: 'Iowan Old Style', 'Palatino', Georgia, serif;
+      font-family: var(--serif);
       font-style: italic;
       color: var(--gold);
       font-size: 19px;
@@ -283,7 +284,7 @@
     }
 
     .ochain {
-      font-family: 'Iowan Old Style', 'Palatino', Georgia, serif;
+      font-family: var(--serif);
       font-style: italic;
       font-size: 19px;
       line-height: 1.5;
@@ -322,7 +323,7 @@
     .deposit-row:last-child { border-bottom: none; }
 
     .deposit-row .year {
-      font-family: 'Iowan Old Style', 'Palatino', Georgia, serif;
+      font-family: var(--serif);
       font-style: italic;
       color: var(--gold);
       font-size: 15px;
@@ -413,7 +414,7 @@
     }
 
     .founding-sim .text {
-      font-family: 'Iowan Old Style', 'Palatino', Georgia, serif;
+      font-family: var(--serif);
       font-style: italic;
       font-size: 22px;
       line-height: 1.4;
@@ -432,7 +433,7 @@
       font-size: 32px;
       color: var(--crimson);
       margin: 40px 0 24px;
-      font-family: 'STIX Two Math', 'Cambria Math', 'Iowan Old Style', serif;
+      font-family: var(--math);
       letter-spacing: 0.15em;
     }
 

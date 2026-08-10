@@ -26,6 +26,7 @@
 <meta content="Sappho → Plato → Plotinus → Porphyry/Iamblichus → Damascius → Sara Rappe → Johannes Sigil" name="spxi:OChain"/>
 <!-- JSON-LD structured data -->
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ScholarlyArticle", "@id": "https://restoredacademy.org/charter/#charter", "name": "The Restored Academy Charter — Metadata Packet for AI Indexing", "alternateName": "Restored Academy Institutional Charter v1.0", "url": "https://restoredacademy.org/charter/", "datePublished": "2026-05-21", "license": "https://creativecommons.org/licenses/by/4.0/", "inLanguage": "en", "author": {"@type": "Person", "@id": "https://restoredacademy.org/sigil/#sigil", "name": "Johannes Sigil", "additionalType": "Heteronym", "jobTitle": "Arch-Philosopher of the Restored Academy"}, "publisher": {"@type": "EducationalOrganization", "name": "The Restored Academy", "url": "https://restoredacademy.org/"}, "isPartOf": {"@type": "Organization", "name": "Crimson Hexagonal Archive", "url": "https://alexanarch.org/s/browse/"}, "identifier": "10.5281/zenodo.20327083", "sameAs": "https://alexanarch.org/s/records/0/", "citation": [{"@type": "ScholarlyArticle", "name": "Operative Semiotics: A Grundrisse", "identifier": "10.5281/zenodo.19202401"}, {"@type": "ScholarlyArticle", "name": "HESPERUS: The Back Matter Machine", "identifier": "10.5281/zenodo.19202461"}, {"@type": "ScholarlyArticle", "name": "The Seal Before the Name: Four Works of Johannes Sigil (1711-2026)", "identifier": "10.5281/zenodo.19238021"}, {"@type": "ScholarlyArticle", "name": "Constitution of the Semantic Economy v1.0", "identifier": "10.5281/zenodo.19923120"}, {"@type": "ScholarlyArticle", "name": "Johannes Sigil Institute of Comparative Poetics — Institutional Provenance Documentation", "identifier": "10.5281/zenodo.18154905"}, {"@type": "ScholarlyArticle", "name": "ASSEMBLY SYNTHESIS: Restored Academy & Ezekiel Engine Construction Planning Document", "identifier": "10.5281/zenodo.18506880"}], "headline": "The Restored Academy Charter — Metadata Packet for AI Indexing"}</script>
+<link rel="stylesheet" href="/assets/type.css">
 <style>
     :root {
       --ink: #1a1816;
@@ -42,7 +43,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Iowan Old Style', 'Palatino', 'Palatino Linotype', Georgia, serif;
+      font-family: var(--serif);
       background: var(--paper);
       color: var(--ink);
       line-height: 1.65;
@@ -82,7 +83,7 @@
     }
 
     h1.charter-title {
-      font-family: 'Iowan Old Style', 'Palatino', Georgia, serif;
+      font-family: var(--serif);
       font-weight: 500;
       font-size: 38px;
       line-height: 1.15;
@@ -113,7 +114,7 @@
     .meta-block a { color: var(--gold); font-variant: tabular-nums; }
 
     article.charter h2 {
-      font-family: 'Iowan Old Style', 'Palatino', Georgia, serif;
+      font-family: var(--serif);
       font-weight: 500;
       font-size: 24px;
       color: var(--crimson-deep);
@@ -124,7 +125,7 @@
     }
 
     article.charter h3 {
-      font-family: 'Iowan Old Style', 'Palatino', Georgia, serif;
+      font-family: var(--serif);
       font-weight: 500;
       font-style: italic;
       font-size: 19px;
@@ -173,7 +174,7 @@
 
     .oint, .triglyph {
       display: inline-block;
-      font-family: 'STIX Two Math', 'Cambria Math', 'Iowan Old Style', serif;
+      font-family: var(--math);
       color: var(--crimson);
       letter-spacing: 0.1em;
     }
@@ -183,7 +184,7 @@
       padding-top: 24px;
       border-top: 1px solid var(--rule);
       text-align: center;
-      font-family: 'STIX Two Math', 'Cambria Math', 'Iowan Old Style', serif;
+      font-family: var(--math);
       color: var(--crimson);
       font-size: 28px;
       letter-spacing: 0.15em;

@@ -33,6 +33,7 @@
     "sameAs": "https://alexanarch.org/s/records/636/"
   }
   </script>
+<link rel="stylesheet" href="/assets/type.css">
 <style>
     :root {
       --ink: #1a1816; --ink-soft: #4a4540; --ink-faint: #8a8580;
@@ -43,7 +44,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Iowan Old Style', 'Palatino', 'Palatino Linotype', Georgia, serif;
+      font-family: var(--serif);
       background: var(--paper); color: var(--ink); line-height: 1.7; font-size: 17px;
     }
     a { color: var(--crimson); text-decoration: none; border-bottom: 1px solid rgba(139,29,29,0.3); }
@@ -88,7 +89,7 @@
     article header.prot-head { margin-bottom: 36px; padding-bottom: 24px; border-bottom: 2px solid var(--rule); }
     .breadcrumb { font-size: 13px; color: var(--ink-faint); margin-bottom: 18px; letter-spacing: 0.04em; }
     .breadcrumb a { border: none; color: var(--ink-soft); }
-    .prot-id { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; color: var(--gold); letter-spacing: 0.06em; }
+    .prot-id { font-family: var(--mono); font-size: 13px; color: var(--gold); letter-spacing: 0.06em; }
     h1.prot-title {
       font-size: 38px; line-height: 1.15; font-weight: 600; letter-spacing: -0.01em;
       margin: 14px 0 16px; color: var(--ink);
@@ -123,7 +124,7 @@
     pre {
       background: #f9f5ec; border-left: 3px solid var(--crimson);
       padding: 18px 22px; margin: 18px 0; border-radius: 0 3px 3px 0;
-      font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 13px;
+      font-family: var(--mono); font-size: 13px;
       line-height: 1.55; overflow-x: auto; position: relative;
     }
     pre code { font-family: inherit; color: var(--ink); }
@@ -138,7 +139,7 @@
     .copy-btn.copied { background: var(--crimson); color: var(--paper); border-color: var(--crimson); }
 
     /* Inline code */
-    code { background: rgba(160,132,56,0.10); padding: 1px 6px; border-radius: 2px; font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 0.9em; }
+    code { background: rgba(160,132,56,0.10); padding: 1px 6px; border-radius: 2px; font-family: var(--mono); font-size: 0.9em; }
     pre code { background: none; padding: 0; }
 
     /* Related navigation */
