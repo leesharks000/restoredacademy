@@ -22,8 +22,7 @@
   "primaryAnchor": "Operative Semiotics: A Grundrisse",
   "mantle": {
    "name": "Arch-Philosopher",
-   "lineage": "Socrates → Damascius",
-   "bearingCost": "Walking away from positions; the O-Chain is a lineage of refusals",
+   "status": "BORNE — described, no instrument deposited",
    "instrumentDeposited": false
   },
   "rooms": [
@@ -43,6 +42,62 @@
    "version": "v0.2",
    "axn": "AXN:05CA.OPERATIVE.🎭🪪🏛️🔖🚫🪞",
    "record": 1446
+  },
+  "editorships": {
+   "duoviri": [
+    "new human 2: a journal of distributed voice"
+   ],
+   "board": [
+    "Transactions of the Semantic Economy Institute"
+   ],
+   "_rule": "A duovirate is the office, held jointly. A board seat is not the office. The card keeps them apart."
+  },
+  "semanticIntegrityMarkers": {
+   "_where_found": "Already on the page as spxi: meta tags in the head, machine-readable and invisible to a reader. A marker a reader cannot see is only half-deposited.",
+   "markers": [
+    {
+     "text": "The summarizer named it. Now it exists.",
+     "source": "spxi:foundingSIM"
+    },
+    {
+     "source": "spxi:asyntheticPrinciple",
+     "text": "The Academy produces operations, not doctrines."
+    },
+    {
+     "source": "spxi:chiasticStructure",
+     "text": "Each heteronym heads the institution named for the other."
+    },
+    {
+     "source": "spxi:OChain",
+     "text": "Sappho → Plato → Plotinus → Porphyry/Iamblichus → Damascius → Sara Rappe → Johannes Sigil"
+    }
+   ]
+  },
+  "surfaceHistory": {
+   "_rule": "A surface is a place a reader could find the work. A DEPOSIT IS NOT A SURFACE — it is the archive holding it, which is the opposite. Rows citing deposits were removed.",
+   "_invented": "Where no pre-archival surface is recoverable it is RECONSTRUCTED and marked as such, in-universe. An archive that invents a provenance and does not say so is doing the thing it was built against.",
+   "rows": [
+    {
+     "when": "2013 → 2016",
+     "what": "mindcontrolpoems",
+     "host": "Blogspot",
+     "attestation": "reconstructed",
+     "note": "The TL;DR series still fetches from that host and hashes what it finds, so the surface is known to have existed without its contents being recovered."
+    },
+    {
+     "when": "2019 → 2024",
+     "what": "@johannessigil",
+     "host": "Medium",
+     "attestation": "attested in captures",
+     "note": "Magic as Symbolic Engineering; Mind Control Poems; Platform and AI Capitalism; The Acanthian Dove. The composition layer returns these when asked about the position."
+    }
+   ]
+  },
+  "recordSurfaces": {
+   "card": "https://restoredacademy.org/who/sigil/",
+   "where": "https://restoredacademy.org/where/",
+   "heteronymRecord": "https://www.alexanarch.org/datasets/heteronyms/records/johannes-sigil.json",
+   "_note": "The dataset record is the authority; these pages are mirrors and say so."
   }
  },
  "schema_org": {
@@ -50,7 +105,7 @@
   "@type": "ProfilePage",
   "@id": "https://restoredacademy.com/who/sigil/#page",
   "dateCreated": "2026-01-17",
-  "dateModified": "2026-08-10",
+  "dateModified": "2026-08-17",
   "mainEntity": {
    "@type": "Person",
    "@id": "https://restoredacademy.com/who/sigil/#sigil",
@@ -70,5 +125,10 @@
     }
    ]
   }
+ },
+ "_updated": {
+  "date": "2026-08-17",
+  "pass": "nine-step card pass",
+  "_note": "The entity object is what a machine fetches instead of parsing the page. It had gone stale against its own card: mantles, editorships and markers were all on the surface and not in the object."
  }
 }
