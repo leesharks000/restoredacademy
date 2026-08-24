@@ -24,7 +24,7 @@ Book-as-website meets technical reference. Warm paper background (#f5f1e8), crim
 ## Authority
 
 - Charter DOI: [10.5281/zenodo.20327083](https://www.alexanarch.org/go/?doi=10.5281/zenodo.20327083) (Johannes Sigil, head of The Restored Academy)
-- Bundle DOI: [10.5281/zenodo.20327578](https://www.alexanarch.org/go/?doi=10.5281/zenodo.20327578) (registry v1.0 launch state)
+- Bundle DOI: `10.5281/zenodo.20327578` (registry v1.0 launch state) — **severed 2026-06-19, no reconstruction of the bundle exists.** The DOI is retained as the citation of record; canonical archive at [alexanarch.org](https://www.alexanarch.org/).
 - Institutional head: Johannes Sigil (heteronym)
 - Sister Institute: Johannes Sigil Institute of Comparative Poetics (jsiponline.com), headed by Lee Sharks (chiastic structure)
 - Parent archive: The Crimson Hexagonal Archive on Zenodo (community: `crimsonhexagonal`)
