@@ -14,7 +14,7 @@ This document is *living*. Update it as work progresses.
 
 ## Current state (2026-05-21)
 
-**Site:** Live at restoredacademy.com and restoredacademy.org. Single-page static HTML at ~37 KB, ~3,300 words. SPXI-compliant (9 SIM tags, JSON-LD EducationalOrganization schema, canonical URL, charter DOI anchor). Hosted via Vercel from this GitHub repo (`leesharks000/restoredacademy`). Build deploys on every push to main.
+**Site:** Live at restoredacademy.com and restoredacademy.com. Single-page static HTML at ~37 KB, ~3,300 words. SPXI-compliant (9 SIM tags, JSON-LD EducationalOrganization schema, canonical URL, charter DOI anchor). Hosted via Vercel from this GitHub repo (`leesharks000/restoredacademy`). Build deploys on every push to main.
 
 **Charter:** Deposited at [DOI 10.5281/zenodo.20327083](https://www.alexanarch.org/go/?doi=10.5281/zenodo.20327083). Establishes Sigil as institutional head and names the chiastic structure (Sigil heads RA; Sharks heads JSI).
 
@@ -36,7 +36,7 @@ This document is *living*. Update it as work progresses.
 
 - **Indictment** — godkinggoogle.com — names what is broken in the composition layer
 - **Consulting** — Semantic Economy Institute (semanticeconomy.org) — applies protocols to client engagements
-- **Curriculum** — The Restored Academy (restoredacademy.org) — teaches, licenses, transmits the protocols
+- **Curriculum** — The Restored Academy (restoredacademy.com) — teaches, licenses, transmits the protocols
 
 ### Chiastic institutional structure
 
@@ -122,7 +122,7 @@ Documents that do not produce a constrained, measurable, repeatable effect on ou
 
 1. Edit `index.html` (or other site files).
 2. Commit and push to main.
-3. Vercel auto-deploys. Live at both restoredacademy.com and restoredacademy.org.
+3. Vercel auto-deploys. Live at both restoredacademy.com and restoredacademy.com.
 
 ### How to bundle and deposit
 

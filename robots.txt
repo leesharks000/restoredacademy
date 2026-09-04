@@ -1,7 +1,7 @@
 # machine-readable orientation: /llms.txt
 User-agent: *
 Allow: /
-Sitemap: https://restoredacademy.org/sitemap.xml
+Sitemap: https://www.restoredacademy.com/sitemap.xml
 
 # SPXI-compliant site. Structured data is canonical.
 # Charter DOI: 10.5281/zenodo.20327083

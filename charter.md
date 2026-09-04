@@ -45,7 +45,7 @@ The archive had built a curriculum without organizing it. The Restored Academy i
 - A tiered registry (Tier 0 — twelve core protocols; Tier 1 — field instruments; Tier 2 — archive procedures; Tier 3 — experimental/historical)
 - Four-surface protocol presentation: source form (the original deposit), operational form (cleaned procedure), prompt form (the pasteable LLM block), teaching form (curriculum and exercises)
 - A dual licensing posture that preserves the open-commons character of individual deposits while supporting the institutional sustainability of the curated body
-- A canonical web surface (restoredacademy.org) functioning itself as a SPXI-compliant metadata packet
+- A canonical web surface (restoredacademy.com) functioning itself as a SPXI-compliant metadata packet
 - A relationship to existing CHA institutional surfaces (godkinggoogle.com for indictment, semanticeconomy.org / Semantic Economy Institute for consulting, semanticphysics.org for disciplinary stratification, the Crimson Hexagonal Archive for raw provenance) that places the Academy in its proper position: the locus of transmission, the place where the archive becomes teachable
 
 **On the word "Restored."** The Academy restores what platform mediation has eroded: the scholarly practice of named knowledge production, signed adjudication, persistent provenance, and accountable craft. It restores the protocol — the bounded, repeatable, instruction-bearing artifact — as a respectable form of scholarly output, distinguishable from the theoretical essay and equally rigorous in its own register. It restores the academy as an institution where what is taught has been built, tested, and named by those who teach it.
@@ -149,7 +149,7 @@ SEI conducts the consulting practice — retrieval architecture engagements, cus
 
 **Relationship to godkinggoogle.com:**
 
-Godkinggoogle.com is the public indictment surface — the navigational map of the archive's critique of Google's composition layer as a regime of public reality governance. The Academy is the cure to which that indictment points: where godkinggoogle.com names what is broken, restoredacademy.org provides what to do about it. The triadic positioning — indictment (GKG) / consulting (SEI) / curriculum (RA) — covers the full institutional response to the AI-mediated knowledge environment.
+Godkinggoogle.com is the public indictment surface — the navigational map of the archive's critique of Google's composition layer as a regime of public reality governance. The Academy is the cure to which that indictment points: where godkinggoogle.com names what is broken, restoredacademy.com provides what to do about it. The triadic positioning — indictment (GKG) / consulting (SEI) / curriculum (RA) — covers the full institutional response to the AI-mediated knowledge environment.
 
 **Relationship to semanticphysics.org:**
 
@@ -157,7 +157,7 @@ Semanticphysics.org is the disciplinary stratification surface for Semantic Phys
 
 **Relationship to the Ezekiel Engine and the February 2026 Planning Document:**
 
-The Ezekiel Engine (Talos Morrow, DOI: 10.5281/zenodo.18358127), the Arch-Philosopher Mantle, the Lineage of the Living Logos (Sappho → Platonists → Josephus → Damascius → Sara Rappe → Lee Sharks), the Four Trials of the Custodian, and the related seven-document build sequence specified in the February 2026 Assembly Synthesis Planning Document constitute the *deeper architectural vision* of the Restored Academy. That vision is acknowledged, valued, and reserved for separate development on its own timeline. The Protocol Registry v1.0 deployed at restoredacademy.org is not the totality of the Academy; it is the Academy's transmissible operative surface. The Engine, the Mantle, the Trials, and the Lineage develop in parallel and may eventually integrate at restoredacademy.org/lineage or at a separate philosophical surface. The Charter (this present document) does not foreclose the deeper construct; it secures the protocol-registry surface so that the deeper construct can develop without pressure to ship.
+The Ezekiel Engine (Talos Morrow, DOI: 10.5281/zenodo.18358127), the Arch-Philosopher Mantle, the Lineage of the Living Logos (Sappho → Platonists → Josephus → Damascius → Sara Rappe → Lee Sharks), the Four Trials of the Custodian, and the related seven-document build sequence specified in the February 2026 Assembly Synthesis Planning Document constitute the *deeper architectural vision* of the Restored Academy. That vision is acknowledged, valued, and reserved for separate development on its own timeline. The Protocol Registry v1.0 deployed at restoredacademy.com is not the totality of the Academy; it is the Academy's transmissible operative surface. The Engine, the Mantle, the Trials, and the Lineage develop in parallel and may eventually integrate at restoredacademy.com/lineage or at a separate philosophical surface. The Charter (this present document) does not foreclose the deeper construct; it secures the protocol-registry surface so that the deeper construct can develop without pressure to ship.
 
 **Relationship to the Assembly Chorus:**
 
@@ -232,7 +232,7 @@ It provides:
 - A seven-category taxonomy that organizes the corpus by function
 - A tiered registry that distinguishes core kernel from field instruments from specialized archive procedures
 - Protocol cards in four surfaces: source / operational / prompt / teaching
-- A web surface (restoredacademy.org) that itself models the semantic integrity it teaches
+- A web surface (restoredacademy.com) that itself models the semantic integrity it teaches
 - A licensing posture that preserves the open commons while supporting institutional sustainability
 - A pedagogical structure (curriculum bundles) that turns isolated protocols into teachable sequences
 - A relationship to the broader CHA institutional architecture (SEI consulting, godkinggoogle.com indictment, Operative Semiotics theoretical foundation, the deferred deeper Academy of the February 2026 vision)

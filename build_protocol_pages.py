@@ -19,7 +19,7 @@ HEAD_TPL = """<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>{prot_id} {prot_short} — The Restored Academy Protocol Registry</title>
-  <link rel="canonical" href="https://restoredacademy.org/protocols/{prot_id}.html">
+  <link rel="canonical" href="https://www.restoredacademy.com/protocols/{prot_id}">
   <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
   <meta name="description" content="{prot_id} — {prot_short}. {tagline}">
 
@@ -29,20 +29,20 @@ HEAD_TPL = """<!DOCTYPE html>
   <meta name="spxi:institutionalAffiliation" content="The Restored Academy · Crimson Hexagonal Archive">
   <meta name="spxi:licenseDeclaration" content="CC BY 4.0 · tiered commercial licensing for curated body">
   <meta name="spxi:depositAnchor" content="{source_doi}">
-  <meta name="spxi:canonicalURL" content="https://restoredacademy.org/protocols/{prot_id}.html">
+  <meta name="spxi:canonicalURL" content="https://www.restoredacademy.com/protocols/{prot_id}">
 
   <script type="application/ld+json">
   {{
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "@id": "https://restoredacademy.org/protocols/{prot_id}.html",
+    "@id": "https://www.restoredacademy.com/protocols/{prot_id}",
     "name": "{prot_id}: {prot_short}",
     "headline": "{prot_id} — {prot_short}",
-    "url": "https://restoredacademy.org/protocols/{prot_id}.html",
+    "url": "https://www.restoredacademy.com/protocols/{prot_id}",
     "isPartOf": {{
       "@type": "Collection",
       "name": "Restored Academy Protocol Registry",
-      "url": "https://restoredacademy.org/"
+      "url": "https://www.restoredacademy.com/"
     }},
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "author": {{ "@type": "Person", "name": "{author}" }},

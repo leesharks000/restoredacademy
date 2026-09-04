@@ -94,8 +94,8 @@
    ]
   },
   "recordSurfaces": {
-   "card": "https://restoredacademy.org/who/sigil/",
-   "where": "https://restoredacademy.org/where/",
+   "card": "https://restoredacademy.com/who/sigil/",
+   "where": "https://restoredacademy.com/where/",
    "heteronymRecord": "https://www.alexanarch.org/datasets/heteronyms/records/johannes-sigil.json",
    "_note": "The dataset record is the authority; these pages are mirrors and say so."
   }
