@@ -1,4 +1,4 @@
-# restoredacademy.com / restoredacademy.org
+# restoredacademy.com / restoredacademy.com
 
 The Restored Academy Protocol Registry — a curated catalog of executable methods, prompt-native semantic runtimes, diagnostic instruments, and instructional kernels from the Crimson Hexagonal Archive.
 
@@ -31,11 +31,11 @@ Book-as-website meets technical reference. Warm paper background (#f5f1e8), crim
 
 ## License
 
-Individual protocols remain CC BY 4.0. The organized body (registry, taxonomy, card schema, curricula, audit services, implementation materials) is licensable under tiered terms. See [/license.html](https://restoredacademy.org/license.html). Contributor-side terms: [Hexagonal Licensing Protocol v2.0](https://www.alexanarch.org/go/?doi=10.5281/zenodo.20327083).
+Individual protocols remain CC BY 4.0. The organized body (registry, taxonomy, card schema, curricula, audit services, implementation materials) is licensable under tiered terms. See [/license.html](https://restoredacademy.com/license.html). Contributor-side terms: [Hexagonal Licensing Protocol v2.0](https://www.alexanarch.org/go/?doi=10.5281/zenodo.20327083).
 
 ## Deployment
 
-Static site hosted on Vercel. Auto-deploys from `main`. Domain: restoredacademy.com + restoredacademy.org.
+Static site hosted on Vercel. Auto-deploys from `main`. Domain: restoredacademy.com + restoredacademy.com.
 
 ## Build
 
