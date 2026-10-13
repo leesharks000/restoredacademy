@@ -6,6 +6,11 @@
 
 **Voice:** Johannes Sigil. Part of the Crimson Hexagonal Archive.
 
+## The Academy's two mantles
+
+Two mantle objects (13 October 2026), a pair. The Arch-Philosopher (#1679): borne by carrying the dialectic forward a turn, materially; no single work or office bears it; ratified in the Space Ark with Johannes Sigil as bearer, specified here with no new determination. The Living Academy (#1678): borne by a library and the program it carries — the critique of AI-mediated political economy — across eight modes; specified, not determined. The Restored Academy is one institution inside that library.
+https://www.restoredacademy.com/readings/academy-mantles — deposits #1679, #1678; evaluated in https://huggingface.co/datasets/leesharks/mantle-bearing
+
 ## Sappho's future reader
 
 Two metadata packets (28 September 2026): Fragment 147 states the horizon; Fragment 31 builds the seat. The remembrance reading of fr. 147 is common ground; the deictic future-reader reading of fr. 31 and the joining of the two are Lee Sharks's (as Rebekah Cranes and Johannes Sigil). τινα means "someone", not "reader".
