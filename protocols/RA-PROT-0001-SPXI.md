@@ -8,7 +8,7 @@ Entity-level inscription protocol that publishes machine-readable provenance, di
 
 ## 1. What it does
 
-SPXI (pronounced *spexy*, an acronym for *Semantic Packet for eXchange & Indexing*) is the protocol for inscribing a structured-data packet about an entity into the web surface that represents it, in a form that AI search composition systems (Google AI Overview, AI Mode, Bing Chat, Perplexity, Claude with retrieval) consume during composition.
+SPXI (pronounced *spexy*, an acronym for *Semantic Packet for eXchange & Indexing*) is a protocol and practice of entity inscription, itemized as 85 methods at spxi.dev/methods; this card teaches its packet layer: inscribing a structured-data packet about an entity into the web surface that represents it, in a form that AI search composition systems (Google AI Overview, AI Mode, Bing Chat, Perplexity, Claude with retrieval) consume during composition.
 
 A SPXI deployment publishes, on the entity's canonical page:
 
