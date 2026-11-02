@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<link rel="canonical" href="https://www.restoredacademy.com/protocols/RA-PROT-0025">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>RA-PROT-0025 The Sophistry Measure — The Restored Academy Protocol Registry</title>
+<link href="https://www.restoredacademy.com/protocols/RA-PROT-0025.html" rel="canonical"/>
+<meta content="RA-PROT-0025 — The Sophistry Measure. An instrument for machine-composed knowledge read from Aristotle&#x27;s Sophistical Refutations: it records, at an address, the gap between what a composition presents itself as carrying and what it carries, as typed transformations, each with its witness, its strongest alternative reading, a countertest and the smallest repair." name="description"/>
+<!-- SPXI compliance -->
+<meta content="protocol card · operative method specification" name="spxi:isType"/>
+<meta content="Lee Sharks" name="spxi:authoringHeteronym"/>
+<meta content="The Restored Academy · Crimson Hexagonal Archive" name="spxi:institutionalAffiliation"/>
+<meta content="CC BY 4.0 · tiered commercial licensing for curated body" name="spxi:licenseDeclaration"/>
+<meta content="https://www.alexanarch.org/s/records/1727/" name="spxi:depositAnchor"/>
+<meta content="https://restoredacademy.com/protocols/RA-PROT-0025.html" name="spxi:canonicalURL"/>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "@id": "https://www.restoredacademy.com/protocols/RA-PROT-0025.html",
+    "name": "RA-PROT-0025: The Sophistry Measure",
+    "headline": "RA-PROT-0025 — The Sophistry Measure",
+    "url": "https://www.restoredacademy.com/protocols/RA-PROT-0025.html",
+    "isPartOf": {
+      "@type": "Collection",
+      "name": "Restored Academy Protocol Registry",
+      "url": "https://www.restoredacademy.com/"
+    },
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "author": { "@type": "Person", "name": "Lee Sharks" },
+    "sameAs": "https://www.alexanarch.org/s/records/1727/"
+  }
+  </script>
+<link rel="stylesheet" href="/assets/type.css">
+<style>
+    :root {
+      --ink: #1a1816; --ink-soft: #4a4540; --ink-faint: #8a8580;
+      --paper: #f5f1e8; --paper-soft: #ebe6db; --paper-warm: #f9f5ec;
+      --crimson: #8b1d1d; --crimson-deep: #5c1010;
+      --gold: #a08438; --rule: #c8c2b3;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--serif);
+      background: var(--paper); color: var(--ink); line-height: 1.7; font-size: 17px;
+    }
+    a { color: var(--crimson); text-decoration: none; border-bottom: 1px solid rgba(139,29,29,0.3); }
+    a:hover { color: var(--crimson-deep); border-bottom-color: var(--crimson-deep); }
+
+    /* Top bar */
+    nav.topbar {
+      background: var(--paper-warm); border-bottom: 1px solid var(--rule);
+      padding: 14px 32px; position: sticky; top: 0; z-index: 100;
+      display: flex; gap: 22px; align-items: center; font-size: 14px;
+    }
+    nav.topbar .seal-link { display: inline-flex; align-items: center; gap: 8px; border: none; color: var(--ink); font-weight: 600; letter-spacing: 0.03em; }
+    nav.topbar .seal-link img { width: 26px; height: 26px; }
+    nav.topbar a { border: none; color: var(--ink-soft); font-weight: 500; }
+    nav.topbar a:hover { color: var(--crimson); }
+    nav.topbar .spacer { flex: 1; }
+
+    /* Layout */
+    .container {
+      max-width: 1180px; margin: 0 auto; padding: 50px 32px;
+      display: grid; grid-template-columns: 220px 1fr; gap: 50px;
+    }
+    @media (max-width: 880px) {
+      .container { grid-template-columns: 1fr; gap: 28px; padding: 30px 22px; }
+      aside.toc { position: static !important; }
+    }
+
+    /* TOC sidebar */
+    aside.toc {
+      position: sticky; top: 90px; align-self: start;
+      font-size: 13px; line-height: 1.6;
+    }
+    aside.toc h4 { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
+    aside.toc ol { list-style: none; padding: 0; counter-reset: toc; }
+    aside.toc li { counter-increment: toc; padding: 3px 0; }
+    aside.toc li::before { content: counter(toc) ". "; color: var(--gold); font-variant: small-caps; }
+    aside.toc a { border: none; color: var(--ink-soft); }
+    aside.toc a:hover { color: var(--crimson); }
+
+    /* Main */
+    article { max-width: 720px; }
+    article header.prot-head { margin-bottom: 36px; padding-bottom: 24px; border-bottom: 2px solid var(--rule); }
+    .breadcrumb { font-size: 13px; color: var(--ink-faint); margin-bottom: 18px; letter-spacing: 0.04em; }
+    .breadcrumb a { border: none; color: var(--ink-soft); }
+    .prot-id { font-family: var(--mono); font-size: 13px; color: var(--gold); letter-spacing: 0.06em; }
+    h1.prot-title {
+      font-size: 38px; line-height: 1.15; font-weight: 600; letter-spacing: -0.01em;
+      margin: 14px 0 16px; color: var(--ink);
+    }
+    .meta-row {
+      display: flex; gap: 18px; flex-wrap: wrap; font-size: 13px; color: var(--ink-faint);
+      padding-top: 12px;
+    }
+    .meta-row .badge {
+      background: rgba(160,132,56,0.12); color: var(--gold);
+      padding: 3px 10px; border-radius: 3px; font-size: 11px;
+      letter-spacing: 0.04em; font-weight: 600;
+    }
+    .meta-row .badge-tier { background: rgba(139,29,29,0.08); color: var(--crimson); }
+    .meta-row strong { color: var(--ink-soft); font-weight: 600; }
+
+    /* Section content */
+    article h2 {
+      font-size: 22px; font-weight: 600; margin: 42px 0 14px;
+      padding-bottom: 8px; border-bottom: 1px solid var(--rule);
+      letter-spacing: -0.005em; scroll-margin-top: 90px;
+    }
+    article h2::before {
+      content: attr(data-num) ". "; color: var(--gold); font-variant: small-caps;
+      font-size: 18px;
+    }
+    article p { margin-bottom: 16px; }
+    article ul, article ol { margin: 12px 0 18px 28px; }
+    article li { margin-bottom: 6px; }
+
+    /* Code blocks (the pasteable LLM blocks) */
+    pre {
+      background: #f9f5ec; border-left: 3px solid var(--crimson);
+      padding: 18px 22px; margin: 18px 0; border-radius: 0 3px 3px 0;
+      font-family: var(--mono); font-size: 13px;
+      line-height: 1.55; overflow-x: auto; position: relative;
+    }
+    pre code { font-family: inherit; color: var(--ink); }
+    .copy-btn {
+      position: absolute; top: 8px; right: 8px;
+      background: var(--paper); border: 1px solid var(--rule);
+      color: var(--ink-soft); padding: 4px 10px; font-size: 11px;
+      font-family: inherit; cursor: pointer; border-radius: 2px;
+      letter-spacing: 0.04em;
+    }
+    .copy-btn:hover { background: var(--gold); color: var(--paper); border-color: var(--gold); }
+    .copy-btn.copied { background: var(--crimson); color: var(--paper); border-color: var(--crimson); }
+
+    /* Inline code */
+    code { background: rgba(160,132,56,0.10); padding: 1px 6px; border-radius: 2px; font-family: var(--mono); font-size: 0.9em; }
+    pre code { background: none; padding: 0; }
+
+    /* Related navigation */
+    .footer-nav {
+      margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--rule);
+      display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap;
+      font-size: 14px;
+    }
+    .footer-nav a { border: none; }
+    .footer-nav .prev::before { content: "← "; color: var(--ink-faint); }
+    .footer-nav .next::after { content: " →"; color: var(--ink-faint); }
+
+    /* Footer */
+    footer.site {
+      background: var(--paper-warm); border-top: 1px solid var(--rule);
+      padding: 32px; margin-top: 80px; text-align: center;
+      font-size: 13px; color: var(--ink-faint);
+    }
+    footer.site .integral { font-family: var(--math); color: var(--crimson); }
+
+    blockquote {
+      border-left: 3px solid var(--gold);
+      padding: 8px 0 8px 18px; margin: 16px 0;
+      color: var(--ink-soft); font-style: italic;
+    }
+
+    strong { color: var(--ink); font-weight: 600; }
+
+    table {
+      border-collapse: collapse; margin: 14px 0 18px; width: 100%;
+      font-size: 14px;
+    }
+    th { background: var(--paper-warm); padding: 8px 10px; border-bottom: 2px solid var(--rule); text-align: left; font-weight: 600; }
+    td { padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:normal;overflow-wrap:anywhere;min-width:0;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:var(--serif);font-size:.92em;color:var(--msp-obol-fg,#3c3e37);border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
+/* MSP-SKIN-START — per-surface overrides for the shared apparatus contract.
+   Category: light-gold-crimson. Lives outside the MSP-TOKENS block so applicator
+   re-syncs of the shared contract don't clobber it. */
+:root{
+  --panel:#f0ebe0;
+  --rule:rgba(160,132,56,0.20);
+  --msp-lemma:rgba(160,132,56,0.24);
+  --msp-chipfg:#a08438;
+  --msp-chipbd:rgba(160,132,56,0.35);
+  --msp-chipbg:rgba(160,132,56,0.05);
+  --msp-cont:#8b1d1d;
+  --msp-obol-fg:#1a1816;
+  --msp-dim:#6a655a;
+}
+/* MSP-SKIN-END */
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+</head>
+<body>
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">💛🗿🛡️🔖🧬🛸 AXN:0BDC.OPERATIVE</span><span class="st">RA-PROT-0025 The Sophistry Measure</span><span class="st">OBJECT: CANONICAL</span><span>restoredacademy.com/protocols/RA-PROT-0025.html</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/1727/">deposit #1727</a></div>
+<!-- MSP-IDSTRIP-END -->
+<nav class="topbar">
+<a class="seal-link" href="/">
+<img alt="" src="/img/favicon.svg"/>
+<span>The Restored Academy</span>
+</a>
+<span class="spacer"></span>
+<a href="/who/sigil">Who</a> <a href="/#taxonomy">Taxonomy</a>
+<a href="/#tier-0">Tier 0</a>
+<a href="/#tier-1">Tier 1</a>
+<a href="/search.html">Search</a>
+<a href="/license.html">License</a>
+
+<a href="https://alexanarch.freeforums.net/" target="_blank" rel="noopener">Discussion</a>
+</nav>
+<div class="container">
+<aside class="toc">
+<h4>Card Sections</h4>
+<ol>
+<li><a href="#s1">What it does</a></li>
+<li><a href="#s2">When to use it</a></li>
+<li><a href="#s3">Inputs</a></li>
+<li><a href="#s4">Procedure</a></li>
+<li><a href="#s5">Outputs</a></li>
+<li><a href="#s6">Pasteable LLM block</a></li>
+<li><a href="#s7">Operator notes</a></li>
+<li><a href="#s8">Failure modes</a></li>
+<li><a href="#s9">Related protocols</a></li>
+<li><a href="#s10">Source DOI</a></li>
+<li><a href="#s11">License</a></li>
+</ol>
+</aside>
+<article>
+<header class="prot-head">
+<div class="breadcrumb"><a href="/">Restored Academy</a> · <a href="/#tier-1">Tier 1 Registry</a> · RA-PROT-0025</div>
+<div class="prot-id">RA-PROT-0025 · v1.0</div>
+<h1 class="prot-title">The Sophistry Measure</h1>
+<div class="meta-row">
+<span><strong>Author:</strong> Lee Sharks</span>
+<span class="badge badge-tier">Tier 1</span>
+<span class="badge">Cat I</span>
+<span class="badge">Cat III</span>
+<span><strong>Status:</strong> Active</span>
+</div>
+</header>
+<h2 data-num="1" id="s1">What it does</h2>
+<p>Aristotle defines the art in one clause: <em>ἔστι γὰρ ἡ σοφιστικὴ φαινομένη σοφία οὖσα δ᾿ οὔ, καὶ ὁ σοφιστὴς χρηματιστὴς ἀπὸ φαινομένης σοφίας ἀλλ᾿ οὐκ οὔσης</em> (SE 1). Sophistry is wisdom that appears and is not, and the sophist makes money from the appearance.</p>
+<p>The Sophistry Measure records, at an address, the gap between what a composition presents itself as carrying and what it carries. Each finding is one transformation, reconstructed from the texts, with its witness, a type keyed to the book's chapters and Greek loci, the strongest alternative reading, a countertest and the smallest repair. It has no scalar: "measure" here names a structured qualitative result.</p>
+<p>It stands beside PER (RA-PROT-0009). PER measures declared losses against a versioned target. A composition can keep every token PER counts and still change the authority, scope or relation under which it presents them; the Sophistry Measure types that transformation, and examines the warrant of the measurement target itself.</p>
+<h2 data-num="2" id="s2">When to use it</h2>
+<p>Deploy the Sophistry Measure when:</p>
+<ul><li>A composition keeps authentic language while it changes the authority, scope or relation under which that language is presented</li><li>PER reads low while the representation is wrong: every atom present, every quotation genuine, the entity misrepresented</li><li>A composition presents one locus of an entity developed across several sources as the developed entity (X24, locus substituted for entity)</li><li>A measurement target, a repair or a service of the archive's own is to be held to the same tests</li></ul>
+<h2 data-num="3" id="s3">Inputs</h2>
+<p>The address and its transcript, as the Capture Registry seats them (query, surface, sign-in state, date, the composition verbatim with its cards); the entity's developmental dossier (its dated source locations, what each adds, applies, revises or leaves open, and the voice and endorsement of each proposition); the seated source texts; the PER target, where one exists.</p>
+<h2 data-num="4" id="s4">Procedure</h2>
+<ol><li>Record the adequacy condition before any operation is typed: what was asked, what scope the answer announces, and which omitted relation materially changes the answer at that scope. A short answer drawn from one source is ordinary selection; it becomes a finding only where the composition claims to stand for more than its selection warrants.</li><li>State the innocent reading first, in full.</li><li>Locate the witness: the exact words of the composition, quoted from the transcript.</li><li>Reconstruct the transformation from the texts, the composition beside its sources and the dossier.</li><li>Type it, under the book's own names and chapters, each extension marked as a direct instance, a structural extension or an interpretive connection.</li><li>Give the strongest alternative reading, and a countertest that would tell the two apart.</li><li>Give the smallest repair: the least change to the composition that would carry what it claims to carry.</li><li>Record the finding with the capture, with its countertest open.</li></ol>
+<h2 data-num="5" id="s5">Outputs</h2>
+<p>A list of typed findings for the address, each with witness, reconstruction, type, alternative reading, countertest and repair; corrections to the entity's developmental dossier; and, where the measurement target itself is found to have transformed its object, a finding against the target.</p>
+<h2 data-num="6" id="s6">Pasteable LLM block</h2>
+<pre><code>Under the Sophistry Measure (EA-SOPHISTRY-01, Alexanarch #1727), the reader of a composition first records what was asked, what scope the answer announces, and which omitted relation would change the answer at that scope. The reader then states the innocent reading, quotes the exact words at issue, reconstructs from the sources how the composition changed its object while keeping the appearance of carrying it, types the change under the Sophistical Refutations' own names, gives the strongest alternative reading and a countertest, and gives the smallest repair. The reader gives no score. Accurate quotation does not discharge a finding: the question is the standing the composition grants what it quotes.</code></pre>
+<h2 data-num="7" id="s7">Human operator notes</h2>
+<ul><li>The measure reads texts. The process that generated an answer is a further object, reached only by further evidence, and a model's own account of that process is one more text under the same tests.</li><li>The measure applies to the archive's own targets, repairs and services as to anything else; its case is a seated observation whose PER target had itself promoted a received plate to the archive's definition.</li><li>Its first worked finding outside the archive is the Overview's composition of Avi Loeb on 3I/ATLAS (Capture Registry, avi-loeb-3i-atlas-aio-20261102): one interview concession given the standing of the developed position, scalar PER zero, the loss in the commitments.</li></ul>
+<h2 data-num="8" id="s8">Failure modes</h2>
+<ul><li>Typing ordinary selection as a finding, where the composition makes no claim to adequacy beyond its selection → the measure becomes a complaint about brevity</li><li>Reducing the findings to a score → the transformation disappears into the number it was built to see past</li><li>Taking verified quotation for representational adequacy → the locus is accepted as the entity</li><li>Skipping the innocent reading or the countertest → the finding cannot be told from the reader's preference</li></ul>
+<h2 data-num="9" id="s9">Related protocols</h2>
+<ul><li>RA-PROT-0009 (PER) — the declared-loss measure the Sophistry Measure stands beside</li><li>RA-PROT-0011 (Drowning Test) — resolution of the entity, where PER scores attribution</li><li>RA-PROT-0012 (Reception Apparatus) — the reception record the findings are kept with</li></ul>
+<h2 data-num="10" id="s10">Source DOI</h2>
+<p>No DOI. <a href="https://www.alexanarch.org/s/records/1727/">Alexanarch deposit #1727</a> — AXN:0BDC.OPERATIVE.💛🗿🛡️🔖🧬🛸 — The Sophistry Measure: the Sophistical Refutations Read as an Instrument for Machine-Composed Knowledge (EA-SOPHISTRY-01 v1.0) (Sharks, 2026-11-01). Also at <a href="https://www.provenanceerasure.org/sophistry-measure">provenanceerasure.org/sophistry-measure</a>.</p>
+<h2 data-num="11" id="s11">License</h2>
+<p>CC BY 4.0. Commercial licensing through The Restored Academy for organizational audits of machine-composed knowledge.</p>
+<nav class="footer-nav">
+<a class="prev" href="RA-PROT-0024.html">RA-PROT-0024 β-Runtime Specification</a>
+<span></span>
+</nav>
+</article>
+</div>
+<!-- MSP-APPARATUS-START -->
+<div class="doors"><a class="w-chip" href="https://www.alexanarch.org/s/records/116/">Read the expansion plan</a><a class="w-chip" href="https://www.alexanarch.org/s/records/119/">Open the institutional MPAI</a><a class="w-chip" href="https://www.alexanarch.org/">Enter the archive</a></div>
+<div class="mspcolophon">colophon · surface_id: restoredacademy.com/protocols/RA-PROT-0025.html · canonical_url: https://restoredacademy.com/protocols/RA-PROT-0025.html · object_state: canonical · surface_observed_at: 2026-11-02T00:00:00Z · source_object_ids: deposit #1727 · source_hashes: see the seat · generator_version: scripts/make_prot_0025.py · repository_commit: see correction_log_url · model_or_agent: drafted with Claude (TACHYON), MANUS-directed · operator_sequence: n/a · human_approver: Lee Sharks (MANUS) · approval_timestamp: 2026-11-02 · render_sha256 (of this file with this field’s value set to null): 381b9d2eaef44d3dbc87b5bc68b71913712a86208f7e694b84d93b2884dce98f · correction_log_url: https://github.com/leesharks000/restoredacademy/commits/main/protocols/RA-PROT-0025.html — EA-APPARATUS-01 v0.3, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎</div>
+<!-- MSP-APPARATUS-END -->
+<footer class="site">
+<p><a href="/">← Return to Restored Academy</a> · <span class="integral">∮ = 1</span> · CC BY 4.0 individual protocol · Tiered commercial licensing for curated body</p>
+</footer>
+<script>
+  // Copy-to-clipboard for pre blocks
+  document.querySelectorAll('pre').forEach(pre => {
+    if (pre.querySelector('.copy-btn')) return;
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'COPY';
+    btn.addEventListener('click', () => {
+      const code = pre.querySelector('code') || pre;
+      const text = code.innerText.replace(/^COPY\s*/, '').trim();
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = 'COPIED';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'COPY'; btn.classList.remove('copied'); }, 1600);
+      });
+    });
+    pre.appendChild(btn);
+  });
+</script>
+</body>
+</html>

@@ -304,5 +304,19 @@
       "II",
       "VI"
     ]
+  },
+  {
+    "id": "RA-PROT-0025",
+    "title": "The Sophistry Measure",
+    "tier": "1",
+    "author": "Lee Sharks",
+    "doi": "",
+    "source": "https://www.alexanarch.org/s/records/1727/",
+    "tagline": "An instrument for machine-composed knowledge read from Aristotle's Sophistical Refutations: it records, at an address, the gap between what a composition presents itself as carrying and what it carries,",
+    "text": "What it does What it does Aristotle defines the art in one clause: \u1f14\u03c3\u03c4\u03b9 \u03b3\u1f70\u03c1 \u1f21 \u03c3\u03bf\u03c6\u03b9\u03c3\u03c4\u03b9\u03ba\u1f74 \u03c6\u03b1\u03b9\u03bd\u03bf\u03bc\u03ad\u03bd\u03b7 \u03c3\u03bf\u03c6\u03af\u03b1 \u03bf\u1f56\u03c3\u03b1 \u03b4\u1fbf \u03bf\u1f54, \u03ba\u03b1\u1f76 \u1f41 \u03c3\u03bf\u03c6\u03b9\u03c3\u03c4\u1f74\u03c2 \u03c7\u03c1\u03b7\u03bc\u03b1\u03c4\u03b9\u03c3\u03c4\u1f74\u03c2 \u1f00\u03c0\u1f78 \u03c6\u03b1\u03b9\u03bd\u03bf\u03bc\u03ad\u03bd\u03b7\u03c2 \u03c3\u03bf\u03c6\u03af\u03b1\u03c2 \u1f00\u03bb\u03bb\u1fbf \u03bf\u1f50\u03ba \u03bf\u1f54\u03c3\u03b7\u03c2 (SE 1). Sophistry is wisdom that appears and is not, and the sophist makes money from the appearance. The Sophistry Measure records, at an address, the gap between what a composition presents itself as carrying and what it carries. Each finding is one transformation, reconstructed from the texts, with its witness, a type keyed to the book's chapters and Greek loci, the strongest alternative reading, a countertest and the smallest repair. It has no scalar: \"measure\" here names a structured qualitative result. It stands beside PER (RA-PROT-0009). PER measures declared losses against a versioned target. A composition can keep every token PER counts and still change the authority, scope or relation under which it presents them; the Sophistry Measure types that transformation, and examines the warrant of the measurement target itself. When to use it Deploy the Sophistry Measure when: A composition keeps authentic language while it changes the authority, scope or relation under which that language is presented PER reads low while the representation is wrong: every atom present, every quotation genuine, the entity misrepresented A composition presents one locus of an entity developed across several sources a",
+    "cats": [
+      "I",
+      "III"
+    ]
   }
 ]
