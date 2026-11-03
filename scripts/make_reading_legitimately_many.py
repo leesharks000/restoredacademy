@@ -6,7 +6,7 @@ author's word: "legitimately many should go to restoredacademy"."""
 import html, json, pathlib, re, sys
 import markdown
 R = pathlib.Path(__file__).resolve().parents[1]
-SRC = pathlib.Path(sys.argv[1])          # the packet's Markdown (alexanarch/drafts/EA-MPAI-LEGITIMATELY-MANY-01-draft.md)
+SRC = pathlib.Path(sys.argv[1])          # the packet as deposited (alexanarch data/texts/AXN-0BE8-text.md, front matter removed)
 REC_S, REC_P = "https://www.alexanarch.org/s/records/1733/", "https://www.alexanarch.org/s/records/1734/"
 DROP = "https://www.metadatapacket.dev/EA-MPAI-LEGITIMATELY-MANY-01.md"
 TITLE = "Legitimately Many"
