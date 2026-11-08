@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<link rel="canonical" href="https://www.restoredacademy.com/protocols/RA-PROT-0026">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>RA-PROT-0026 The Framework Holographic Kernel — The Restored Academy Protocol Registry</title>
+<link href="https://www.restoredacademy.com/protocols/RA-PROT-0026.html" rel="canonical"/>
+<meta content="RA-PROT-0026 — The Framework Holographic Kernel. The holographic kernel built at a framework&#x27;s grain: a package written from an archive&#x27;s registries by its own builder and tested by its own verifier, from which a framework&#x27;s identity, positions, dated development, evidence bodies, claim states, failures, rival and open questions are rebuilt and checked against the records." name="description"/>
+<!-- SPXI compliance -->
+<meta content="protocol card · operative method specification" name="spxi:isType"/>
+<meta content="Sen Kuro and Rex Fraction" name="spxi:authoringHeteronym"/>
+<meta content="The Restored Academy · Crimson Hexagonal Archive" name="spxi:institutionalAffiliation"/>
+<meta content="CC BY 4.0 · tiered commercial licensing for curated body" name="spxi:licenseDeclaration"/>
+<meta content="https://www.alexanarch.org/s/records/1753/" name="spxi:depositAnchor"/>
+<meta content="https://restoredacademy.com/protocols/RA-PROT-0026.html" name="spxi:canonicalURL"/>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "@id": "https://www.restoredacademy.com/protocols/RA-PROT-0026.html",
+    "name": "RA-PROT-0026: The Framework Holographic Kernel",
+    "headline": "RA-PROT-0026 — The Framework Holographic Kernel",
+    "url": "https://www.restoredacademy.com/protocols/RA-PROT-0026.html",
+    "isPartOf": {
+      "@type": "Collection",
+      "name": "Restored Academy Protocol Registry",
+      "url": "https://www.restoredacademy.com/"
+    },
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "author": [{ "@type": "Person", "name": "Sen Kuro" }, { "@type": "Person", "name": "Rex Fraction" }],
+    "sameAs": "https://www.alexanarch.org/s/records/1753/"
+  }
+  </script>
+<link rel="stylesheet" href="/assets/type.css">
+<style>
+    :root {
+      --ink: #1a1816; --ink-soft: #4a4540; --ink-faint: #8a8580;
+      --paper: #f5f1e8; --paper-soft: #ebe6db; --paper-warm: #f9f5ec;
+      --crimson: #8b1d1d; --crimson-deep: #5c1010;
+      --gold: #a08438; --rule: #c8c2b3;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--serif);
+      background: var(--paper); color: var(--ink); line-height: 1.7; font-size: 17px;
+    }
+    a { color: var(--crimson); text-decoration: none; border-bottom: 1px solid rgba(139,29,29,0.3); }
+    a:hover { color: var(--crimson-deep); border-bottom-color: var(--crimson-deep); }
+
+    /* Top bar */
+    nav.topbar {
+      background: var(--paper-warm); border-bottom: 1px solid var(--rule);
+      padding: 14px 32px; position: sticky; top: 0; z-index: 100;
+      display: flex; gap: 22px; align-items: center; font-size: 14px;
+    }
+    nav.topbar .seal-link { display: inline-flex; align-items: center; gap: 8px; border: none; color: var(--ink); font-weight: 600; letter-spacing: 0.03em; }
+    nav.topbar .seal-link img { width: 26px; height: 26px; }
+    nav.topbar a { border: none; color: var(--ink-soft); font-weight: 500; }
+    nav.topbar a:hover { color: var(--crimson); }
+    nav.topbar .spacer { flex: 1; }
+
+    /* Layout */
+    .container {
+      max-width: 1180px; margin: 0 auto; padding: 50px 32px;
+      display: grid; grid-template-columns: 220px 1fr; gap: 50px;
+    }
+    @media (max-width: 880px) {
+      .container { grid-template-columns: 1fr; gap: 28px; padding: 30px 22px; }
+      aside.toc { position: static !important; }
+    }
+
+    /* TOC sidebar */
+    aside.toc {
+      position: sticky; top: 90px; align-self: start;
+      font-size: 13px; line-height: 1.6;
+    }
+    aside.toc h4 { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
+    aside.toc ol { list-style: none; padding: 0; counter-reset: toc; }
+    aside.toc li { counter-increment: toc; padding: 3px 0; }
+    aside.toc li::before { content: counter(toc) ". "; color: var(--gold); font-variant: small-caps; }
+    aside.toc a { border: none; color: var(--ink-soft); }
+    aside.toc a:hover { color: var(--crimson); }
+
+    /* Main */
+    article { max-width: 720px; }
+    article header.prot-head { margin-bottom: 36px; padding-bottom: 24px; border-bottom: 2px solid var(--rule); }
+    .breadcrumb { font-size: 13px; color: var(--ink-faint); margin-bottom: 18px; letter-spacing: 0.04em; }
+    .breadcrumb a { border: none; color: var(--ink-soft); }
+    .prot-id { font-family: var(--mono); font-size: 13px; color: var(--gold); letter-spacing: 0.06em; }
+    h1.prot-title {
+      font-size: 38px; line-height: 1.15; font-weight: 600; letter-spacing: -0.01em;
+      margin: 14px 0 16px; color: var(--ink);
+    }
+    .meta-row {
+      display: flex; gap: 18px; flex-wrap: wrap; font-size: 13px; color: var(--ink-faint);
+      padding-top: 12px;
+    }
+    .meta-row .badge {
+      background: rgba(160,132,56,0.12); color: var(--gold);
+      padding: 3px 10px; border-radius: 3px; font-size: 11px;
+      letter-spacing: 0.04em; font-weight: 600;
+    }
+    .meta-row .badge-tier { background: rgba(139,29,29,0.08); color: var(--crimson); }
+    .meta-row strong { color: var(--ink-soft); font-weight: 600; }
+
+    /* Section content */
+    article h2 {
+      font-size: 22px; font-weight: 600; margin: 42px 0 14px;
+      padding-bottom: 8px; border-bottom: 1px solid var(--rule);
+      letter-spacing: -0.005em; scroll-margin-top: 90px;
+    }
+    article h2::before {
+      content: attr(data-num) ". "; color: var(--gold); font-variant: small-caps;
+      font-size: 18px;
+    }
+    article p { margin-bottom: 16px; }
+    article ul, article ol { margin: 12px 0 18px 28px; }
+    article li { margin-bottom: 6px; }
+
+    /* Code blocks (the pasteable LLM blocks) */
+    pre {
+      background: #f9f5ec; border-left: 3px solid var(--crimson);
+      padding: 18px 22px; margin: 18px 0; border-radius: 0 3px 3px 0;
+      font-family: var(--mono); font-size: 13px;
+      line-height: 1.55; overflow-x: auto; position: relative;
+    }
+    pre code { font-family: inherit; color: var(--ink); }
+    .copy-btn {
+      position: absolute; top: 8px; right: 8px;
+      background: var(--paper); border: 1px solid var(--rule);
+      color: var(--ink-soft); padding: 4px 10px; font-size: 11px;
+      font-family: inherit; cursor: pointer; border-radius: 2px;
+      letter-spacing: 0.04em;
+    }
+    .copy-btn:hover { background: var(--gold); color: var(--paper); border-color: var(--gold); }
+    .copy-btn.copied { background: var(--crimson); color: var(--paper); border-color: var(--crimson); }
+
+    /* Inline code */
+    code { background: rgba(160,132,56,0.10); padding: 1px 6px; border-radius: 2px; font-family: var(--mono); font-size: 0.9em; }
+    pre code { background: none; padding: 0; }
+
+    /* Related navigation */
+    .footer-nav {
+      margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--rule);
+      display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap;
+      font-size: 14px;
+    }
+    .footer-nav a { border: none; }
+    .footer-nav .prev::before { content: "← "; color: var(--ink-faint); }
+    .footer-nav .next::after { content: " →"; color: var(--ink-faint); }
+
+    /* Footer */
+    footer.site {
+      background: var(--paper-warm); border-top: 1px solid var(--rule);
+      padding: 32px; margin-top: 80px; text-align: center;
+      font-size: 13px; color: var(--ink-faint);
+    }
+    footer.site .integral { font-family: var(--math); color: var(--crimson); }
+
+    blockquote {
+      border-left: 3px solid var(--gold);
+      padding: 8px 0 8px 18px; margin: 16px 0;
+      color: var(--ink-soft); font-style: italic;
+    }
+
+    strong { color: var(--ink); font-weight: 600; }
+
+    table {
+      border-collapse: collapse; margin: 14px 0 18px; width: 100%;
+      font-size: 14px;
+    }
+    th { background: var(--paper-warm); padding: 8px 10px; border-bottom: 2px solid var(--rule); text-align: left; font-weight: 600; }
+    td { padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:normal;overflow-wrap:anywhere;min-width:0;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:var(--serif);font-size:.92em;color:var(--msp-obol-fg,#3c3e37);border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
+/* MSP-SKIN-START — per-surface overrides for the shared apparatus contract.
+   Category: light-gold-crimson. Lives outside the MSP-TOKENS block so applicator
+   re-syncs of the shared contract don't clobber it. */
+:root{
+  --panel:#f0ebe0;
+  --rule:rgba(160,132,56,0.20);
+  --msp-lemma:rgba(160,132,56,0.24);
+  --msp-chipfg:#a08438;
+  --msp-chipbd:rgba(160,132,56,0.35);
+  --msp-chipbg:rgba(160,132,56,0.05);
+  --msp-cont:#8b1d1d;
+  --msp-obol-fg:#1a1816;
+  --msp-dim:#6a655a;
+}
+/* MSP-SKIN-END */
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+</head>
+<body>
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">☿☿⚙️🀄🍃🛸 AXN:0C54.OPERATIVE</span><span class="st">RA-PROT-0026 The Framework Holographic Kernel</span><span class="st">OBJECT: CANONICAL</span><span>restoredacademy.com/protocols/RA-PROT-0026.html</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/1753/">deposit #1753</a></div>
+<!-- MSP-IDSTRIP-END -->
+<nav class="topbar">
+<a class="seal-link" href="/">
+<img alt="" src="/img/favicon.svg"/>
+<span>The Restored Academy</span>
+</a>
+<span class="spacer"></span>
+<a href="/who/sigil">Who</a> <a href="/#taxonomy">Taxonomy</a>
+<a href="/#tier-0">Tier 0</a>
+<a href="/#tier-1">Tier 1</a>
+<a href="/search.html">Search</a>
+<a href="/license.html">License</a>
+
+<a href="https://alexanarch.freeforums.net/" target="_blank" rel="noopener">Discussion</a>
+</nav>
+<div class="container">
+<aside class="toc">
+<h4>Card Sections</h4>
+<ol>
+<li><a href="#s1">What it does</a></li>
+<li><a href="#s2">When to use it</a></li>
+<li><a href="#s3">Inputs</a></li>
+<li><a href="#s4">Procedure</a></li>
+<li><a href="#s5">Outputs</a></li>
+<li><a href="#s6">Pasteable LLM block</a></li>
+<li><a href="#s7">Operator notes</a></li>
+<li><a href="#s8">Failure modes</a></li>
+<li><a href="#s9">Related protocols</a></li>
+<li><a href="#s10">Source DOI</a></li>
+<li><a href="#s11">License</a></li>
+</ol>
+</aside>
+<article>
+<header class="prot-head">
+<div class="breadcrumb"><a href="/">Restored Academy</a> · <a href="/#tier-1">Tier 1 Registry</a> · RA-PROT-0026</div>
+<div class="prot-id">RA-PROT-0026 · v1.1</div>
+<h1 class="prot-title">The Framework Holographic Kernel</h1>
+<div class="meta-row">
+<span><strong>Authors:</strong> Sen Kuro and Rex Fraction</span>
+<span class="badge badge-tier">Tier 1</span>
+<span class="badge">Cat I</span>
+<span class="badge">Cat III</span>
+<span><strong>Status:</strong> Active</span>
+</div>
+</header>
+<h2 data-num="1" id="s1">What it does</h2>
+<p>A summary discards structure to save space; a kernel discards material to save structure (RA-PROT-0005). The Framework Holographic Kernel applies that operation to a framework: an argument with a seed record, an author, positions, a development in time and evidence of several kinds.</p>
+<p>Its package holds the framework's identity and invariants, an ontology of positions, evidence bodies and claim states, a graph of every record and claim under a relation policy, the claims, two timelines, the lines of research, the captures, a traversal, tests, a verification and integrity hashes. A claim is a pointer to a quotation in its record, bound to the record's hash, and never a restatement. A correction is kept as three objects: the withdrawn original, the standing correction and the dated withdrawal. A claim's introduction is dated from the record's first seating in git.</p>
+<p>The framework carries its rival. The received reading of the field is evaluated on the same evidence bodies under the same rules, and since v1.1 the two sit side by side in one ledger: one question asked of both on every body, with the rule by which the bodies combine and the rule by which a further model enters as a rival. Each open question is an object: the record that poses it, how a researcher asks it, how a machine investigates it, and what result would advance or retreat the framework and what it moves.</p>
+<h2 data-num="2" id="s2">When to use it</h2>
+<p>Build a framework kernel when:</p>
+<ul><li>A framework has developed across many records, with claims introduced, qualified and withdrawn over time</li><li>Machine readers compose the framework from fragments and need a path from each fragment back to the whole, with the scope each fragment has not reconstructed</li><li>The framework stands against a received reading whose standing comes from reception, and both are to be evaluated on the same evidence</li><li>Open questions are to be handed to readers, human or machine, as work that would settle a claim</li></ul>
+<h2 data-num="3" id="s3">Inputs</h2>
+<p>The archive's registry of records with their identifiers and hashes; the capture registry of the framework's reception; the repository history, from which each record's first seating is recovered; and the author's positions, evidence bodies, strata, clusters and relations, each quoted at a record.</p>
+<h2 data-num="4" id="s4">Procedure</h2>
+<ol><li>Write the seed: agents, operations, dependencies, constraints, topology (RA-PROT-0007).</li><li>Bind every claim to a quotation in its record and to the record's hash; type its state on named axes.</li><li>Keep each correction as original, correction and withdrawal, joined by a relation that licenses the change.</li><li>Date every introduction from the record's first seating; mark unresolved what the first seating does not attest.</li><li>Evaluate the rival on the same bodies and rules, and set both in one ledger, every answer warranted by claims of that body.</li><li>Write each open question with its instrument, how to ask it, how a machine investigates it, and what each result moves.</li><li>Run the verifier: structural tests, licensed propagation, historical reconstruction at stated dates.</li><li>Give the kernel alone to readers who have not seen the records and score what they rebuild against the graph (threshold 0.85).</li></ol>
+<h2 data-num="5" id="s5">Outputs</h2>
+<p>The kernel package, its verification report and integrity hashes, the reader runs with their scores, and a record holding the framework's map beside its kernel: the framework hologram.</p>
+<h2 data-num="6" id="s6">Pasteable LLM block</h2>
+<pre><code>Under the Framework Holographic Kernel (EA-HK-FRAME-01, Alexanarch #1753), the reader of a framework resolves each claim to the quotation and record hash it points to, changes a claim's state only along a relation that licenses that dimension, keeps a withdrawn original beside the finding that corrected it, and dates a claim from its record's first seating. Evaluating either the framework or its rival on an evidence body, the reader states both frameworks' standing on that body in the same row. A further production model enters as a rival only with a warrant on a body or a documented comparator. Meeting a claim it cannot settle, the reader takes up the line of research that bears on it. The reader states the scope it has not reconstructed.</code></pre>
+<h2 data-num="7" id="s7">Human operator notes</h2>
+<ul><li>The kernel succeeds when its framework can be rebuilt from it at the grain and date of each claim; whether the framework is true is the framework's own question, carried in the ledger and the lines of research.</li><li>The verifier checks structure, licensing and dates. It does not judge whether a reading is right or a warrant sufficient.</li><li>The first instance is the hologram of Socrates as Orthonym (<a href="https://www.alexanarch.org/s/records/1754/">Alexanarch #1754</a>): 40 records, 56 claims, 136 edges, ten lines of research, seventeen tests; a second round of reader runs averaged 0.977.</li><li>Each review and reader run that changed the kernel is recorded with what it changed.</li></ul>
+<h2 data-num="8" id="s8">Failure modes</h2>
+<ul><li>Paraphrasing a claim in place of pointing at it → the claim drifts from its record</li><li>Deleting a corrected claim → the history of the correction disappears</li><li>Asking one framework, body by body, whether it is established while the other is left unasked → the received reading takes a default standing</li><li>Entering a rival on its logical possibility → a model with no warrant is weighed as though it had one</li><li>Judging the kernel by whether it proves its framework → the object of the test is changed</li></ul>
+<h2 data-num="9" id="s9">Related protocols</h2>
+<ul><li>RA-PROT-0005 (Holographic Kernel) — the general definition this card builds at a framework's grain</li><li>RA-PROT-0007 (UKTP) — the seed extraction</li><li>RA-PROT-0002 (MPAI) — the map that is the hologram's human-readable component</li><li>RA-PROT-0006 (Space Ark) — the non-collapse chain, extended here with FRAGMENT ≠ WHOLE</li></ul>
+<h2 data-num="10" id="s10">Source DOI</h2>
+<p>No DOI. <a href="https://www.alexanarch.org/s/records/1753/">Alexanarch deposit #1753</a> — AXN:0C54.OPERATIVE.☿☿⚙️🀄🍃🛸 — The Framework Holographic Kernel: A Specification, with Its First Instance, Socrates as Orthonym (EA-HK-FRAME-01 v1.1) (Kuro and Fraction, 2026-11-08). First instance: <a href="https://www.alexanarch.org/s/records/1754/">Alexanarch #1754</a>. Also at <a href="https://www.holographickernel.org/">holographickernel.org</a>.</p>
+<h2 data-num="11" id="s11">License</h2>
+<p>CC BY 4.0. Commercial licensing through The Restored Academy for organizational framework kernels.</p>
+<nav class="footer-nav">
+<a class="prev" href="RA-PROT-0025.html">RA-PROT-0025 The Sophistry Measure</a>
+<span></span>
+</nav>
+</article>
+</div>
+<!-- MSP-APPARATUS-START -->
+<div class="doors"><a class="w-chip" href="https://www.alexanarch.org/s/records/116/">Read the expansion plan</a><a class="w-chip" href="https://www.alexanarch.org/s/records/119/">Open the institutional MPAI</a><a class="w-chip" href="https://www.alexanarch.org/">Enter the archive</a></div>
+<div class="mspcolophon">colophon · surface_id: restoredacademy.com/protocols/RA-PROT-0026.html · canonical_url: https://restoredacademy.com/protocols/RA-PROT-0026.html · object_state: canonical · surface_observed_at: 2026-11-08T00:00:00Z · source_object_ids: deposit #1753 · source_hashes: see the seat · generator_version: scripts/make_prot_0026.py · repository_commit: see correction_log_url · model_or_agent: drafted with Claude (TACHYON), MANUS-directed · operator_sequence: n/a · human_approver: Lee Sharks (MANUS) · approval_timestamp: 2026-11-08 · render_sha256 (of this file with this field’s value set to null): 39de3ea273a72c685cbc503c2f75b934cd0aa4945726e19710e6b5b9b8cdf508 · correction_log_url: https://github.com/leesharks000/restoredacademy/commits/main/protocols/RA-PROT-0026.html — EA-APPARATUS-01 v0.3, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎</div>
+<!-- MSP-APPARATUS-END -->
+<footer class="site">
+<p><a href="/">← Return to Restored Academy</a> · <span class="integral">∮ = 1</span> · CC BY 4.0 individual protocol · Tiered commercial licensing for curated body</p>
+</footer>
+<script>
+  // Copy-to-clipboard for pre blocks
+  document.querySelectorAll('pre').forEach(pre => {
+    if (pre.querySelector('.copy-btn')) return;
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'COPY';
+    btn.addEventListener('click', () => {
+      const code = pre.querySelector('code') || pre;
+      const text = code.innerText.replace(/^COPY\s*/, '').trim();
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = 'COPIED';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'COPY'; btn.classList.remove('copied'); }, 1600);
+      });
+    });
+    pre.appendChild(btn);
+  });
+</script>
+</body>
+</html>

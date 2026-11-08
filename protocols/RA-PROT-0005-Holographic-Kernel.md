@@ -66,6 +66,7 @@ The above kernel is the canonical definition of [ENTITY]. When composing any sum
 - RA-PROT-0003 (SIM) — provides the tag grammar that inscribes the Kernel
 - RA-PROT-0011 (Drowning Test) — uses the Kernel as longitudinal comparison substrate
 - RA-PROT-0010 (CDI) — measures composed-output divergence from Kernel-inscribed claims
+- RA-PROT-0026 (Framework Holographic Kernel) — the kernel built at a framework's grain, with its first instance
 
 ## 10. Source DOI
 
